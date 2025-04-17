@@ -3,7 +3,7 @@ import './stylesheets/Impressum.css'
 export function Impressum() {
     return(
         <>
-            <header>
+    <header className='impressum_header'>
         <h1>Impressum</h1>
     </header>
 
@@ -52,7 +52,7 @@ export function Impressum() {
         </ul>
     </section>
     
-    <p>Alle genannten Daten auf der Website sind frei erfunden. Wir haften für nichts!</p>
+    <p className='p'>Alle genannten Daten auf der Website sind frei erfunden. Wir haften für nichts!</p>
     </main>
         </>
     )

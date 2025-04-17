@@ -1,4 +1,4 @@
-header{
+.impressum_header{
     text-align: center;
     margin-top: 7vh;
 }
@@ -17,7 +17,7 @@ header{
     font-weight: bold;
 }
 
-main p {
+.p {
     text-align: center; 
     font-size: small;
 }

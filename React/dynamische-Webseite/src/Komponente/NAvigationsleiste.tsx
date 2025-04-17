@@ -21,6 +21,7 @@ export function Header() {
             <li><Link to="/Angebote">Höhlentauchen</Link></li>
           </ul>
         </li>
+        <li><Link to="/Shop" aria-label="Shop">Shop</Link></li>
         <li><Link to="/Überuns" aria-label="Über uns">Über Uns</Link></li>
         <li><Link to="/Kontakt" aria-label="Kontakt">Kontakt</Link></li>
       </ul>

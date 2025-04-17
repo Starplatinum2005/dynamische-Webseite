@@ -1,0 +1,14 @@
+:root{
+  --Textfarbe : #000080;
+  --Hintergrundfarbe : #f0f8ff;
+  --SeitenÜberschrift: white;/*für Überschrift von Inderx und Angebote*/
+  --Unterüberschriften: black;
+  --Navigationsleiste: rgb(8, 11, 67);
+  --Dropdownhintergrund: #f9f9f9;
+  --Dropdowntext: black;
+  --footer: white;
+  --hovern: #4040a7; /*für Navigationsleiste*/
+  --Bestätigungsbox: white;
+  --Platzhalter: #2f2e2e/*Für Eingabeformular*/   
+}
+

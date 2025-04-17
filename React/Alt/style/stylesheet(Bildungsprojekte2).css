@@ -1,0 +1,135 @@
+main p {
+    color: var(--Textfarbe)
+}
+
+.Bildungsprojekte-container{
+    display: flex; /* Flexbox wird aktiviert, für flexible darstellung */
+    align-items: 0; /* Vertikale Ausrichtung */
+    gap: 1em; /* Abstand zwischen Bild und Text */
+    margin: 2em 0; /* Abstand nach oben und unten */
+    flex-wrap: wrap;
+}
+
+.Bildungsprojekte-image{
+    width:30%;     
+    max-width: 500px; 
+    height: auto; 
+    display: block;
+    margin: 1; /*wenn man 0 macht dann ist es zentriert */
+    object-fit: cover;
+    border-radius: 8px;
+}
+.Bildungsprojekte-text {
+    width: 60%; 
+    font-size: 1em; /* Textgröße */
+}
+
+.Projekte{
+    display: flex;
+    flex-direction: row-reverse; /*Flexelemente von rechts nach links*/
+    align-items: flex-start;
+    gap: 2em;
+    margin: 0;
+    width: 100%; 
+
+}
+.Projekte-image{
+    width:30%; 
+    max-width: 600px; 
+    display: block;
+    margin: 0; /*wenn man 0 macht dann ist es zentriert */
+    border-radius: 8px;
+}
+
+.Projekte-text {
+    width: 70%; 
+    font-size: 1em;
+    margin: 0;
+    text-align: left;
+}
+
+.Vortragsreihen {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 1em;
+    margin: 0;
+    width: 100%;
+    flex-wrap: wrap; 
+}
+.Vortragsreihen-image {
+    width:28%; 
+    max-width: 500px; 
+    height: auto; 
+    display: block;
+    margin: 0; /*wenn man 0 macht dann ist es zentriert */
+    border-radius: 8px;
+}
+.Vortragsreihen-text {
+    width: 70%; 
+    font-size: 1em;
+
+}
+
+h1, h2, h3 {
+    color: var(--Unterüberschriften); /* Überschriften in Schwarz */
+}
+
+main {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 6em;
+}
+h1 {
+    color: var(--Unterüberschriften);  
+    text-align: left; 
+    margin: 0;
+}
+
+@media (max-width: 768px) { /*wird nur verwendet wenn Bildschirm max. 768 px breit ist*/
+    .Bildungsprojekte-text{
+        width: 80%;
+    }
+    .Projekte {
+        flex-direction: column; /* Stapelt Bild und Text untereinander */
+        align-items: flex-start; /* Linksbündig */
+    }
+    h1{
+        font-size: 18px;
+    }
+    
+    .Projekte-image,
+    .Projekte-text {
+    width: 90%; /* Volle Breite */
+    }
+    
+    .Bildungsprojekte {
+        flex-direction: column;  /*vertikale Anordnung*/
+        align-items: flex-start;  /*linke Ausrichtung*/
+    }
+    
+    .Bildungsprojekte-image{
+        width: 90%
+    }
+
+    .Bildungsprojekte -text {
+        width: 90%; /* Volle Breite */
+    }
+
+    .Vortragsreihen {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+        
+    .Vortragsreihen-image,
+    .Vortragsreihen-text {
+        width: 90%; /* Volle Breite */
+    }
+    
+    main{
+        padding: 1em;
+    }
+
+}
+

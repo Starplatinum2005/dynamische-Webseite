@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Ocean Dive - Kursbuchung</title>
+    <link rel="stylesheet" href="../style/stylesheet(index).css" />
+    <link rel="stylesheet" href="../style/stylesheet(buchung).css">
+    <link rel="stylesheet" href="../style/stylesheet(Angebote).css" />
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+</head>
+<body>
+    <nav class="navbar"> <!-- Klassen im stylesheet index2-->
+        <a href="./index.html" aria-label="Link zur Startseite">
+            <img class="logo" src="../images/LOGO4.png" alt="Taucher"> 
+        </a> 
+        <ul class="navbar-list">
+            <li><a href="./index.html" aria-label="Link zur Startseite">Home</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="Angebote.html" aria-label="Link zur Angebotsseite">Angebote</a>
+                <ul class="dropdown-content">
+                    <li><a href="Angebote.html#Kurse" aria-label="Link zur Angebotsseite">Schnuppertauchen</a></li>
+                    <li><a href="Angebote.html#Kurse" aria-label="Link zur Angebotsseite">Delfintauchen</a></li>
+                    <li><a href="Angebote.html#Kurse" aria-label="Link zur Angebotsseite">Korallentauchen</a></li>
+                    <li><a href="Angebote.html#Kurse" aria-label="Link zur Angebotsseite">Tauchschein</a></li>
+                    <li><a href="Angebote.html#Kurse" aria-label="Link zur Angebotsseite">Höhlentauchen</a></li>
+                </ul>
+            </li>
+            <li><a href="./Überuns.html" aria-label="Link zur Seite über uns">Über Uns</a></li>
+            <li><a href="./Kontakt.html" aria-label="Link zur Kontaktseite">Kontakt</a></li>
+        </ul>
+    </nav>
+    <main>
+    
+        <div class="kurs-container">  <!--Klassen sind im Stylesheet Buchung-->
+            <div class="kurs-info">
+                <h2>Warnung</h2>
+                <p>Bei dieser Website handelt es sich um ein studentisches Projekt</p>
+            </div>
+        </div>
+
+    <div class="kurs-container">  <!--Klassen sind im Stylesheet Buchung-->
+        <img class="kurs-bild" src="https://cdn.pixabay.com/photo/2012/02/23/08/57/woman-15840_1280.jpg" alt="Schnuppertauchen">
+        <div class="kurs-info">
+            <h2>Schnuppertauchen</h2>
+            <p>Der perfekte Einstieg in die Unterwasserwelt für Neugierige und Anfänger. Probieren Sie das Tauchen unter Anleitung aus!</p>
+            <p class="kurs-preis">Preis: 20 €</p>
+        </div>
+    </div>
+    
+
+    <div class="kurs-container">
+        <img class="kurs-bild" src="https://cdn.pixabay.com/photo/2015/06/11/23/45/dolphin-806359_1280.jpg" alt="Delfintauchen">
+        <div class="kurs-info">
+            <h2>Delfintauchen</h2>
+            <p>Erleben Sie ein unvergessliches Abenteuer beim Tauchen mit Delfinen. Perfekt für Naturliebhaber.</p>
+            <p class="kurs-preis">Preis: 50 €</p>
+        </div>
+    </div>
+
+    <div class="kurs-container">
+        <img class="kurs-bild" src="https://cdn.pixabay.com/photo/2016/04/26/22/35/coral-1355474_1280.jpg" alt="Korallentauchen">
+        <div class="kurs-info">
+            <h2>Korallentauchen</h2>
+            <p>Entdecken Sie die faszinierende Welt der Korallenriffe. Geeignet für erfahrene Taucher.</p>
+            <p class="kurs-preis">Preis: 45 €</p>
+        </div>
+    </div>
+
+
+
+    <div class="kurs-container">
+        <img class="kurs-bild" src="https://cdn.pixabay.com/photo/2015/03/11/15/19/divers-668777_1280.jpg" alt="Tauchschein">
+        <div class="kurs-info">
+            <h2>Tauchschein</h2>
+            <p>Erlernen Sie die Grundlagen des Tauchens mit einem professionellen Trainer. Ideal für Anfänger und Fortgeschrittene.</p>
+            <p class="kurs-preis">Preis: 75 €</p>
+        </div>
+    </div>
+
+    <div class="kurs-container">
+        <img class="kurs-bild" src="https://cdn.pixabay.com/photo/2012/02/23/08/35/below-15685_1280.jpg" alt="Höhlentauchen">
+        <div class="kurs-info">
+            <h2>Höhlentauchen</h2>
+            <p>Erkunden Sie die faszinierenden Höhlen unter Wasser und erleben Sie eine einzigartige Herausforderung.</p>
+            <p class="kurs-preis">Preis: 35 €</p>
+        </div>
+    </div>
+
+    <section class="Buchungs-Formular">
+
+            <h1 class="Strich">Buchen Sie Ihren Tauchkurs</h1>
+            <form class="Formular">
+                <label for="name">Name:</label> <!--for wird mit id verknüpft, sodass wenn man auf Name klickt auch auf das Textfeld weitergeleitet wird-->
+                <input type="text"  id="name" required placeholder="Max Mustermann"><br>
+
+                <label for="email">E-Mail Adresse:</label>
+                <input type="email"  id="email" required placeholder="max123@gmail.com"><br>
+
+                <label for="number">Anzahl Erwachsene</label>
+                <input type="number" id="number" required><br>
+
+                <label for="Anzahl">Anzahl Kinder</label>
+                <input type="number" id="Anzahl" required><br>
+
+                <label for="kurs">Wählen Sie Ihren Kurs</label>
+                <select id="kurs" required >
+                    <option >Schnuppertauchen (20€ p.P.)</option>
+                    <option>Delfintauchen (50€ p.P.)</option>
+                    <option>Korallentauchen (45€ p. P.)</option>
+                    <option>Tauchschein (75€ p.P.)</option>
+                    <option>Höhlentauchen (35€ p.P.)</option>
+                </select><br/>
+
+                <label for="datum">Datum</label>
+                <input type="date" id="datum" required><br/>
+
+                <label for="nachricht">Anmerkungen und Wünsche:</label>
+                <textarea id="nachricht" placeholder="Ihre Nachricht"></textarea><br>
+
+                <button type="submit">Tauchkurs buchen</button>
+        </form>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <section class="gridcontainer">
+            <section class="ersteSpalte">
+                <p>Öffnungszeiten</p>
+                <p>Sommersaison:</p>
+                <p>Mo.: Ruhetag</p>
+                <p>Di. - Fr.: 12:00 - 20:00</p>
+                <p>Sa. und So.: 10:00 - 20:00</p>
+            </section>
+            <section class="zweiteSpalte">
+                <p><a href="./Impressum.html" aria-label="Link zum Impressum">Impressum</a></p>
+                <p><a href="./Datenschutz.html" aria-label="Link zum Datenschutz">Datenschutz</a></p>
+                <p><a href="./Überuns.html" aria-label="Link zur Seite Über uns ">Über uns</a></p>
+                <p><a href="./Kontakt.html" aria-label="Link zur Kontaktseite">Kontakt</a></p>
+            </section>
+            <section class="dritteSpalte">
+                <p>Folgen Sie uns auf</p>
+                <section class="social-icons">
+                    <a href="https://instagram.com" aria-label="Link zu Instagram"class="icon-container">
+                        <img src="../images/Instagram Logo.webp" alt="Instagram Logo" class="icon-image">
+                        <p>Instagram</p>
+                    </a>
+                    <a href="https://facebook.com" aria-label="Link zu Facebook"class="icon-container">
+                        <img src="../images/Facebook Logo 2.webp" alt="Facebook Logo" class="icon-image">
+                        <p style="color: white;">Facebook</p>
+                    </a>
+                </section>
+            </section>
+        </section>
+    </footer>
+
+</body>
+</html>

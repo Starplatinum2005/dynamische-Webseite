@@ -1,0 +1,25 @@
+header{
+    text-align: center;
+    margin-top: 7vh;
+}
+
+.Anschrift ul{ 
+    font-size: 17px;
+    margin-left: 5%;
+    margin-right: 5%;
+    list-style: none;
+    color: var(--Unterüberschriften);
+}
+
+.fett{
+    display: block;
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+
+main p {
+    text-align: center; 
+    font-size: small;
+}
+
+

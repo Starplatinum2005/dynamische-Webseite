@@ -1,0 +1,304 @@
+:root{
+   --Textfarbe : #000080;
+   --Hintergrundfarbe : #f0f8ff;
+   --SeitenÜberschrift: white;/*für Überschrift von Inderx und Angebote*/
+   --Unterüberschriften: black;
+   --Navigationsleiste: rgb(8, 11, 67);
+   --Dropdownhintergrund: #f9f9f9;
+   --Dropdowntext: black;
+   --footer: white;
+   --hovern: #4040a7; /*für Navigationsleiste*/
+   --Bestätigungsbox: white;
+   --Platzhalter: #2f2e2e/*Für Eingabeformular*/   
+}
+
+body {
+    margin: 0; /* Entfernt Standard-Außenabstand*/
+    padding-top: 50px; 
+    font-family: Arial, sans-serif; 
+    display: flex; /* aktiviert Flex für  Body */
+    flex-direction: column; /* Ordnet Kinder-Elemente vertikal an*/
+    min-height: 100vh; /* Mindestens Höhe des Viewports(Volle Höhe des Bildschirms(in dem Fall die Farbe auch hinter der Navigationsleiste) */
+    box-sizing: border-box; /* padding und border werden in die angegebene Breite schon miteingerechnet, sodass keine extra Berchnung notwendig ist */
+    background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe (AliceBlue) */
+}
+
+h1{
+   color: var(--Unterüberschriften);
+}
+
+.dropdown { /*Dropdownbereich wird relativ zum Angebots link positioniert*/
+    position: relative; /* stellt sicher, dass dropdown-content relativ zu dieser Klasse positioniert wird */
+    display: inline-block; /* Zeigt Dropdown-Inhalt inline an */
+}
+
+
+.dropdown-content {
+   display: none; /* Das Dropdown-Menü wird versteckt */
+   position: absolute; /* Position unterhalb des Dropdown-Menüs */
+   top: 100%; /* Position direkt unter dem Eltern-Element */
+   left: 0; /* Links ausgerichtet */
+   background-color: var(--Dropdownhintergrund); /* Heller Hintergrund */
+   min-width: 160px; /* Mindestbreite */
+   width: 100%; /* Optional: Breite */
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Schlagschatten */
+   z-index: 1; /* Überlappung sichern */
+   padding: 0; /* Kein Innenabstand */
+}
+
+nav {
+    text-align: center; /* Zentriert Text */
+    padding: 1vh;
+    padding-top: 2vh; /* Zusätzlicher Abstand oben */
+    color: var(--Textfarbe); /* Schriftfarbe Marineblau */
+    width: 100%; /* Breite 100% des Containers */
+    margin: 0; /* Kein Außenabstand */
+    position: absolute; /* Fixiert über Seiteninhalt */
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex; /* Flexibles Layout */
+    width: 5vw; /* Breite 8% des Containers */
+    height: auto;
+}
+
+.Neuigkeiten {
+   display: flex; /* Flexibles Layout */
+   justify-content: space-around; /* Elemente gleichmäßig verteilen */
+   gap: 20px; /* Lücke zwischen Elementen */
+   flex-wrap: wrap; /* Elemente umbrechen bei Platzmangel */
+   margin: 5%; /* Außenabstand */
+}
+
+.Thema {
+   display: flex; /* Flexibles Layout */
+   flex-direction: column; /* Elemente vertikal anordnen */
+   font-size: 20px; /* Schriftgröße */
+   border: 2px solid var(--Textfarbe); /* Rahmen in Marineblau */
+   background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe */
+   color: var(--Textfarbe); /* Textfarbe */
+   padding: 20px; /* Innenabstand */
+   border-radius: 8px; /* Runde Ecken */
+   width: 20vw; /* Breite */
+}
+
+.Thema p {
+    text-align: center; /* Zentrierter Text */
+    word-wrap: break-word; /* Längere Wörter umbrechen */
+    overflow-wrap: break-word; /* Alternative Wortumbruch */
+    margin: 0; /* Kein Außenabstand */
+}
+
+.Themabild {
+   width: 100%; /* Bildbreite füllt Container */
+   height: auto; /* Proportionale Höhe */
+   margin-bottom: 10px; /* Abstand unten */
+   border-radius: 15px;
+}
+
+.Anfangscontainer1 {
+   position: relative; /* Position relativ zum Eltern-Element */
+   width: 90%; /* Container nimmt 90% der Breite ein */
+   
+   margin: 50px auto; /* Zentriert Container horizontal */
+   overflow: hidden; /* Überschuss verstecken */
+   border-radius: 15px; /* Runde Ecken */
+}
+
+.Anfangsbild1 {
+    width: 100%; /* Bild nimmt gesamte Breite ein */
+    height: auto; /* Höhe passt sich an */
+    display: block; /* Block-Layout */
+}
+
+.Anfangstext1 {
+   position: absolute; /* Position absolut im Container und relativ zu welcome container1 */
+   top: 50%; /* Zentriert vertikal */
+   left: 50%; /* Zentriert horizontal */
+   transform: translate(-50%, -50%); /* Perfekte Zentrierung */
+   background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter schwarzer Hintergrund */
+   color: var(--SeitenÜberschrift); /* Weiße Schriftfarbe */
+   padding: 20px 40px; /* Innenabstand */
+   border-radius: 8px; /* Runde Ecken */
+   text-align: center; /* Zentrierter Text */
+   font-size: 1.5rem; /* relative Schriftgröße */
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 1); /* Schlagschatten */
+}
+
+.Abschnitt1 {
+   display: flex; /* Flexibles Layout */
+   align-items: flex-start; /* Elemente oben ausrichten */
+   gap: 2em; /* Lücke zwischen Elementen */
+   margin: 5%; /* Außenabstand */
+   flex-wrap: wrap; /* Elemente umbrechen */
+}
+
+.Textcontainer1 {
+   max-width: 60%; /* Maximale Breite 60% */
+   color: var(--Textfarbe); /* Marineblau */
+}
+
+.Textcontainer1 p {
+   margin-bottom: 5%; /* Abstand nach unten */
+   line-height: 1.6; /* Zeilenhöhe */
+}
+
+.Bildcontainer1 {
+   margin-top: 3%; /* Abstand oben */
+   width: 35%; /* Breite des Containers */
+   display: flex; /* Flexibles Layout */
+   justify-content: center; /* Zentriert Bild horizontal */
+   align-items: flex-start; /* Bild oben ausrichten */
+}
+
+.Bild-rechts {
+   margin-top: 10%; /* Abstand oben */
+   max-width: 100%; /* Maximale Breite 100% */
+   height: auto; /* Höhe passt sich an */
+   border-radius: 8px; /* Runde Ecken */
+}
+
+.Abschnitt2 {
+   display: flex; /* Flexibles Layout */
+   align-items: flex-start; /* Elemente oben ausrichten */
+   gap: 20px; /* Abstand zwischen Elementen */
+   margin: 5%; /* Außenabstand */
+   flex-wrap: wrap; /* Umbrechen bei Platzmangel */
+}
+
+.Textcontainer2 {
+   max-width: 60%; /* Maximale Breite 60% */
+}
+
+.Textcontainer2 p {
+   margin-bottom: 5%; /* Abstand unten */
+   line-height: 1.6; /* Zeilenhöhe */
+   color: var(--Textfarbe); /* Marineblau */
+}
+
+.Bildcontainer2 {
+   margin-top: 12%; /* Abstand oben */
+   width: 35%; 
+   display: flex; /* Flexibles Layout */
+   justify-content: center; /* Zentriert Bild horizontal */
+   align-items: flex-start; /* Bild oben ausrichten */
+}
+
+.Strich {
+   margin-top: 5%; /* Abstand oben */
+   margin-bottom: 5%; /* Abstand unten */
+   text-align: center; /* Zentrierte Linie */
+   border-top: 2px solid var(--Textfarbe); /* Obere Rahmenlinie */
+   width: 80%; /* Breite 80% des Containers */
+   margin-left: auto; /* Zentriert horizontal */
+   margin-right: auto; /* Zentriert horizontal */
+   padding-top: 5%; /* Abstand oberhalb der Linie */
+}
+
+.Bild-links {
+   margin-top: 10%; /* Abstand oben */
+   max-width: 100%; /* Maximale Breite 100% */
+   height: auto; /* Höhe passt sich an */
+   border-radius: 8px; /* Runde Ecken */
+}
+
+.navbar { /*grundlegendes Layout der Leiste*/
+   display: flex; /* Flexibles Layout für links und logo */
+   justify-content: space-between; /* Elemente an den Rand schieben */
+   align-items: center; /* Zentriert Elemente vertikal */
+   background-color: var(--Navigationsleiste); 
+   padding: 10px 20px; /* Innenabstand */
+   position: fixed; /* Fixiert oben auf der Seite */
+   top: 0; /* Position am oberen Rand */
+   left: 0; /* Beginn am linken Rand */
+   width: 100%; 
+   height: 15vh;
+   z-index: 1000; /* Über anderen Inhalten */
+}
+
+.navbar-list { /*beziet sich auf die Links*/
+   list-style: none; /* Entfernt Aufzählungszeichen */
+   display: flex; 
+   margin: 0; /* Kein Außenabstand */
+   white-space: nowrap; /* Kein Umbruch in der Liste */
+}
+
+
+.navbar-list a, .dropbtn { /*definiert visuelles Verhalten Links */
+   color: var(--SeitenÜberschrift); /* Weiße Schriftfarbe */
+   text-align: center; /* Zentrierter Text */
+   padding: 14px 20px; /* Innenabstand */
+   text-decoration: none; /* Keine Unterstreichung */
+   font-size: 16px; /* Schriftgröße */
+   background-color: inherit; /* Hintergrund erbt von Eltern */
+   border: none; /* Kein Rahmen */
+   cursor: pointer; /* Zeiger-Symbol */
+   display: block; /* Block-Layout */
+}
+
+.navbar-list a:hover, .dropdown:hover .dropbtn {
+   background-color: var(--hovern); /* Farbänderung bei Hover */
+   color: var(--Hintergrundfarbe);
+}
+
+
+.dropdown-content li {
+   display: block; /* Block-Layout */
+   text-align: left; /* Links ausgerichtet */
+   margin: 0; /* Kein Außenabstand */
+}
+
+.dropdown-content a {
+   color: var(--Dropdowntext); /* Schriftfarbe Schwarz */
+   padding: 12px 16px; /* Innenabstand */
+   text-decoration: none; /* Keine Unterstreichung */
+   display: block; /* Block-Layout */
+}
+
+.dropdown:hover .dropdown-content { /*wir aktiviert wenn der Dropdown Inhalt aktiviert wird*/
+   display: block; /* Zeigt Dropdown-Inhalt bei Hover */
+}
+
+
+@media (max-width: 768px) {
+   .navbar-list {
+       justify-content: center; /* Zentriert die verbleibenden Elemente */
+   }
+
+   .logo{
+      width: 11vw;
+  }
+
+   .navbar-list li {
+       display: none; /* Versteckt alle Listenelemente */
+   }
+
+   .navbar-list li:nth-child(1), /* Zeigt "Home" an */
+   .navbar-list li:nth-child(2) { /* Zeigt "Angebote" an */
+       display: block; /* Sichtbar machen */
+   }
+
+   .dropdown .dropdown-content {
+       display: none !important; /* Versteckt das Dropdown-Menü und durch !important erhält dies mehr Priorität */
+   }
+
+   .Textcontainer1,
+   .Textcontainer2{
+      max-width: 90%;
+      
+   }
+   
+   .Bildcontainer1,
+   .Bildcontainer2{
+      margin-top: 1%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+   }
+   
+   .Thema{
+      width: 250px;
+   }
+   
+}

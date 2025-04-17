@@ -1,0 +1,49 @@
+    main {  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Container für die Bestätigungsbox */
+    .Bestätigungscontainer {
+        text-align: center;
+        padding: 1em;
+    }   
+
+    .Bestätigungsbox {
+        background-color: var(Bestätigungsbox);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 30px;
+        width: 50vw;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: var(--Textfarbe);
+        font-size: 24px;
+        margin: 0 0 10px;
+    }
+
+    .button {
+        display: inline-block;
+        background-color: var(--Hintergrundfarbe);
+        color: var(--Textfarbe);
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        border: 2px solid var(--Textfarbe);
+    }
+        
+    .button:hover {
+        background-color: var(--hovern);
+        color: var(--Hintergrundfarbe);
+    }
+
+    
+    
+   
+    

@@ -3,7 +3,7 @@ import styles from './stylesheets/Überuns.module.css';
 export function Überuns () {
     return (
         <>
-            <header>
+            <header className={styles.header}>
                 <h1>
                     Über uns
                 </h1>

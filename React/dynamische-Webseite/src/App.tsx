@@ -7,7 +7,7 @@ import { Überuns } from './Seiten/Überuns';
 import { Bildungsprojekt } from './Seiten/Bildungsprojekt';
 import { Naturschutz } from './Seiten/Naturschutz';
 import { Kontakt } from './Seiten/Kontakt';
-import Header from './Komponente/NAvigationsleiste';
+import { Header } from './Komponente/NAvigationsleiste';
 import { Impressum } from './Seiten/Impressum';
 import { Datenschutz } from './Seiten/Datenschutz';
 

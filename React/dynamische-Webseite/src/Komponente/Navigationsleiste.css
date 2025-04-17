@@ -14,14 +14,14 @@
  
  
 nav {
-   text-align: center; /* Zentriert Text */
-   padding: 1vh;
-   padding-top: 2vh; /* Zusätzlicher Abstand oben */
-   color: var(--Textfarbe); /* Schriftfarbe Marineblau */
-   width: 100%; /* Breite 100% des Containers */
-   margin: 0; /* Kein Außenabstand */
-   position: absolute; /* Fixiert über Seiteninhalt */
-   box-sizing: border-box;
+    text-align: center; /* Zentriert Text */
+    padding: 1vh;
+    padding-top: 2vh; /* Zusätzlicher Abstand oben */
+    color: var(--Textfarbe); /* Schriftfarbe Marineblau */
+    width: 100%; /* Breite 100% des Containers */
+    margin: 0; /* Kein Außenabstand */
+    position: absolute; /* Fixiert über Seiteninhalt */
+    box-sizing: border-box;
 }
 
  .navbar-list { /*beziet sich auf die Links*/
@@ -86,16 +86,6 @@ nav {
    padding: 0; /* Kein Innenabstand */
 }
 
-nav {
-    text-align: center; /* Zentriert Text */
-    padding: 1vh;
-    padding-top: 2vh; /* Zusätzlicher Abstand oben */
-    color: var(--Textfarbe); /* Schriftfarbe Marineblau */
-    width: 100%; /* Breite 100% des Containers */
-    margin: 0; /* Kein Außenabstand */
-    position: absolute; /* Fixiert über Seiteninhalt */
-    box-sizing: border-box;
-}
 
 .logo {
     display: flex; /* Flexibles Layout */

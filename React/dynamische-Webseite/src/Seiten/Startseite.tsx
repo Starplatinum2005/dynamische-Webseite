@@ -1,6 +1,6 @@
 
 import './stylesheets/Index.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, /*Link*/ } from 'react-router-dom'
 
 const Einführungstext:{ text: string, Überschrift: string } = {
     Überschrift: "WILLKOMMEN BEI BLUE OCEAN DIVE",
@@ -8,7 +8,7 @@ const Einführungstext:{ text: string, Überschrift: string } = {
 };
 
 export function Index(){
-    const navigate = useNavigate();
+    const navigate= useNavigate();
     return(
       <>
           <main>
@@ -49,6 +49,7 @@ export function Index(){
                   <p>Unser Bildungsprojekt</p>
                       
                     <div className="Jetzt-buchen">
+                    {/*<button><Link to="/Bildungsprojekt" aria-label="Link zum Bildungsprojekt">Bildungsprojekt</Link></button>*/}
                       <button
                         aria-label="Link zum Bildungsprojekt"
                         onClick={() => navigate('/Bildungsprojekt')}>

@@ -3,7 +3,7 @@ import './stylesheets/Kontakt.css'
 export function Kontakt (){
     return(
         <>
-            <header>
+    <header className='überuns_header'>
         <h1>Kontakt</h1>
     </header>
 

@@ -89,6 +89,6 @@ nav {
 
 .logo {
     display: flex; /* Flexibles Layout */
-    width: 5vw; /* Breite 8% des Containers */
+    width: 6vw; /* Breite 8% des Containers */
     height: auto;
 } 

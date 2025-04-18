@@ -11,6 +11,7 @@ import { Header } from './Komponente/NAvigationsleiste';
 import { Impressum } from './Seiten/Impressum';
 import { Datenschutz } from './Seiten/Datenschutz';
 import { Shop } from './Seiten/Shop';
+import {Hochzaehler} from './Seiten/Zähler';
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/Impressum' element={<Impressum />} />
           <Route path='/Datenschutz'element={<Datenschutz/>} />
           <Route path='/Bildungsprojekt' element= {<Bildungsprojekt />} /> 
+          <Route path='/Spenden' element= {<Hochzaehler />} /> 
           <Route path='/Naturschutz' element = {<Naturschutz />} /> 
           <Route path='/Shop' element = {<Shop />} /> 
         </Routes>

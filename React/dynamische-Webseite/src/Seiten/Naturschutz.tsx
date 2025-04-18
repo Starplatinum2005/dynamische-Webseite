@@ -1,4 +1,5 @@
-import './stylesheets/Naturschutzgebiet.css'
+import './stylesheets/Naturschutzgebiet.css';
+import {Hochzaehler} from './Zähler';
 
 export function Naturschutz (){
     return(
@@ -55,6 +56,7 @@ export function Naturschutz (){
             <br/>
             <p>Die Tauchschule lädt alle Interessierten ein, Teil dieses besonderen Projekts zu werden – ob durch eine Spende, aktive Mitarbeit oder einen Besuch des Naturschutzgebiets. Gemeinsam können wir die Unterwasserwelt schützen und für zukünftige Generationen bewahren.</p>
         </section>
+        <Hochzaehler />
     </main>
     </>
 );

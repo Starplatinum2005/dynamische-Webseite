@@ -1,4 +1,4 @@
-.header {
+.header_überuns {
     text-align: center; 
     margin-top: 7vh; 
     font-weight: bold; 
@@ -6,7 +6,7 @@
 }
 
 
-.Zitat {
+.Zitat_überuns {
     color: var(--Textfarbe); 
     text-align: center; 
     font-style: italic; 
@@ -15,14 +15,14 @@
     margin-top: 1em;
 }
 
-.Test {
+.Test_überuns {
     text-align: center; 
     color: var(--Unterüberschriften); 
     margin-top: 100px; 
     font-size: 40px;
 }
 
-h3 {
+.h3_überuns {
     text-align: left; 
     color: var(--Unterüberschriften);  
     font-size: 30px; 
@@ -31,7 +31,7 @@ h3 {
    
 }
 
-.text{
+.text_überuns{
     margin-left: 10%; 
     margin-right: 10%; 
     margin-bottom: 50px;

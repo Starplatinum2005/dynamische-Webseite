@@ -11,7 +11,7 @@ import { Header } from './Komponente/NAvigationsleiste';
 import { Impressum } from './Seiten/Impressum';
 import { Datenschutz } from './Seiten/Datenschutz';
 import { Shop } from './Seiten/Shop';
-import {Hochzaehler} from './Seiten/Zähler';
+import { Hochzaehler } from './Seiten/Zähler';
 
 
 

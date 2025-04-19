@@ -4,8 +4,8 @@ import {Hochzaehler} from './Zähler';
 export function Naturschutz (){
     return(
     <>
-    <main>
-        <h1> Naturschutzgebiet "Korallenreich" – Ein Projekt der Tauchschule Blue Ocean Dive</h1>
+    <main className='main_Naturschutzgebiet'>
+        <h1 className='h1_Naturschutzgebiet'> Naturschutzgebiet "Korallenreich" – Ein Projekt der Tauchschule Blue Ocean Dive</h1>
 
         <section className="Naturschutzgebiet-container">
             <img className="Naturschutzgebiet-image" src="https://cdn.pixabay.com/photo/2023/10/30/13/49/ai-generated-8352912_640.jpg" alt="Korallenriff"/>

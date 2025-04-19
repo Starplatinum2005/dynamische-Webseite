@@ -3,12 +3,12 @@ import './stylesheets/Datenschutz.css'
 export function Datenschutz (){
     return(
         <>
-        <header>
+        <header className='header_Datenschutz'>
         <h1> Datenschutz </h1>
     </header>
 
 
-    <main>
+    <main className='main_Datenschutz'>
 
 
         <p>Wir informieren Sie nachfolgend gemäß den gesetzlichen Vorgaben des Datenschutzrechts (insb. gemäß BDSG n.F. und der europäischen Datenschutz-Grundverordnung ‚DS-GVO‘) über die Art, den Umfang und Zweck der Verarbeitung personenbezogener Daten durch unser Unternehmen. Diese Datenschutzerklärung gilt auch für unsere Websites und Sozial-Media-Profile. Bezüglich der Definition von Begriffen wie etwa „personenbezogene Daten“ oder „Verarbeitung“ verweisen wir auf Art. 4 DS-GVO.</p>

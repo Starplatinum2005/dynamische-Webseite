@@ -62,7 +62,7 @@ export function Angebote (){
                 <a className="Jetzt-buchen" href="buchung.html" aria-label="zur Seite buchen"><button>Mehr dazu</button></a>
             </article>
             <article className="Angebote-Boxen">
-                <img className="Boxen-Image" src="https://cdn.pixabay.com/photo/2012/02/23/08/35/below-15685_1280.jpg" alt="Delfinschwimmen"/>
+                <img className="Boxen-Image" src="/Höhlentauchen.png" alt="Höhlentauchen"/>
                 <p>Höhlentauchen</p>
                 <a className="Jetzt-buchen" href="buchung.html" aria-label="zur Seite buchen"><button>Mehr dazu</button></a>
             </article>

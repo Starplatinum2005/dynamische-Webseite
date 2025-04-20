@@ -25,7 +25,7 @@ export function Index(){
                   <p>{Einführungstext.text}</p>
               </article>
               <a className="Bildcontainer1">
-                  <img className= "Bild-rechts" src="https://cdn.pixabay.com/photo/2015/06/17/20/54/diving-813028_640.jpg" alt="Taucherbild"/>
+                  <img className= "Bild-rechts" src="/Tauchbild_2.png" alt="Taucherbild"/>
               </a>
           </section>
   

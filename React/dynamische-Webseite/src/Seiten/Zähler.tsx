@@ -1,7 +1,7 @@
 import './stylesheets/Zähler.css';
 import {useState, useEffect} from "react"; //useState (React Hook) um einen State innerhalb der Component abzubilden
 
-const vorherigeSpende = 1000;
+const vorherigeSpende = 100;
 
 export const Hochzaehler = () =>{
     const [gesamtSpende, setGesamtSpende] = useState(vorherigeSpende); //gesamtSpende: Spendensumme, die im System gespeichert ist; useState Funktion nimmt einen initialen Zustand und eine Funktion zum Verändern entgegen

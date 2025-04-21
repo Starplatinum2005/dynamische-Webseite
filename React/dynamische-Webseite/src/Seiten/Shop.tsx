@@ -19,7 +19,6 @@ export function Shop () {
     });
 
     return (
-<<<<<<< HEAD
   <>
     
     <h1 className="shop-title">Ocean Dive Shop</h1>

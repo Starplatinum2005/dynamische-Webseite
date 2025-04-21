@@ -33,7 +33,7 @@ return () => clearInterval(timer);
 
 return (
     <div className = "spendenbox">
-       <h2>{anzeigeSpende}€ wurden gespendet</h2> 
+       <h2>{anzeigeSpende}€ bereits gespendet</h2> 
     </div>
 );
 };

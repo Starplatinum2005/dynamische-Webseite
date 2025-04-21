@@ -130,10 +130,6 @@ export function Shop () {
     🛒 Warenkorb ({cart.length})
   </a>
   </>
-=======
-        <>
-            <h1>S</h1>
-        </>
->>>>>>> d5643e7a9aa12a541cdece575fc84c94abd2bf3e
+
     )
 }

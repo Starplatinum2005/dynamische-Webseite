@@ -19,7 +19,6 @@ export function Shop () {
     });
 
     return (
-<<<<<<< HEAD
   <>
     
     <h1 className="shop-title">Ocean Dive Shop</h1>
@@ -130,10 +129,6 @@ export function Shop () {
     🛒 Warenkorb ({cart.length})
   </a>
   </>
-=======
-        <>
-            <h1>S</h1>
-        </>
->>>>>>> d5643e7a9aa12a541cdece575fc84c94abd2bf3e
+
     )
 }

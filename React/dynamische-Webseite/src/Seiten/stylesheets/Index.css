@@ -1,18 +1,4 @@
-:root{
-   --Textfarbe : #000080;
-   --Hintergrundfarbe : #f0f8ff;
-   --SeitenÜberschrift: white;/*für Überschrift von Inderx und Angebote*/
-   --Unterüberschriften: black;
-   --Navigationsleiste: rgb(8, 11, 67);
-   --Dropdownhintergrund: #f9f9f9;
-   --Dropdowntext: black;
-   --footer: white;
-   --hovern: #4040a7; /*für Navigationsleiste*/
-   --Bestätigungsbox: white;
-   --Platzhalter: #2f2e2e/*Für Eingabeformular*/   
-}
-
-body {
+.Startseite_main {
     margin: 0; /* Entfernt Standard-Außenabstand*/
     padding-top: 50px; 
     font-family: Arial, sans-serif; 
@@ -23,39 +9,10 @@ body {
     background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe (AliceBlue) */
 }
 
-h1{
+.Startseite_h1{
    color: var(--Unterüberschriften);
 }
 
-.dropdown { /*Dropdownbereich wird relativ zum Angebots link positioniert*/
-    position: relative; /* stellt sicher, dass dropdown-content relativ zu dieser Klasse positioniert wird */
-    display: inline-block; /* Zeigt Dropdown-Inhalt inline an */
-}
-
-
-.dropdown-content {
-   display: none; /* Das Dropdown-Menü wird versteckt */
-   position: absolute; /* Position unterhalb des Dropdown-Menüs */
-   top: 100%; /* Position direkt unter dem Eltern-Element */
-   left: 0; /* Links ausgerichtet */
-   background-color: var(--Dropdownhintergrund); /* Heller Hintergrund */
-   min-width: 160px; /* Mindestbreite */
-   width: 100%; /* Optional: Breite */
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Schlagschatten */
-   z-index: 1; /* Überlappung sichern */
-   padding: 0; /* Kein Innenabstand */
-}
-
-nav {
-    text-align: center; /* Zentriert Text */
-    padding: 1vh;
-    padding-top: 2vh; /* Zusätzlicher Abstand oben */
-    color: var(--Textfarbe); /* Schriftfarbe Marineblau */
-    width: 100%; /* Breite 100% des Containers */
-    margin: 0; /* Kein Außenabstand */
-    position: absolute; /* Fixiert über Seiteninhalt */
-    box-sizing: border-box;
-}
 
 .logo {
     display: flex; /* Flexibles Layout */
@@ -202,64 +159,6 @@ nav {
    height: auto; /* Höhe passt sich an */
    border-radius: 8px; /* Runde Ecken */
 }
-
-.navbar { /*grundlegendes Layout der Leiste*/
-   display: flex; /* Flexibles Layout für links und logo */
-   justify-content: space-between; /* Elemente an den Rand schieben */
-   align-items: center; /* Zentriert Elemente vertikal */
-   background-color: var(--Navigationsleiste); 
-   padding: 10px 20px; /* Innenabstand */
-   position: fixed; /* Fixiert oben auf der Seite */
-   top: 0; /* Position am oberen Rand */
-   left: 0; /* Beginn am linken Rand */
-   width: 100%; 
-   height: 15vh;
-   z-index: 1000; /* Über anderen Inhalten */
-}
-
-.navbar-list { /*beziet sich auf die Links*/
-   list-style: none; /* Entfernt Aufzählungszeichen */
-   display: flex; 
-   margin: 0; /* Kein Außenabstand */
-   white-space: nowrap; /* Kein Umbruch in der Liste */
-}
-
-
-.navbar-list a, .dropbtn { /*definiert visuelles Verhalten Links */
-   color: var(--SeitenÜberschrift); /* Weiße Schriftfarbe */
-   text-align: center; /* Zentrierter Text */
-   padding: 14px 20px; /* Innenabstand */
-   text-decoration: none; /* Keine Unterstreichung */
-   font-size: 16px; /* Schriftgröße */
-   background-color: inherit; /* Hintergrund erbt von Eltern */
-   border: none; /* Kein Rahmen */
-   cursor: pointer; /* Zeiger-Symbol */
-   display: block; /* Block-Layout */
-}
-
-.navbar-list a:hover, .dropdown:hover .dropbtn {
-   background-color: var(--hovern); /* Farbänderung bei Hover */
-   color: var(--Hintergrundfarbe);
-}
-
-
-.dropdown-content li {
-   display: block; /* Block-Layout */
-   text-align: left; /* Links ausgerichtet */
-   margin: 0; /* Kein Außenabstand */
-}
-
-.dropdown-content a {
-   color: var(--Dropdowntext); /* Schriftfarbe Schwarz */
-   padding: 12px 16px; /* Innenabstand */
-   text-decoration: none; /* Keine Unterstreichung */
-   display: block; /* Block-Layout */
-}
-
-.dropdown:hover .dropdown-content { /*wir aktiviert wenn der Dropdown Inhalt aktiviert wird*/
-   display: block; /* Zeigt Dropdown-Inhalt bei Hover */
-}
-
 
 @media (max-width: 768px) {
    .navbar-list {

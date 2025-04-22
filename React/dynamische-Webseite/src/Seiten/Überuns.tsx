@@ -22,7 +22,7 @@ export function Überuns () {
 
           
         <h3 className={styles.h3_überuns}>
-            Unsere Mission:
+            Unsere Mission:
         </h3>
 
     

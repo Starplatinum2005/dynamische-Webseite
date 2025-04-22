@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 export function Shop () {
 
-    const addToCart = (productName ) => {
+    const addToCart = (productName: unknown ) => {
       const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
       const updateCart = [...existingCart, productName];
       localStorage.setItem('cart', JSON.stringify(updateCart));
@@ -20,7 +20,7 @@ export function Shop () {
 
     return (
   <>
-    
+    <main className='Shop_main'>
     <h1 className="shop-title">Ocean Dive Shop</h1>
     <section className="category">
     <h2>Ausrüstung</h2>
@@ -128,6 +128,7 @@ export function Shop () {
   <a href="#warenkorb" className="cart-button">
     🛒 Warenkorb ({cart.length})
   </a>
+  </main>
   </>
 
     )

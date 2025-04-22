@@ -10,7 +10,7 @@ export const Hochzaehler = () =>{
     const [gesamtSpende, setGesamtSpende] = useState(vorherigeSpende); //gesamtSpende: Spendensumme, die im System gespeichert ist; useState Funktion nimmt einen initialen Zustand und eine Funktion zum Verändern entgegen
     const [anzeigeSpende, setAnzeigeSpende] = useState(0); // anzeigeSpende: aktuelle zahl (auf Bildschirm) (wird hochgezählt zur Summe)
 
-    let betrag = 110; //Simulation einer Spende (solange noch keine Spendenfunktion eingebunden ist)
+    const betrag = 110; //Simulation einer Spende (solange noch keine Spendenfunktion eingebunden ist)
     
     const Spende =(eingabe:number) =>{
     setGesamtSpende(prev => prev+eingabe); //Funktion erhöht die gesamtSpende (falls gespendet wurde)

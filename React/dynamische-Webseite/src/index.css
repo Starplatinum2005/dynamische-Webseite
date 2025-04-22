@@ -5,10 +5,15 @@
   --Unterüberschriften: black;
   --Navigationsleiste: rgb(8, 11, 67);
   --Dropdownhintergrund: #f9f9f9;
+  --navbarhöhe: 13vh;
   --Dropdowntext: black;
   --footer: white;
   --hovern: #4040a7; /*für Navigationsleiste*/
   --Bestätigungsbox: white;
-  --Platzhalter: #2f2e2e/*Für Eingabeformular*/   
+  --Platzhalter: #2f2e2e/*Für Eingabeformular*/ 
+ 
 }
 
+main {
+  margin-top: var(--navbarhöhe);
+}

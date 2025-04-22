@@ -1,9 +1,9 @@
-import styles from './stylesheets/buchung.module.css'
+import './stylesheets/buchung.css'
 
 export function Buchung (){
     return (
         <>
-        <main>
+        <main className="buchung_main">
     
         <div className="kurs-container">  
             <div className="kurs-info">

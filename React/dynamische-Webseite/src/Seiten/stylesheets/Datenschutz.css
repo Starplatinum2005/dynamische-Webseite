@@ -1,11 +1,11 @@
-header {
+.header_Datenschutz {
     text-align: center; 
     margin-top: 7vh; 
     font-weight: bold; 
     color: var(--Unterüberschriften);  
 }
 
-main{
+.main_Datenschutz{
     margin-left: 50px;
     margin-right: 50px; 
     margin-bottom: 30px;

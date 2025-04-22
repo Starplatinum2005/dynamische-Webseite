@@ -1,0 +1,28 @@
+.spendenbox{
+    border: 3px solid var(--Navigationsleiste);
+    color: var(--Navigationsleiste);
+    background-color: white;
+    padding: 1.5rem; /* Innenabstand */
+    border-radius: 10px; /* Runde Ecken */
+    box-shadow: 0 1px 15px rgba(0, 120, 150, 0.4); /* X, Y (2px nach unten), Weite-> wie verlaufen der Schatten sein soll, rgb (leicht türkis), a = 40% */
+    font-size: 1.2rem;
+    text-align: center; 
+    max-width: 500px;
+    /*margin: 2rem auto;*/
+    margin-top: 4rem;         /* Abstand nach oben */
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease-in-out;
+    /*animation: pulse 0.5s ease-in-out infinite alternate;*/
+}
+
+/*@keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+  } */ 
+
+.spendenbox:hover {
+    transform: scale(1.02);
+    box-shadow: 0 1px 25px rgba(0, 120, 150, 0.6);
+  }

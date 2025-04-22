@@ -1,10 +1,11 @@
-import './stylesheets/Naturschutzgebiet.css'
+import './stylesheets/Naturschutzgebiet.css';
+import {Hochzaehler} from './Zähler';
 
 export function Naturschutz (){
     return(
     <>
-    <main>
-        <h1> Naturschutzgebiet "Korallenreich" – Ein Projekt der Tauchschule Blue Ocean Dive</h1>
+    <main className='main_Naturschutzgebiet'>
+        <h1 className='h1_Naturschutzgebiet'> Naturschutzgebiet "Korallenreich" – Ein Projekt der Tauchschule Blue Ocean Dive</h1>
 
         <section className="Naturschutzgebiet-container">
             <img className="Naturschutzgebiet-image" src="https://cdn.pixabay.com/photo/2023/10/30/13/49/ai-generated-8352912_640.jpg" alt="Korallenriff"/>
@@ -55,6 +56,7 @@ export function Naturschutz (){
             <br/>
             <p>Die Tauchschule lädt alle Interessierten ein, Teil dieses besonderen Projekts zu werden – ob durch eine Spende, aktive Mitarbeit oder einen Besuch des Naturschutzgebiets. Gemeinsam können wir die Unterwasserwelt schützen und für zukünftige Generationen bewahren.</p>
         </section>
+        <Hochzaehler />
     </main>
     </>
 );

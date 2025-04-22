@@ -6,7 +6,7 @@ export function Header() {
   return (
     <nav className="navbar">
       <Link to="/" aria-label="Startseite">
-        <img className="logo" src="/LOGO4.png" alt="Taucher" />
+        <img className="logo" src="/LOGO6.png" alt="Taucher" />
       </Link>
 
       <ul className="navbar-list">

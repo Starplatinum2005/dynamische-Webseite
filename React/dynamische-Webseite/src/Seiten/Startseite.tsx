@@ -11,7 +11,7 @@ export function Index(){
     const navigate= useNavigate();
     return(
       <>
-          <main>
+          <main className='Startseite_main'>
           <section className="Anfangscontainer1">
               <img className="Anfangsbild1" src="/test.jpg" alt="Willkommen"/>
               <article className="Anfangstext1">
@@ -21,16 +21,16 @@ export function Index(){
 
           <section className="Abschnitt1"> 
               <article className="Textcontainer1">
-                  <h1>{Einführungstext.Überschrift}</h1>
+                  <h1 className='Startseite_h1'>{Einführungstext.Überschrift}</h1>
                   <p>{Einführungstext.text}</p>
               </article>
               <a className="Bildcontainer1">
-                  <img className= "Bild-rechts" src="https://cdn.pixabay.com/photo/2015/06/17/20/54/diving-813028_640.jpg" alt="Taucherbild"/>
+                  <img className= "Bild-rechts" src="/Tauchbild_2.png" alt="Taucherbild"/>
               </a>
           </section>
   
   
-          <h1 className="Strich">AKTUELLES</h1>
+          <h1 className="Startseite_h1 Strich">AKTUELLES</h1>
   
           <section className="Neuigkeiten">
               <article className="Thema">
@@ -66,15 +66,13 @@ export function Index(){
               <img className= "Bild-links" src="https://cdn.pixabay.com/photo/2017/01/22/18/00/cala-agulla-2000385_640.jpg" alt="Tauchen auf Mallorca"/>
           </a>
           <div className="Textcontainer2">
-              <h1 className="Strich">TAUCHEN AUF MALLORCA</h1>
+              <h1 className="Strich Startseite_h1">TAUCHEN AUF MALLORCA</h1>
               <p>Erlebe die faszinierende Unterwasserwelt Mallorcas! Die Insel bietet dir nicht nur traumhafte Strände und kristallklares Wasser, sondern auch eine beeindruckende Vielfalt an Tauchrevieren. Von bunten Korallenriffen über geheimnisvolle Höhlen bis hin zu faszinierenden Wracks – Mallorcas Unterwasserwelt hat für Anfänger und erfahrene Taucher gleichermaßen einiges zu bieten.</p>
               <p>Tauche in kleinen Gruppen an den schönsten Spots der Insel. Entdecke Meeresschildkröten, Zackenbarsche und eine beeindruckende Vielfalt an Fischen, während die Sonne die Wasseroberfläche in ein schimmerndes Lichtspiel verwandelt. Sicherheit, Spaß und nachhaltiges Tauchen stehen dabei immer im Mittelpunkt.</p>
               <p>Mallorca wartet darauf, von dir entdeckt zu werden – und wir freuen uns, dich dabei zu begleiten! Tauche mit uns ein und erlebe unvergessliche Momente unter der Wasseroberfläche.</p>
           </div>
       </span>
-  
-  
-  
+
       </main>
       
       </>

@@ -1,13 +1,13 @@
 import './stylesheets/shop.css';
-import { products } from '../data/products';
+//import { products } from '../data/products';
 import { useState } from 'react';
 
 
 
 export function Shop () {
 
-    const addToCart = (productName: unknown ) => {
-      const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+    const addToCart = (productName : unknown) => {
+      const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
       const updateCart = [...existingCart, productName];
       localStorage.setItem('cart', JSON.stringify(updateCart));
       setCart(updateCart);

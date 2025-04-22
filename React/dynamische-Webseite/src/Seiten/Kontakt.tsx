@@ -3,6 +3,7 @@ import './stylesheets/Kontakt.css'
 export function Kontakt (){
     return(
         <>
+    <main>
     <header className='Kontakt_header'>
         <h1>Kontakt</h1>
     </header>
@@ -26,6 +27,7 @@ export function Kontakt (){
             <button type="submit" className="button">Absenden</button>
         </form>
     </section>
+    </main>
         </>
     )
 }

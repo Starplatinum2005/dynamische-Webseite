@@ -1,6 +1,5 @@
 .Startseite_main {
     margin: 0; /* Entfernt Standard-Außenabstand*/
-    padding-top: 50px; 
     font-family: Arial, sans-serif; 
     display: flex; /* aktiviert Flex für  Body */
     flex-direction: column; /* Ordnet Kinder-Elemente vertikal an*/

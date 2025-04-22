@@ -1,0 +1,24 @@
+.faq-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .faq-item {
+    margin-bottom: 10px;
+  }
+  
+  .faq-question {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .faq-answer {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #fff;
+  }
+  

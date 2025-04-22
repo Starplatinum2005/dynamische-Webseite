@@ -1,10 +1,10 @@
 
 
 .spendenbox{
-    border: 3px solid var(--Navigationsleiste);
-    color: var(--Navigationsleiste);
     background-color: white;
+    color: var(--Navigationsleiste);
     padding: 1.5rem; /* Innenabstand */
+    border: 3px solid var(--Navigationsleiste);
     border-radius: 10px; /* Runde Ecken */
     box-shadow: 0 1px 15px rgba(0, 120, 150, 0.4); /* X, Y (2px nach unten), Weite-> wie verlaufen der Schatten sein soll, rgb (leicht türkis), a = 40% */
     font-size: 1.2rem;
@@ -24,7 +24,31 @@
     100% { transform: scale(1.05); }
   } */ 
 
-.spendenbox:hover {
+.spendenbox:hover{
     transform: scale(1.02);
     box-shadow: 0 1px 25px rgba(0, 120, 150, 0.6);
   }
+
+.spendenbutton{
+  background-color: var(--Navigationsleiste);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold; /*Text wird fett*/
+  cursor: pointer;  /*Mauszeiger ändert sich zu einer Hand -> signalisiert, dass man klicken kann*/
+  transition: all 0.3s ease; /*Änderungen nicht abrupt sondern weich*/
+  }
+
+.spendenbutton:hover{
+  background-color: rgba(0, 120, 150, 0.4);
+  transform: scale(1.05); /*spendenbutton wird um 5% vergrößert*/
+}
+
+.spendenhinweis{
+  color: #444;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}

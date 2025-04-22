@@ -12,12 +12,13 @@ import { Impressum } from './Seiten/Impressum';
 import { Datenschutz } from './Seiten/Datenschutz';
 import { Shop } from './Seiten/Shop';
 import { Hochzaehler } from './Seiten/Zähler';
-
+import { ScrollToTop } from './Funktionen/ScrollToTop';
 
 
 function App() {
   return (
     <>
+    <ScrollToTop/>
     <Header/>
       <main>
         <Routes>

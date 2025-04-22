@@ -1,94 +1,93 @@
-.navbar { /*grundlegendes Layout der Leiste*/
-    display: flex; /* Flexibles Layout für links und logo */
-    justify-content: space-between; /* Elemente an den Rand schieben */
-    align-items: center; /* Zentriert Elemente vertikal */
-    background-color: var(--Navigationsleiste); 
-    padding: 10px 20px; /* Innenabstand */
-    position: fixed; /* Fixiert oben auf der Seite */
-    top: 0; /* Position am oberen Rand */
-    left: 0; /* Beginn am linken Rand */
-    width: 100%; 
-    height: 13vh;
-    z-index: 1000; /* Über anderen Inhalten */
- }
- 
- 
-nav {
-    text-align: center; /* Zentriert Text */
-    padding: 1vh;
-    padding-top: 2vh; /* Zusätzlicher Abstand oben */
-    color: var(--Textfarbe); /* Schriftfarbe Marineblau */
-    width: 100%; /* Breite 100% des Containers */
-    margin: 0; /* Kein Außenabstand */
-    position: absolute; /* Fixiert über Seiteninhalt */
-    box-sizing: border-box;
+.navbar { /* Container für Logo + Links */
+   display: flex;                   
+   justify-content: space-between;  /* Logo links, Links rechts */
+   align-items: center;             /* vertikale Zentrierung aller Items */
+   background-color: var(--Navigationsleiste);
+   padding: 0 20px;                 /* nur horizontaler Innenabstand */
+   position: fixed; top: 0; left: 0;
+   width: 100%;
+   height: 13vh;                    /* du kannst hier auch px oder % nehmen */
+   z-index: 1000;
 }
 
- .navbar-list { /*beziet sich auf die Links*/
-    list-style: none; /* Entfernt Aufzählungszeichen */
-    display: flex; 
-    margin: 0; /* Kein Außenabstand */
-    white-space: nowrap; /* Kein Umbruch in der Liste */
- }
- 
- 
- .navbar-list a, .dropbtn { /*definiert visuelles Verhalten Links */
-    color: var(--SeitenÜberschrift); /* Weiße Schriftfarbe */
-    text-align: center; /* Zentrierter Text */
-    padding: 14px 20px; /* Innenabstand */
-    text-decoration: none; /* Keine Unterstreichung */
-    font-size: 16px; /* Schriftgröße */
-    background-color: inherit; /* Hintergrund erbt von Eltern */
-    border: none; /* Kein Rahmen */
-    cursor: pointer; /* Zeiger-Symbol */
-    display: block; /* Block-Layout */
- }
- 
- .navbar-list a:hover, .dropdown:hover .dropbtn {
-    background-color: var(--hovern); /* Farbänderung bei Hover */
-    color: var(--Hintergrundfarbe);
- }
- 
- 
- .dropdown-content li {
-    display: block; /* Block-Layout */
-    text-align: left; /* Links ausgerichtet */
-    margin: 0; /* Kein Außenabstand */
- }
- 
- .dropdown-content a {
-    color: var(--Dropdowntext); /* Schriftfarbe Schwarz */
-    padding: 12px 16px; /* Innenabstand */
-    text-decoration: none; /* Keine Unterstreichung */
-    display: block; /* Block-Layout */
- }
- 
- .dropdown:hover .dropdown-content { /*wir aktiviert wenn der Dropdown Inhalt aktiviert wird*/
-    display: block; /* Zeigt Dropdown-Inhalt bei Hover */
- }
- 
- .dropdown { /*Dropdownbereich wird relativ zum Angebots link positioniert*/
-    position: relative; /* stellt sicher, dass dropdown-content relativ zu dieser Klasse positioniert wird */
-    display: inline-block; /* Zeigt Dropdown-Inhalt inline an */
+/* Der Link, der das Logo umgibt */
+.navbar > a {
+   display: flex;                   /* macht das <a> selbst zur Flexbox */
+   align-items: center;             /* zentriert das <img> */
+   height: 100%;                    /* füllt die komplette Navbar-Höhe */
+   padding: 0;                      /* entfernt ggf. Default-Padding */
 }
 
+/* Das Logo selbst */
+.logo {
+   height: 100%;                     /* skaliert relativ zur Navbar (13vh) */
+   padding-top: 1em;
+   width: auto;                     /* behält Proportionen */
+   flex-shrink: 0;                  /* schrumpft nie kleiner als 80% */
+}
+
+/* Liste der Navigationslinks */
+.navbar-list {
+   display: flex;
+   align-items: center;             /* zentriert jedes <li> vertikal */
+   height: 100%;                    /* volle Navbar-Höhe */
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   white-space: nowrap;
+}
+
+/* Die eigentlichen Links (und Dropdown-Button) */
+.navbar-list a,
+.dropbtn {
+   display: flex;                   /* Flexbox, um innen zu zentrieren */
+   align-items: center;             /* Text vertikal zentrieren */
+   justify-content: center;         /* Text horizontal zentrieren */
+   height: 100%;                    /* volle Navbar-Höhe */
+   padding: 12px 20px;                 /* nur horizontaler Abstand */
+   font-size: 16px;
+   color: var(--SeitenÜberschrift);
+   text-decoration: none;
+   background-color: inherit;
+   border: none;
+   cursor: pointer;
+}
+
+/* Hover‑Zustand */
+.navbar-list a:hover,
+.dropdown:hover .dropbtn {
+   background-color: var(--hovern);
+   color: var(--Hintergrundfarbe);
+}
+
+/* Dropdown-Grundgerüst (unverändert) */
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
 
 .dropdown-content {
-   display: none; /* Das Dropdown-Menü wird versteckt */
-   position: absolute; /* Position unterhalb des Dropdown-Menüs */
-   top: 100%; /* Position direkt unter dem Eltern-Element */
-   left: 0; /* Links ausgerichtet */
-   background-color: var(--Dropdownhintergrund); /* Heller Hintergrund */
-   min-width: 160px; /* Mindestbreite */
-   width: 100%; /* Optional: Breite */
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Schlagschatten */
-   z-index: 1; /* Überlappung sichern */
-   padding: 0; /* Kein Innenabstand */
+   display: none;
+   position: absolute;
+   top: 100%; left: 0;
+   background-color: var(--Dropdownhintergrund);
+   min-width: 160px;
+   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+   z-index: 1;
+   padding: 0;
 }
 
+.dropdown-content li {
+   margin: 0;
+}
 
-.logo {
-    display: flex; /* Flexibles Layout */
-    width: 5vw; /* Breite 8% des Containers */
-    height: auto;
-} 
+.dropdown-content a {
+   display: block;
+   padding: 12px 16px;
+   color: var(--Dropdowntext);
+   text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}

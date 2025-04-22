@@ -2,7 +2,7 @@
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #001f3f;
-    color: #fff;
+    color: var(--SeitenÜberschrift);
     overflow-x: hidden;
   }
   

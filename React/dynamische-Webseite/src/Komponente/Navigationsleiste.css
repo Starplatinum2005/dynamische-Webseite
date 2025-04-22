@@ -1,4 +1,4 @@
-.navbar { /* Container für Logo + Links */
+.navbar { 
    display: flex;                   
    justify-content: space-between;  /* Logo links, Links rechts */
    align-items: center;             /* vertikale Zentrierung aller Items */
@@ -6,19 +6,19 @@
    padding: 0 20px;                 /* nur horizontaler Innenabstand */
    position: fixed; top: 0; left: 0;
    width: 100%;
-   height: var(--navbarhöhe);                    /* du kannst hier auch px oder % nehmen */
+   height: var(--navbarhöhe);                    /* Im root Ordner als Variable gespeichert */
    z-index: 1000;
 }
 
-/* Der Link, der das Logo umgibt */
-.navbar > a {
+
+.navbar  a {  /*oder .navbar > a   */
    display: flex;                   /* macht das <a> selbst zur Flexbox */
    align-items: center;             /* zentriert das <img> */
    height: 100%;                    /* füllt die komplette Navbar-Höhe */
    padding: 0;                      /* entfernt ggf. Default-Padding */
 }
 
-/* Das Logo selbst */
+
 .logo {
    height: 100%;                     /* skaliert relativ zur Navbar (13vh) */
    padding-top: 1em;
@@ -53,14 +53,13 @@
    cursor: pointer;
 }
 
-/* Hover‑Zustand */
 .navbar-list a:hover,
 .dropdown:hover .dropbtn {
    background-color: var(--hovern);
    color: var(--Hintergrundfarbe);
 }
 
-/* Dropdown-Grundgerüst (unverändert) */
+
 .dropdown {
    position: relative;
    display: inline-block;

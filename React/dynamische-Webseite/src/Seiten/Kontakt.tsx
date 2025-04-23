@@ -3,10 +3,11 @@ import './stylesheets/Kontakt.css'
 export function Kontakt (){
     return(
         <>
+ 
     <header className='Kontakt_header'>
         <h1>Kontakt</h1>
     </header>
-
+    <main>
     <section className="Kontakt">
         <h2>Kontaktformular</h2>
         <form action="Sendebestätigung.html" className="Kontaktformular">
@@ -26,6 +27,7 @@ export function Kontakt (){
             <button type="submit" className="button">Absenden</button>
         </form>
     </section>
+    </main>
         </>
     )
 }

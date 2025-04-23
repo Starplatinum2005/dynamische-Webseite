@@ -8,7 +8,6 @@ type Produkt = {
   price: number
 }
 
-
 export function Shop () {
 
     const addToCart = (productName : Produkt) => {

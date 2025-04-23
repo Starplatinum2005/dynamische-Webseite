@@ -64,7 +64,10 @@ const FAQ = () => {
   ];
 
   return (
+    <>
+    <main>
     <div className="faq-container">
+      <h2 className='h2_FAQ'>FAQ - Häufig gestellte Fragen</h2>
       {faqs.map((faq, index) => (
         <div key={index} className="faq-item">
           <div className="faq-question" onClick={() => toggleFAQ(index)}>
@@ -73,7 +76,10 @@ const FAQ = () => {
           {activeIndex === index && <div className="faq-answer">{faq.answer}</div>}
         </div>
       ))}
+      <div className='faq-not-found'>Frage nicht gefunden? Kontaktieren Sie uns telefonisch oder per Email!</div>
     </div>
+    </main>
+    </>
   );
 };
 

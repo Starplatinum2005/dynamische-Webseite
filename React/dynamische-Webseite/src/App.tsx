@@ -5,6 +5,7 @@ import { Index } from './Seiten/Startseite';
 import { Angebote } from './Seiten/Angebote';
 import { Überuns } from './Seiten/Überuns';
 import { Bildungsprojekt } from './Seiten/Bildungsprojekt';
+import { Buchung } from './Seiten/Buchung';
 import { Naturschutz } from './Seiten/Naturschutz';
 import { Kontakt } from './Seiten/Kontakt';
 import { Header } from './Komponente/NAvigationsleiste';
@@ -33,6 +34,7 @@ function App() {
           <Route path='/Spenden' element= {<Hochzaehler />} /> 
           <Route path='/Naturschutz' element = {<Naturschutz />} /> 
           <Route path='/Shop' element = {<Shop />} /> 
+          <Route path='/Buchung' element = {<Buchung />} />
           <Route path='/FAQ' element = {<FAQ />} /> 
         </Routes>
       </main>

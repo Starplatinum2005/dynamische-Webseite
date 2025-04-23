@@ -64,6 +64,8 @@ const FAQ = () => {
   ];
 
   return (
+    <>
+    <main>
     <div className="faq-container">
       <h2 className='h2_FAQ'>FAQ - Häufig gestellte Fragen</h2>
       {faqs.map((faq, index) => (
@@ -76,6 +78,8 @@ const FAQ = () => {
       ))}
       <div className='faq-not-found'>Frage nicht gefunden? Kontaktieren Sie uns telefonisch oder per Email!</div>
     </div>
+    </main>
+    </>
   );
 };
 

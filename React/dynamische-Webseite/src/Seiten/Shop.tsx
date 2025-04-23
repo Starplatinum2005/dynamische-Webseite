@@ -1,6 +1,6 @@
 import './stylesheets/shop.css';
-//import { products } from '../data/products';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 type Produkt = {
   id: number,
@@ -9,18 +9,17 @@ type Produkt = {
 }
 
 export function Shop () {
+  const navigate = useNavigate();
+  const [cart, setCart] = useState<Produkt[]>([]);
 
-    const addToCart = (productName : Produkt) => {
-      const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
-      const updateCart = [...existingCart, productName];
-      localStorage.setItem('cart', JSON.stringify(updateCart));
-      setCart(updateCart);
-    };
 
-    const [cart, setCart] = useState (() => {
-      const savedCart = localStorage.getItem('cart');
-      return savedCart ? JSON.parse(savedCart) : [];
-    });
+  const addToCart = (product: Produkt) => {
+    const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
+    existingCart.push(product);
+    localStorage.setItem('cart', JSON.stringify(existingCart));
+    setCart(existingCart);
+  };
+    
 
     return (
   <>
@@ -129,9 +128,10 @@ export function Shop () {
     </div>
   </section>
 
-  <a href="#warenkorb" className="cart-button">
-    🛒 Warenkorb ({cart.length})
-  </a>
+  <button className="cart-button" onClick={() => navigate('/Warenkorb')}>
+  🛒 Warenkorb ({cart.length})
+</button>
+
   </main>
   </>
 

@@ -2,11 +2,15 @@ import './stylesheets/shop.css';
 //import { products } from '../data/products';
 import { useState } from 'react';
 
-
+type Produkt = {
+  id: number,
+  name: string,
+  price: number
+}
 
 export function Shop () {
 
-    const addToCart = (productName : unknown) => {
+    const addToCart = (productName : Produkt) => {
       const existingCart = JSON.parse(localStorage.getItem('cart') || '[]');
       const updateCart = [...existingCart, productName];
       localStorage.setItem('cart', JSON.stringify(updateCart));

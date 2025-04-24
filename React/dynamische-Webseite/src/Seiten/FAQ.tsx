@@ -11,7 +11,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'Was kostet ein Tauchkurs bei Blue Ocean Dive?',
-      answer: 'Die Preise variieren je nach Kurs. Ein Anfängerkurs kostet etwa 300-500 Euro.',
+      answer: 'Ein Tauchkurs bei Blue Ocean Dive bietet eine Vielzahl von Erlebnissen, von Schnuppertauchen für Anfänger bis hin zu anspruchsvollem Höhlentauchen für Abenteuerlustige, und die Preise variieren je nach Kurs zwischen 60 € und 300 €.',
     },
     {
       question: 'Welche Ausrüstung wird für die Tauchkurse bereitgestellt?',
@@ -26,12 +26,24 @@ const FAQ = () => {
       answer: 'Wir bieten eine Vielzahl von Kursen an, darunter Schnuppertauchen, Anfänger-Tauchkurse, Spezialkurse wie Höhlentauchen und Korallentauchen sowie Professional Kurse.',
     },
     {
+      question: 'Welche Voraussetzungen muss ich erfüllen, um an einem Tauchkurs teilzunehmen?',
+      answer: '',
+    },
+    {
+      question: 'Gibt es spezielle Kurse für Kinder oder Jugendliche?',
+      answer: '',
+    },
+    {
       question: 'Wann finden die Tauchkurse statt?',
       answer: 'Unsere Kurse sind den jahreszeitlichen Bedingungen angepasst. SSI Anfänger-Tauchkurse und SSI Spezialkurse finden von April bis Oktober statt, während Trockentauchen und Workshops hauptsächlich in den Wintermonaten angeboten werden.',
     },
     {
       question: 'Kann ich auch als Tourist an einem Tauchkurs teilnehmen?',
       answer: 'Ja, unsere Tauchkurse sind auch für Touristen geeignet. Wir bieten spezielle Pakete für Urlauber an.',
+    },
+    {
+      question: 'Welche Zertifizierungen kann ich bei Blue Ocean Dive erwerben?',
+      answer: '',
     },
     {
       question: 'Wie kann ich einen Tauchkurs bei Blue Ocean Dive buchen?',

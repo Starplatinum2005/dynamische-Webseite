@@ -15,11 +15,11 @@ const FAQ = () => {
     },
     {
       question: 'Welche Ausrüstung wird für die Tauchkurse bereitgestellt?',
-      answer: 'Unsere Tauchschule verfügt über modernstes Ausbildungs-Equipment. Die Pool-Ausbildung findet in unserem 6 Meter tiefen Indoor-Tauchturm statt, und wir stellen die gesamte notwendige Ausrüstung zur Verfügung.',
+      answer: 'Wir stellen die komplette Tauchausrüstung zur Verfügung, einschließlich Tauchanzug, Maske, Schnorchel, Flossen, Atemregler, Tarierweste und Tauchflasche.',
     },
     {
       question: 'Wo finden die Tauchkurse statt?',
-      answer: 'Unsere Tauchkurse finden an verschiedenen Standorten statt, darunter lokale Seen und Meeresgebiete.',
+      answer: 'Unsere Tauchkurse finden in unserem Tauchcenter auf Mallorca statt. Theorie-Unterricht erfolgt in unseren modern ausgestatteten Schulungsräumen, und die Pool-Ausbildung in unserem 6 Meter tiefen Indoor-Tauchturm.',
     },
     {
       question: 'Welche Tauchkurse bietet Blue Ocean Dive an?',
@@ -27,11 +27,11 @@ const FAQ = () => {
     },
     {
       question: 'Welche Voraussetzungen muss ich erfüllen, um an einem Tauchkurs teilzunehmen?',
-      answer: '',
+      answer: 'Für die meisten Kurse ist eine grundlegende Schwimmfähigkeit erforderlich. Für fortgeschrittene Kurse können zusätzliche Voraussetzungen gelten, die wir im Vorfeld mit dir besprechen.',
     },
     {
       question: 'Gibt es spezielle Kurse für Kinder oder Jugendliche?',
-      answer: '',
+      answer: 'Ja, wir bieten spezielle Tauchkurse für Kinder und Jugendliche an, die auf ihre Bedürfnisse und Fähigkeiten abgestimmt sind.',
     },
     {
       question: 'Wann finden die Tauchkurse statt?',
@@ -39,27 +39,27 @@ const FAQ = () => {
     },
     {
       question: 'Kann ich auch als Tourist an einem Tauchkurs teilnehmen?',
-      answer: 'Ja, unsere Tauchkurse sind auch für Touristen geeignet. Wir bieten spezielle Pakete für Urlauber an.',
+      answer: 'Ja, Touristen sind bei uns herzlich willkommen. Unsere Kurse sind so gestaltet, dass sie auch für Urlauber gut geeignet sind.',
     },
     {
       question: 'Welche Zertifizierungen kann ich bei Blue Ocean Dive erwerben?',
-      answer: '',
+      answer: 'Bei uns kannst du verschiedene Zertifizierungen erwerben, von Anfänger-Zertifikaten bis hin zu professionellen Qualifikationen wie dem Divemaster.',
     },
     {
       question: 'Wie kann ich einen Tauchkurs bei Blue Ocean Dive buchen?',
-      answer: 'Sie können einen Kurs direkt über unsere Website buchen oder uns telefonisch kontaktieren.',
+      answer: 'Du kannst einen Tauchkurs direkt über unsere Website buchen oder uns telefonisch oder per E-Mail kontaktieren.',
     },
     {
       question: 'Wie sorgt Blue Ocean Dive für die Sicherheit der Taucher?',
-      answer: 'Ihre Sicherheit hat für uns höchste Priorität. Wir haben eigene TSC Sicherheits-Standards entwickelt, die dabei helfen, Kurse und Tauchaktivitäten so sicher wie möglich durchzuführen.',
+      answer: 'Sicherheit hat bei uns höchste Priorität. Wir haben eigene Sicherheitsstandards entwickelt und verwenden modernstes Ausbildungs-Equipment. Unsere erfahrenen Tauchlehrer sorgen dafür, dass alle Tauchgänge sicher und kontrolliert ablaufen.',
     },
     {
       question: 'Was ist das Naturschutzgebiet "Korallenreich"?',
-      answer: 'Das Naturschutzgebiet "Korallenreich" ist ein Projekt von Blue Ocean Dive, das einen sicheren Lebensraum für marine Arten schafft und das Bewusstsein für den Schutz der Ozeane stärkt.',
+      answer: 'Das "Korallenreich" ist ein von uns initiiertes Naturschutzprojekt, das einen sicheren Lebensraum für bedrohte Meereslebewesen schafft und das Bewusstsein für den Schutz der Ozeane stärkt.',
     },
     {
       question: 'Wie kann ich mich am Naturschutzprojekt beteiligen?',
-      answer: 'Besucher und Kursteilnehmer haben die Möglichkeit, an Workshops und speziellen Tauchgängen teilzunehmen, die sich auf Naturschutz konzentrieren. Dabei lernen sie, wie wichtig der Schutz der Unterwasserwelt ist.',
+      answer: 'Du kannst dich aktiv an unserem Naturschutzprojekt beteiligen, indem du an unseren Aufräumaktionen teilnimmst oder durch Spenden zur Korallenaufforstung beiträgst.',
     },
   ];
 

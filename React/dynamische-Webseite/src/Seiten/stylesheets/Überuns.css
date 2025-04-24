@@ -1,19 +1,31 @@
-.header_überuns {
-    text-align: center; 
-    margin-top: var(--navbarhöhe); 
+.Überschrift_links_überuns {
+    text-align: left; 
+    margin-top: 150px; 
+    margin-left: 8%;
+    margin-bottom: 20px;
     font-weight: bold; 
     color: var(--Unterüberschriften);  
 }
 
-
-.Zitat_überuns {
+.text_links_überuns{
+    margin-left: 8%; 
+    margin-right: 45%; 
+    margin-bottom: 50px;
+    text-align: justify; 
     color: var(--Textfarbe); 
-    text-align: center; 
-    font-style: italic; 
-    font-size: 30px ;
-    font-family: 'Helvetica', serif; 
-    margin-top: 1em;
+    font-size: 20px; 
+    line-height: 1.5;
 }
+
+.Bild_Mission_überuns {
+    margin-top: 10%; /* Abstand oben */
+    margin-left: 50%; /* Maximale Breite 100% */
+    width: 30%; /* Breite 100% des Containers */
+    height: auto; /* Höhe passt sich an */
+    border-radius: 8px; /* Runde Ecken */
+    object-fit: cover; /* Bild wird skaliert und zugeschnitten */
+}
+
 
 .Test_überuns {
     text-align: center; 
@@ -29,14 +41,4 @@
     margin-left: 70px; 
     margin-bottom: 0px;
    
-}
-
-.text_überuns{
-    margin-left: 10%; 
-    margin-right: 10%; 
-    margin-bottom: 50px;
-    text-align: justify; 
-    color: var(--Textfarbe); 
-    font-size: 20px; 
-    line-height: 1.5;
 }

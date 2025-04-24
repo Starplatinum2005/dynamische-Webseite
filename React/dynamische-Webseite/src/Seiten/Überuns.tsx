@@ -3,32 +3,16 @@ import './stylesheets/Überuns.css';
 export function Überuns () {
     return (
         <>
-            <header className="header_überuns">
-                <h1>
-                    Über uns
-                </h1>
-            </header>    
-
-        <section className="Zitat_überuns">
-            <h1>
-                "Tauchen erleben. Leidenschaft teilen. Gemeinschaft stärken."
-            </h1>    
-        </section>
-
         <main>
-            <h2 className="Test_überuns">
-                Ein herzliches Willkommen bei Blue Ocean Dive!
-            </h2> 
+            <header className="Überschrift_links_überuns">
+                <h1> Unsere Mission </h1>
+            </header> 
 
-          
-        <h3 className="h3_überuns">
-            Unsere Mission:
-        </h3>
-
-    
-            <p className="text_überuns">
+            <p className="text_links_überuns">
             Unsere Mission ist es, Menschen die faszinierende Unterwasserwelt näherzubringen und sie auf ihrem Weg zum selbstbewussten Taucher zu begleiten. Mit uns tauchst du nicht nur in die Tiefe der Meere, sondern auch in eine Gemeinschaft voller Abenteuerlust, Respekt vor der Natur und purer Begeisterung für das Tauchen.
             </p>
+
+            <img className="Bild_Mission_überuns" src="/Tauchbild_1.png" alt="Unsere Mission"/>
     
            <h3 className="h3_überuns">
             Unsere Geschichte:

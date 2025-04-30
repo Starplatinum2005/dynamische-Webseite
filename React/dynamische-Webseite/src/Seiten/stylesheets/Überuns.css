@@ -1,44 +1,50 @@
-.Überschrift_links_überuns {
-    text-align: left; 
-    margin-top: 150px; 
-    margin-left: 8%;
-    margin-bottom: 20px;
-    font-weight: bold; 
-    color: var(--Unterüberschriften);  
-}
-
-.text_links_überuns{
-    margin-left: 8%; 
-    margin-right: 45%; 
-    margin-bottom: 50px;
-    text-align: justify; 
-    color: var(--Textfarbe); 
-    font-size: 20px; 
-    line-height: 1.5;
-}
-
-.Bild_Mission_überuns {
-    margin-top: 10%; /* Abstand oben */
-    margin-left: 50%; /* Maximale Breite 100% */
-    width: 30%; /* Breite 100% des Containers */
-    height: auto; /* Höhe passt sich an */
-    border-radius: 8px; /* Runde Ecken */
-    object-fit: cover; /* Bild wird skaliert und zugeschnitten */
-}
-
-
-.Test_überuns {
-    text-align: center; 
-    color: var(--Unterüberschriften); 
-    margin-top: 100px; 
-    font-size: 40px;
-}
-
-.h3_überuns {
-    text-align: left; 
-    color: var(--Unterüberschriften);  
-    font-size: 30px; 
-    margin-left: 70px; 
-    margin-bottom: 0px;
-   
-}
+.about-us {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px;
+    background-color: #0077b6;
+    color: white;
+  }
+  
+  .header-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .mission, .history, .team, .values, .special, .interactive {
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  .section-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: #0077b6;
+  }
+  
+  .interactive-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .interactive-content a {
+    color: #0077b6;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+  
+  .interactive-content blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 10px 0;
+  }  

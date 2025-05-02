@@ -43,11 +43,23 @@ export function Warenkorb() {
         </ul>
       );
     }
+    
+
+
+    const total = cart.reduce((sum, item) => sum + item.price, 0)
+
+    
 
     return (
         <main className="cart-main">
           <h1 className="cart-title">🛒 Dein Warenkorb</h1>
           {content}
+
+          {cart.length > 0 && (
+            <div className="cart-total">
+              <strong>Gesamt:</strong> €{total.toFixed(2)}
+            </div>
+          )}
     
           {cart.length > 0 && (
             <button className="clear-cart-button" onClick={clearCart}>

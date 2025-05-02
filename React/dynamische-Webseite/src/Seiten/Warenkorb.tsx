@@ -20,6 +20,12 @@ export function Warenkorb() {
         setCart([]);
       };
 
+      const removeFromCart = (indexToRemove: number) => {
+        const newCart = cart.filter((_, index) => index !== indexToRemove);
+        localStorage.setItem('cart', JSON.stringify(newCart));
+        setCart(newCart);
+      };
+
     let content;
     if (cart.length === 0) {
       content = <p className="cart-empty">Warenkorb ist leer.</p>;
@@ -28,7 +34,10 @@ export function Warenkorb() {
         <ul className="cart-list">
           {cart.map((item, index) => (
             <li key={index} className="cart-item">
-              {item.name} – €{item.price.toFixed(2)}
+              <span>{item.name} – €{item.price.toFixed(2)}</span>
+              <button className="remove-btn" onClick={ () => removeFromCart(index)}>
+                Entfernen
+              </button>
             </li>
           ))}
         </ul>

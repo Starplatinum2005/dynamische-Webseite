@@ -19,12 +19,27 @@ export function Überuns() {
         </section>
       </article>
 
+      <section className="stats-container">
+        <div className="stat-item">
+          <h3>17+ Jahre</h3>
+          <p>Erfahrung</p>
+        </div>
+        <div className="stat-item">
+          <h3>1000+</h3>
+          <p>Zufriedene Taucher</p>
+        </div>
+        <div className="stat-item">
+          <h3>50+</h3>
+          <p>Tauchspots</p>
+        </div>
+      </section>
+
       <article className="section-container">
         <section className="section-content">
           <h2>Unsere Geschichte</h2>
           <p>Tauchen ist für uns mehr als nur ein Sport – es ist eine Lebensphilosophie. Gegründet wurde unsere "Blue Ocean Dive"-Tauchschule im Jahr 2006 von vier leidenschaftlichen Tauchern, die ihre Begeisterung für das Unterwasserleben mit anderen teilen wollten. Was mit kleinen Kursen begann, ist heute eine renommierte Tauchschule.</p>
         </section>
-        <img src="/Tauchladen_3.png" alt="Geschichte unserer Tauchschule" className="section-image" />
+        <img src="/Tauchladen_3.2.png" alt="Tauchladen Blue Ocean Dive" className="section-image" />
       </article>
 
       <article className="section-container">

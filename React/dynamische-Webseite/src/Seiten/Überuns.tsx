@@ -43,7 +43,7 @@ export function Überuns() {
       </article>
 
       <article className="section-container">
-        <img src="/Tauchbild_4.png" alt="Unser Team" className="section-image" />
+        <img src="/Gruppenfoto_1.1.png" alt="Gruppenfoto unserer Tauchlehrer an einem Strand" className="section-image" />
         <section className="section-content">
           <h2>Unser Team</h2>
           <p>Unser erfahrenes Team aus zertifizierten Tauchlehrern sorgt dafür, dass jeder Tauchgang sicher, lehrreich und unvergesslich wird. Wir sind stolz darauf, eine familiäre und unterstützende Atmosphäre zu schaffen, in der jeder Teilnehmer in seinem eigenen Tempo lernen kann.</p>
@@ -55,7 +55,7 @@ export function Überuns() {
           <h2>Unsere Philosophie</h2>
           <p>Bei Blue Ocean Dive steht die Sicherheit und das Wohlbefinden unserer Taucher an erster Stelle. Wir arbeiten ausschließlich mit modernster Ausrüstung und bieten flexible Kurszeiten an. Unsere kleine Gruppengröße gewährleistet eine individuelle Betreuung und maximalen Lernerfolg.</p>
         </section>
-        <img src="/Tauchbild_5.png" alt="Unsere Philosophie" className="section-image" />
+        <img src="/Philosophie_1.png" alt="Zwei Taucher unter Wasser mit modernster Tauchausrüstung" className="section-image" />
       </article>
 
       <section className="interactive">

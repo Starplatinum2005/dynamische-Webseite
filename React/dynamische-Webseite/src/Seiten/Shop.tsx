@@ -29,8 +29,13 @@ export function Shop () {
     <h2>Ausrüstung</h2>
     <div className="grid">
       <div className="card">
+        <div className = 'info-wrapper'>
+          <span className = 'info-icon'>ℹ️</span>
+          <div className='info-badge'>Die ProDive Tauchmaske bietet dir kristallklare Sicht unter Wasser dank gehärtetem Glas und beschlagfreier Beschichtung. Ihr komfortabler Silikonrand sorgt für einen dichten Sitz ohne Druckstellen – ideal für lange Tauchgänge und Schnorcheltouren. Perfekt für Einsteiger und Profis.</div>
+        </div>
+
         <span className="badge">Bestseller</span>
-        <img src="/tauchmaske.png" alt="" />
+        <img src="/tauchmaske.png" alt="Tauchmaske" />
         <h3 className = 'shop_h3'>Tauchmaske</h3>
         <div className="price">€49,99</div>
         <button className="btn" onClick={() => addToCart({id: 1, name: 'ProDive Maske', price: 49.99})}>In den Warenkorb</button>
@@ -65,7 +70,7 @@ export function Shop () {
     <div className="grid">
       <div className="card">
         <span className="badge">Neu</span>
-        <img src="/gps-tracker.png" alt="DiveTech Pro"/>
+        <img src="/gps-tracker.png" alt="GPS-System"/>
         <h3 className = 'shop_h3'>GPS-System</h3>
         <div className="price">€249,00</div>
         <button className="btn" onClick={() => addToCart({id: 1, name: 'GPS-System', price: 249.00})}>In den Warenkorb</button>
@@ -113,14 +118,14 @@ export function Shop () {
 
       <div className="card">
         <span className="badge">Sale</span>
-        <img src="/sauerstoff.png" alt="Snorkel Pro Set"/>
+        <img src="/sauerstoff.png" alt="Sauerstoff-Flasche"/>
         <h3 className = 'shop_h3'>Sauerstoff-Flasche</h3>
         <div className="price">€79,00</div>
         <button className="btn" onClick={() => addToCart({id: 1, name: 'Sauerstoff-Flasche', price: 79.00})}>In den Warenkorb</button>
       </div>
       
       <div className="card">
-        <img src="/rucksack.png" alt="DryBag"/>
+        <img src="/rucksack.png" alt="Backpack"/>
         <h3 className = 'shop_h3'>Backpack 40l</h3>
         <div className="price">€44,90</div>
         <button className="btn" onClick={() => addToCart({id: 1, name: 'Backpack 40l', price: 44.90})}>In den Warenkorb</button>

@@ -114,4 +114,59 @@
     background-color: #0097a7;
     transform: scale(1.05);
   }
+
+  .card {
+    position: relative;
+  }
+  
+  
+  .info-wrapper {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+
+  .info-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: #00bcd4;
+  }
+  
+
+  .info-badge {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    background-color: #f0f8ff;
+    color: #001f3f;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-size: 13px;
+    min-width: 200px;
+    max-width: 400px;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    z-index: 10;
+  }
+
+  .info-wrapper:hover .info-badge {
+    display: block;
+  }
+
+  .card p {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+  }
+  
+  
+  
+
   

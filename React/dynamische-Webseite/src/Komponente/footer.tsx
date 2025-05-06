@@ -21,7 +21,7 @@ export function Footer(){
                 <p><Link to="/FAQ" aria-label="Link zum FAQ">FAQ</Link></p>
            </section>
            <section className="dritteSpalte">
-               <p>Folgen Sie uns auf</p>
+               <p>Folgen Sie uns auf:</p>
                <section className="social-icons">
                     <a href="https://instagram.com" aria-label="Link zu Instagram" className="icon-container">
                         <img src="/Instagram Logo.webp" alt="Instagram Logo" className="icon-image"/>

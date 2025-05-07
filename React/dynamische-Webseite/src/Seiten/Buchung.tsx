@@ -17,7 +17,7 @@ export function Buchung (){
             <div className="kurs-info">
                 <h2>Schnuppertauchen</h2>
                 <p>Der perfekte Einstieg in die Unterwasserwelt für Neugierige und Anfänger. Probieren Sie das Tauchen unter Anleitung aus!</p>
-                <p className="kurs-preis">Preis: 20 €</p>
+                <p className="kurs-preis">Preis: 60 €</p>
             </div>
         </div>
 
@@ -27,7 +27,7 @@ export function Buchung (){
             <div className="kurs-info">
                 <h2>Delfintauchen</h2>
                 <p>Erleben Sie ein unvergessliches Abenteuer beim Tauchen mit Delfinen. Perfekt für Naturliebhaber.</p>
-                <p className="kurs-preis">Preis: 50 €</p>
+                <p className="kurs-preis">Preis: 110 €</p>
             </div>
         </div>
 
@@ -36,18 +36,16 @@ export function Buchung (){
             <div className="kurs-info">
                 <h2>Korallentauchen</h2>
                 <p>Entdecken Sie die faszinierende Welt der Korallenriffe. Geeignet für erfahrene Taucher.</p>
-                <p className="kurs-preis">Preis: 45 €</p>
+                <p className="kurs-preis">Preis: 80 €</p>
             </div>
         </div>
-
-
 
         <div className="kurs-container">
             <img className="kurs-bild" src="https://cdn.pixabay.com/photo/2015/03/11/15/19/divers-668777_1280.jpg" alt="Tauchschein"/>
             <div className="kurs-info">
                 <h2>Tauchschein</h2>
                 <p>Erlernen Sie die Grundlagen des Tauchens mit einem professionellen Trainer. Ideal für Anfänger und Fortgeschrittene.</p>
-                <p className="kurs-preis">Preis: 75 €</p>
+                <p className="kurs-preis">Preis: 300 €</p>
             </div>
         </div>
 
@@ -56,7 +54,7 @@ export function Buchung (){
             <div className="kurs-info">
                 <h2>Höhlentauchen</h2>
                 <p>Erkunden Sie die faszinierenden Höhlen unter Wasser und erleben Sie eine einzigartige Herausforderung.</p>
-                <p className="kurs-preis">Preis: 35 €</p>
+                <p className="kurs-preis">Preis: 130 €</p>
             </div>
         </div>
 
@@ -78,11 +76,11 @@ export function Buchung (){
 
                 <label htmlFor="kurs">Wählen Sie Ihren Kurs</label>
                 <select id="kurs" required >
-                    <option >Schnuppertauchen (20€ p.P.)</option>
-                    <option>Delfintauchen (50€ p.P.)</option>
-                    <option>Korallentauchen (45€ p. P.)</option>
-                    <option>Tauchschein (75€ p.P.)</option>
-                    <option>Höhlentauchen (35€ p.P.)</option>
+                    <option >Schnuppertauchen (60€ p.P.)</option>
+                    <option>Delfintauchen (110€ p.P.)</option>
+                    <option>Korallentauchen (80€ p. P.)</option>
+                    <option>Tauchschein (300€ p.P.)</option>
+                    <option>Höhlentauchen (130€ p.P.)</option>
                 </select><br/>
 
                 <label htmlFor="datum">Datum</label>

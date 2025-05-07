@@ -1,13 +1,13 @@
 import './stylesheets/Angebote.css'
-import { useNavigate } from 'react-router-dom'
+import { Boxen} from '../Objects/Angebote';
+import { Angebotsbox } from '../Komponente/Angebotsbox';
 
 
 export function Angebote (){
-    const navigate = useNavigate();
     return(
         <>
         <main>
-            <section className="Anfangscontainer"> 
+        <section className="Anfangscontainer"> 
             <img className="Anfangsbild" src="/Angebote Bild.jpg" alt="Unsere Angebote"/>
             <header className="Anfangstext">
                 <h2>Aktuelle Tauchkurse und Angebote</h2>
@@ -39,35 +39,15 @@ export function Angebote (){
         </span>
 
         <section className="Angebote-main" >
-            <article className="Angebote-Boxen">
-                <img className="Boxen-Image" src="https://cdn.pixabay.com/photo/2012/02/23/08/57/woman-15840_1280.jpg" alt="Delfinschwimmen"/>
-                <p>Schnuppertauchen</p>
-                   <a className="Jetzt-buchen" aria-label="Zur Seite Buchen"><button onClick={() => navigate('/Buchung')}>Mehr dazu</button></a>
-            </article>
-            <article className="Angebote-Boxen">
-                <img className="Boxen-Image" src="https://cdn.pixabay.com/photo/2015/06/11/23/45/dolphin-806359_1280.jpg" alt="Delfinschwimmen"/>
-                <p>Delfintauchen</p>
-                <a className="Jetzt-buchen" aria-label="Zur Seite Buchen"><button onClick={() => navigate('/Buchung')}>Mehr dazu</button></a>
-            </article>
-            <article className="Angebote-Boxen">
-                <img className="Boxen-Image" src="https://cdn.pixabay.com/photo/2016/04/26/22/35/coral-1355474_1280.jpg" alt="Delfinschwimmen"/>
-                <p>Korallentauchen</p>
-                <a className="Jetzt-buchen" aria-label="Zur Seite Angebote buchen"><button onClick={() => navigate('/Buchung')}>Mehr dazu</button></a>
-            </article>
+            <Angebotsbox angebot={Boxen.Schnuppertauchen} />
+            <Angebotsbox angebot={Boxen.Delfintauchen} />
+            <Angebotsbox angebot={Boxen.Korallentauchen} />
         </section>
 
 
         <section className="Angebote-main"> 
-            <article className="Angebote-Boxen">
-                <img className="Boxen-Image" src="https://cdn.pixabay.com/photo/2015/03/11/15/19/divers-668777_1280.jpg" alt="Delfinschwimmen"/>
-                <p>Tauchschein</p>
-                <a className="Jetzt-buchen" aria-label="zur Seite buchen"><button onClick={() => navigate('/Buchung')}>Mehr dazu</button></a>
-            </article>
-            <article className="Angebote-Boxen">
-                <img className="Boxen-Image" src="/Höhlentauchen.png" alt="Höhlentauchen"/>
-                <p>Höhlentauchen</p>
-                <a className="Jetzt-buchen" aria-label="zur Seite buchen"><button onClick={() => navigate('/Buchung')}>Mehr dazu</button></a>
-            </article>
+            <Angebotsbox angebot={Boxen.Schnuppertauchen} />
+            <Angebotsbox angebot={Boxen.Höhlentauchen} />
         </section>
         </main>
     </>

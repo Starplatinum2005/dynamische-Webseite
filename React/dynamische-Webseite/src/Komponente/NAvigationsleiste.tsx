@@ -1,8 +1,9 @@
-
 import './Navigationsleiste.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Header() {
+  const location = useLocation();
+  
   return (
     <nav className="navbar">
       <Link to="/" aria-label="Startseite">
@@ -10,9 +11,23 @@ export function Header() {
       </Link>
 
       <ul className="navbar-list">
-        <li><Link to="/" aria-label="Startseite">Home</Link></li>
+        <li>
+          <Link 
+            to="/" 
+            aria-label="Startseite"
+            className={location.pathname === '/' ? 'active' : ''}
+          >
+            Home
+          </Link>
+        </li>
         <li className="dropdown">
-          <Link to="/Angebote" className="dropbtn" aria-label="Angebote">Angebote</Link>
+          <Link 
+            to="/Angebote" 
+            className={`dropbtn ${location.pathname === '/Angebote' ? 'active' : ''}`}
+            aria-label="Angebote"
+          >
+            Angebote
+          </Link>
           <ul className="dropdown-content">
             <li><Link to="/Angebote">Schnuppertauchen</Link></li>
             <li><Link to="/Angebote">Delfintauchen</Link></li>
@@ -21,13 +36,34 @@ export function Header() {
             <li><Link to="/Angebote">Höhlentauchen</Link></li>
           </ul>
         </li>
-        <li><Link to="/Shop" aria-label="Shop">Shop</Link></li>
-        <li><Link to="/Überuns" aria-label="Über uns">Über Uns</Link></li>
-        <li><Link to="/Kontakt" aria-label="Kontakt">Kontakt</Link></li>
+        <li>
+          <Link 
+            to="/Shop" 
+            className={location.pathname === '/Shop' ? 'active' : ''}
+            aria-label="Shop"
+          >
+            Shop
+          </Link>
+        </li>
+        <li>
+          <Link 
+            to="/uberuns" 
+            className={location.pathname === '/uberuns' ? 'active' : ''}
+            aria-label="Über uns"
+          >
+            Über Uns
+          </Link>
+        </li>
+        <li>
+          <Link 
+            to="/Kontakt" 
+            className={location.pathname === '/Kontakt' ? 'active' : ''}
+            aria-label="Kontakt"
+          >
+            Kontakt
+          </Link>
+        </li>
       </ul>
     </nav>
   );
 }
-
-  
-export default Header;

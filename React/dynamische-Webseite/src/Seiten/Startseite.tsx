@@ -1,4 +1,3 @@
-
 import './stylesheets/Index.css'
 import { useNavigate, /*Link*/ } from 'react-router-dom'
 

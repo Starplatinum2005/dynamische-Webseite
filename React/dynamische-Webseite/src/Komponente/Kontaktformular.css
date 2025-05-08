@@ -1,0 +1,55 @@
+.Kontaktformular {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Kontakt textarea {
+    font-family: Arial, sans-serif;
+}
+
+.Kontaktformular label {
+    font-weight: bold;
+    color: var(--Textfarbe);
+}
+
+.Kontaktformular input,    /*Wird auf alle input und textarea tags angewendet*/
+.Kontaktformular textarea {
+    padding: 10px;
+    border: 2px solid var(--Textfarbe);
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--Hintergrundfarbe);
+}
+
+.Kontaktformular input:focus, /*wird auf das input oder textarea tag angwendet, dass vom Nutzer verwendet wird(draufgeklickt wurde)*/
+.Kontaktformular textarea:focus {
+    outline: none;
+    border-color: var(--Textfarbe);
+    box-shadow: 0 0 5px rgba(0, 0, 128, 0.5);   /*Farbe vom Rand ändert sich wenn man in das Feld klickt*/
+}
+
+.button {    /* Styling für Den Button zum ABschicken wurde aber nicht verlinkt  */
+    padding: 10px;
+    font-size: 16px;
+    color: var(--Textfarbe);
+    background-color: var(--Hintergrundfarbe);
+    border: 2px solid var(--Textfarbe);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {    /*Styling wenn der Mauszeiger über den Button schwebt*/
+    background-color: var(--Textfarbe);
+    color: var(--Hintergrundfarbe);
+}
+
+/* Styling für Platzhalter-Text */
+.Kontaktformular input::placeholder,
+.Kontaktformular textarea::placeholder {
+    color: var(--Platzhalter); /* Farbe für den Platzhaltertext */
+}
+

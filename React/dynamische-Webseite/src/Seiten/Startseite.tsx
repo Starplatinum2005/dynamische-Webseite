@@ -1,9 +1,8 @@
-
 import './stylesheets/Index.css'
 import { useNavigate, /*Link*/ } from 'react-router-dom'
 
 const Einführungstext:{ text: string, Überschrift: string } = {
-    Überschrift: "WILLKOMMEN BEI BLUE OCEAN DIVE",
+    Überschrift: "BLUE OCEAN DIVE",
     text: "Tauche ein in eine Welt voller Abenteuer, Entspannung und einzigartiger Entdeckungen. Bei Blue Ocean Dive verbinden wir Leidenschaft für das Meer mit professioneller Ausbildung und individuellen Tauch-Erlebnissen. Ob du deine ersten Atemzüge unter Wasser erleben möchtest oder ein erfahrener Taucher bist, bei uns findest du genau das richtige Angebot.Unsere Tauchschule steht für höchste Sicherheitsstandards, erfahrene und herzliche Tauchlehrer sowie unvergessliche Momente in einer faszinierenden Unterwasserwelt. Zudem liegt uns der Schutz der Meere besonders am Herzen. Gemeinsam setzen wir uns für nachhaltiges Tauchen und den Erhalt unserer Ozeane ein.    Willkommen an Bord – entdecke mit uns die Wunder der Tiefsee!",
 };
 
@@ -11,13 +10,14 @@ export function Index(){
     const navigate= useNavigate();
     return(
       <>
-          <main className='Startseite_main'>
-          <section className="Anfangscontainer1">
-              <img className="Anfangsbild1" src="/test.jpg" alt="Willkommen"/>
-              <article className="Anfangstext1">
-                  <h2>BLUE OCEAN DIVE</h2>
-              </article>
-          </section>
+          <main className="startseite">
+      <header className="header">
+        <img src="/Testt3.png" alt="Taucher unter Wasser" className="header-image" />
+        <section className="header-content">
+          <h1>Willkommen bei Blue Ocean Dive</h1>
+          <p>"Tauche ein in die Welt der Unterwasser-Abenteuer"</p>
+        </section>
+      </header>
 
           <section className="Abschnitt1"> 
               <article className="Textcontainer1">

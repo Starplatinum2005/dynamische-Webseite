@@ -1,3 +1,39 @@
+.startseite {
+   font-family: 'Helvetica', Arial, sans-serif;
+   color: var(--Textfarbe);
+   line-height: 1.8;
+   max-width: 1400px;
+   margin: 0 auto;
+ }
+ 
+ .header {
+   position: relative;
+   height: 90vh;
+   overflow: hidden;
+   margin-bottom: 60px;
+ }
+ 
+ .header-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: brightness(0.7);
+ }
+ 
+ .header-content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   color: white;
+   z-index: 2;
+   padding: 20px;
+   background: rgba(0, 0, 0, 0.3); /* Fügt einen leicht transparenten Hintergrund hinzu */
+   border-radius: 10px;
+   backdrop-filter: blur(5px); /* Fügt einen Blur-Effekt hinzu */
+ }
+
 .Startseite_main {
     margin: 0; /* Entfernt Standard-Außenabstand*/
     font-family: Arial, sans-serif; 

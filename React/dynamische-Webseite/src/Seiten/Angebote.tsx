@@ -1,6 +1,7 @@
 import './stylesheets/Angebote.css'
-import { Boxen} from '../Objects/Angebote';
+import { Boxen, Info} from '../Objects/Angebote';
 import { Angebotsbox } from '../Komponente/Angebotsbox';
+import { InfoBoxen } from '../Komponente/InfoBoxen';
 
 
 export function Angebote (){
@@ -16,22 +17,10 @@ export function Angebote (){
 
 
         <section className="Angebote-Allgemeines">
-            <article className="box">
-                <h2>ALLGEMEINES</h2>
-                <p>Als eine der bekanntesten und renommiertesten Tauchschulen Mallorca mit über 40 Jahren Erfahrung bieten wir Ihnen das professionelle Umfeld für eine gute und fundierte Tauchausbildung.</p>
-            </article>
-            <article className="box">
-                <h2>SICHERHEIT</h2>
-                <p>Ihre Sicherheit hat für uns immer höchste Priorität. Aus diesem Grund haben wir eigene TSC Sicherheits-Standards entwickelt, die dabei helfen, Kurse und Tauchaktivitäten so sicher wie möglich durchzuführen.</p>
-            </article>
-            <article className="box">
-                <h2>KURS-ANGEBOT</h2>
-                <p>Tauchen ist ein Outdoor-Sport ist, daher ist unser Kursprogramm den jeweiligen jahreszeitlichen Bedingungen angepasst. Trockentauchen und Workshops bieten wir hauptsächlich in den Wintermonaten an. SSI Anfänger-Tauchkurse und SSI Spezialkurse finden von April bis Oktober statt. Unser umfangreiches Kursangebot umfasst Schnuppertauchen, Anfänger-Tauchkurse, Trainings, Personal Training, Spezialkurse und Professional Kurse.</p>
-            </article>
-            <article className="box">
-                <h2>LOGISTIK</h2>
-                <p>Unser Tauchcenter verfügt über eine hervorragende Logistik und modernstes Ausbildungs-Equipment. Theorie-Unterricht findet in einem unserer drei modern ausgestatteten Schulungsräume statt. Die Pool-Ausbildung findet in unserem 6 Meter tiefen Indoor-Tauchturm statt. Zeitraubende Fahrten zu öffentlichen Hallen- oder Freibädern entfallen, das spart Zeit und Geld.</p>
-            </article>
+            <InfoBoxen info={Info.Allgemeines} />
+            <InfoBoxen info={Info.Sicherheit} />
+            <InfoBoxen info={Info.Kurs_Angebote} />
+            <InfoBoxen info={Info.Sicherheit} />
         </section>
 
         <span className="Tauch-Angebote" id="Kurse"> 

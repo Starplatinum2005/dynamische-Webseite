@@ -1,0 +1,9 @@
+.box {
+    border: 2px solid var(--Textfarbe); /* Rahmen in Marineblau */
+    background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe AliceBlue */
+    padding: 20px; /* Innenabstand */
+    margin-bottom: 20px; /* Abstand nach unten */
+    border-radius: 10px; /* Runde Ecken */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Schlagschatten für 3D-Effekt */
+    font-size: 1.2rem;
+}

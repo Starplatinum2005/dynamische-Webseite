@@ -1,8 +1,16 @@
 import './Navigationsleiste.css'
 import { Link, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
 
 export function Header() {
   const location = useLocation();
+  const [username, setUsername] = useState<string | null>(null)
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('username');
+    setUsername(storedUser);
+  }, [location]);
   
   return (
     <nav className="navbar">
@@ -63,6 +71,14 @@ export function Header() {
             Kontakt
           </Link>
         </li>
+        <li>
+  {username ? (
+    <span className='span'>Willkommen, {username}!</span>
+  ) : (
+    <Link to="/login" aria-label="LogIn">Log In</Link>
+  )}
+</li>
+
       </ul>
     </nav>
   );

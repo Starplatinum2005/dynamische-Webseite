@@ -46,6 +46,12 @@
     text-align: center; /* Text zentrieren */
 }
 
+.Angebote-Boxen img {
+    width: 100%;    /* Bild nimmt die volle Breite der Box ein */
+    height: 200px;  /* Fixe Höhe für alle Bilder */
+    object-fit: cover; /* Bild wird proportional skaliert und zugeschnitten */
+}
+
 .Angebote-main {
     margin-top: 5%; 
     display: flex; /* Flexbox wird aktiviert */

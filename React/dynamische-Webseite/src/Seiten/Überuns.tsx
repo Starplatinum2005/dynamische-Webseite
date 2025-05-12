@@ -4,10 +4,9 @@ export function Überuns() {
   return (
     <main className="about-us">
       <header className="header">
-        <img src="/Testt3.png" alt="Taucher unter Wasser" className="header-image" />
+        <img src="/Landschaft1.png" alt="Taucher unter Wasser" className="header-image" />
         <section className="header-content">
-          <h1>Willkommen bei Blue Ocean Dive</h1>
-          <p>"Tauche ein in die Welt der Unterwasser-Abenteuer"</p>
+          <h1>Über Blue Ocean Dive</h1>
         </section>
       </header>
 

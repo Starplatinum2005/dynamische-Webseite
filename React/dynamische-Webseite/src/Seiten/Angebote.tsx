@@ -29,7 +29,7 @@ export function Angebote (){
 
         <section className="Angebote-main" >
             <Angebotsbox angebot={Boxen.Delfintauchen} />
-            <Angebotsbox angebot={Boxen.Höhlentauchen} />
+            <Angebotsbox angebot={Boxen.Schnuppertauchen} />
             <Angebotsbox angebot={Boxen.Korallentauchen} />
         </section>
 

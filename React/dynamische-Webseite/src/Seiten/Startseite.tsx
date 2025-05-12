@@ -3,7 +3,7 @@ import { useNavigate, /*Link*/ } from 'react-router-dom'
 
 const Einführungstext:{ text: string, Überschrift: string } = {
     Überschrift: "BLUE OCEAN DIVE",
-    text: "Tauche ein in eine Welt voller Abenteuer, Entspannung und einzigartiger Entdeckungen. Bei Blue Ocean Dive verbinden wir Leidenschaft für das Meer mit professioneller Ausbildung und individuellen Tauch-Erlebnissen. Ob du deine ersten Atemzüge unter Wasser erleben möchtest oder ein erfahrener Taucher bist, bei uns findest du genau das richtige Angebot.Unsere Tauchschule steht für höchste Sicherheitsstandards, erfahrene und herzliche Tauchlehrer sowie unvergessliche Momente in einer faszinierenden Unterwasserwelt. Zudem liegt uns der Schutz der Meere besonders am Herzen. Gemeinsam setzen wir uns für nachhaltiges Tauchen und den Erhalt unserer Ozeane ein.    Willkommen an Bord – entdecke mit uns die Wunder der Tiefsee!",
+    text: "Tauche ein in eine Welt voller Abenteuer, Entspannung und einzigartiger Entdeckungen. Bei Blue Ocean Dive verbinden wir Leidenschaft für das Meer mit professioneller Ausbildung und individuellen Tauch-Erlebnissen. Ob du deine ersten Atemzüge unter Wasser erleben möchtest oder ein erfahrener Taucher bist, bei uns findest du genau das richtige Angebot. Unsere Tauchschule steht für höchste Sicherheitsstandards, erfahrene und herzliche Tauchlehrer sowie unvergessliche Momente in einer faszinierenden Unterwasserwelt. Zudem liegt uns der Schutz der Meere besonders am Herzen. Gemeinsam setzen wir uns für nachhaltiges Tauchen und den Erhalt unserer Ozeane ein. Willkommen an Bord – entdecke mit uns die Wunder der Tiefsee!",
 };
 
 export function Index(){

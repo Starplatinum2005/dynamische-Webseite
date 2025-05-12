@@ -21,7 +21,13 @@ export function Login() {
         placeholder="Benutzername"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        required
       />
+      <input 
+      type="password"
+      placeholder="Passwort"
+      required
+      ></input>
       <button onClick={handleLogin}>Einloggen</button>
     </main>
   );

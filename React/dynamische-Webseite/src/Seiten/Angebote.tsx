@@ -18,8 +18,8 @@ export function Angebote (){
 
         <section className="Angebote-Allgemeines">
             <InfoBoxen info={Info.Allgemeines} />
-            <InfoBoxen info={Info.Sicherheit} />
             <InfoBoxen info={Info.Kurs_Angebote} />
+            <InfoBoxen info={Info.Logistik} />
             <InfoBoxen info={Info.Sicherheit} />
         </section>
 
@@ -28,8 +28,8 @@ export function Angebote (){
         </span>
 
         <section className="Angebote-main" >
-            <Angebotsbox angebot={Boxen.Schnuppertauchen} />
             <Angebotsbox angebot={Boxen.Delfintauchen} />
+            <Angebotsbox angebot={Boxen.Höhlentauchen} />
             <Angebotsbox angebot={Boxen.Korallentauchen} />
         </section>
 

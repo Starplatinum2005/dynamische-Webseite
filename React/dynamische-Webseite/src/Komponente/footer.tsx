@@ -33,8 +33,8 @@ export function Footer(){
                     </a>
                 </section>
             </section>
-        </section>
-    </footer>   
+            </section>
+        </footer>   
     </>
     )
 };

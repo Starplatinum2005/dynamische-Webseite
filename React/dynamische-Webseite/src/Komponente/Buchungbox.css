@@ -1,0 +1,27 @@
+.kurs-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    padding: 3%;
+    background: var(--SeitenÜberschrift);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 5%;
+    margin-left: 5%;
+    
+}
+
+.kurs-bild {
+    width: 25%;
+    border-radius: 8px;
+    
+}
+
+.kurs-info {
+    margin-left: 5vw;
+}
+
+.kurs-preis {
+    font-size: 125%;
+    font-weight: bold;
+}

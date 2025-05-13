@@ -6,12 +6,12 @@ import { InfoBoxen } from '../Komponente/InfoBoxen';
 
 export function Angebote (){
     return(
-        <>
+    <>
         <main>
         <section className="Anfangscontainer"> 
             <img className="Anfangsbild" src="/Angebote Bild.jpg" alt="Unsere Angebote"/>
             <header className="Anfangstext">
-                <h2>Aktuelle Tauchkurse und Angebote</h2>
+                <h2>{Info.Header}</h2>
             </header>
         </section>
 
@@ -24,7 +24,7 @@ export function Angebote (){
         </section>
 
         <span className="Tauch-Angebote" id="Kurse"> 
-            <h1 className="Strich">UNSERE TAUCH-ANGEBOTE</h1>
+            <h1 className="Strich">{Boxen.Header}</h1>
         </span>
 
         <section className="Angebote-main" >

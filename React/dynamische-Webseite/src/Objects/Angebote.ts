@@ -1,6 +1,7 @@
 export type Angebotsboxen = {
     Kurs: string,
-    src: string
+    src: string,
+    alt: string
 }
 export type InfoBox = {
     h2: string,
@@ -8,6 +9,7 @@ export type InfoBox = {
 }
 
 export const Info = {
+    Header: "Aktuelle Tauchkurse und Angebote",
     Allgemeines: {
         h2: "ALLGEMEINES",
         p: "Als eine der bekanntesten und renommiertesten Tauchschulen Mallorca mit über 40 Jahren Erfahrung bieten wir Ihnen das professionelle Umfeld für eine gute und fundierte Tauchausbildung."
@@ -26,26 +28,30 @@ export const Info = {
     }
 }
 export const Boxen = {
+    Header: "UNSERE TAUCH-ANGEBOTE",
     Schnuppertauchen: { 
         Kurs: "Schnuppertauchen",
         src:"https://cdn.pixabay.com/photo/2012/02/23/08/57/woman-15840_1280.jpg" ,
-        alt: "Delfinschwimmen",
+        alt: "Schnuppertauchen",
     },
     Delfintauchen: { 
         Kurs: "Delfintauchen",
         src:"https://cdn.pixabay.com/photo/2015/06/11/23/45/dolphin-806359_1280.jpg",
-        
+        alt:"Delfintauchen"
     },
     Korallentauchen: {
         Kurs: "Korallentauchen",
         src: "https://cdn.pixabay.com/photo/2016/04/26/22/35/coral-1355474_1280.jpg",
+        alt: "Korallentauchen"
     },
     Tauchschein: {
         Kurs: "Tauchschein",
-        src: "https://cdn.pixabay.com/photo/2015/03/11/15/19/divers-668777_1280.jpg"
+        src: "https://cdn.pixabay.com/photo/2015/03/11/15/19/divers-668777_1280.jpg",
+        alt: "Tauchschein"
     },
     Höhlentauchen: {
         Kurs: "Höhlentauchen",
-        src: "/Höhlentauchen.png"
+        src: "/Höhlentauchen.png",
+        alt: "Höhlentauchen"
     }
 }

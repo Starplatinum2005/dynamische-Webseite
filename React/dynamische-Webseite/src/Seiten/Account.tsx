@@ -13,7 +13,7 @@ export function Login() {
       localStorage.setItem('password', password);
       navigate('/');
     }else {
-    alert('Bitte Benutzername und Passwort eingeben.');
+      alert('Bitte Benutzername und Passwort eingeben.');
     }
   };
 
@@ -28,11 +28,11 @@ export function Login() {
         required
       />
       <input 
-      type="password"
-      placeholder="Passwort"
-      value={password}
-      onChange={(e) => setPassword(e.target.value)}
-      required
+        type="password"
+        placeholder="Passwort"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
       />
       <button onClick={handleLogin}>Einloggen</button>
     </main>

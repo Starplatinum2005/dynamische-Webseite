@@ -4,7 +4,7 @@ import { Buchungsbox } from '../Komponente/Buchungbox'
 
 export function Buchung (){
     return (
-        <>
+    <>
         <main className="buchung_main">
     
         <div className="kurs-container">  

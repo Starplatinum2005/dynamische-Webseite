@@ -4,12 +4,16 @@ import './stylesheets/account.css';
 
 export function Login() {
   const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    if (username.trim()) {
+    if (username.trim() && password.trim()) {
       localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
       navigate('/');
+    }else {
+    alert('Bitte Benutzername und Passwort eingeben.');
     }
   };
 
@@ -26,8 +30,10 @@ export function Login() {
       <input 
       type="password"
       placeholder="Passwort"
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
       required
-      ></input>
+      />
       <button onClick={handleLogin}>Einloggen</button>
     </main>
   );

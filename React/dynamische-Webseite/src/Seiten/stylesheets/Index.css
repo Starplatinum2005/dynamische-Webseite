@@ -46,6 +46,7 @@
 
 .Startseite_h1{
    color: var(--Unterüberschriften);
+   font-size: 50px;
 }
 
 .Neuigkeiten {
@@ -53,7 +54,8 @@
    justify-content: space-around; /* Elemente gleichmäßig verteilen */
    gap: 20px; /* Lücke zwischen Elementen */
    flex-wrap: wrap; /* Elemente umbrechen bei Platzmangel */
-   margin: 5%; /* Außenabstand */
+   margin-right: 15%; /* Außenabstand */
+   margin-left: 15%;
 }
 
 .Thema {
@@ -97,59 +99,6 @@
     display: block; /* Block-Layout */
 }
 
-.Anfangstext1 {
-   position: absolute; /* Position absolut im Container und relativ zu welcome container1 */
-   top: 50%; /* Zentriert vertikal */
-   left: 50%; /* Zentriert horizontal */
-   transform: translate(-50%, -50%); /* Perfekte Zentrierung */
-   background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter schwarzer Hintergrund */
-   color: var(--SeitenÜberschrift); /* Weiße Schriftfarbe */
-   padding: 20px 40px; /* Innenabstand */
-   border-radius: 8px; /* Runde Ecken */
-   text-align: center; /* Zentrierter Text */
-   font-size: 1.5rem; /* relative Schriftgröße */
-   box-shadow: 0px 4px 10px rgba(0, 0, 0, 1); /* Schlagschatten */
-}
-
-/* .Anfangscontainer1 {
-   position: relative;
-   width: 100%;
-   height: 90vh;
-   margin: 0;
-   overflow: hidden;
-}
-
-.Anfangsbild1 {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   filter: brightness(0.7);
-   transform: scale(1.02);
-   transition: transform 8s ease;
-}
-
-.Anfangscontainer1:hover .Anfangsbild1 {
-   transform: scale(1.1);
-}
-
-.Anfangstext1 {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%); 
-   background-color: rgba(0, 0, 0, 0.5);
-   color: var(--SeitenÜberschrift); 
-   padding: 30px 60px;
-   backdrop-filter: blur(5px);
-   border: 1px solid rgba(255, 255, 255, 0.2);
-   animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-   from { opacity: 0; transform: translate(-50%, -60%); }
-   to { opacity: 1; transform: translate(-50%, -50%); }
-} */
-
 .Abschnitt1 {
    display: flex; /* Flexibles Layout */
    align-items: flex-start; /* Elemente oben ausrichten */
@@ -166,6 +115,10 @@
 .Textcontainer1 p {
    margin-bottom: 5%; /* Abstand nach unten */
    line-height: 1.6; /* Zeilenhöhe */
+   margin-top: 25px;
+   font-size: 17px;
+   margin-right: 40px;
+   text-align: justify;
 }
 
 .Bildcontainer1 {
@@ -177,10 +130,19 @@
 }
 
 .Bild-rechts {
-   margin-top: 10%; /* Abstand oben */
    max-width: 100%; /* Maximale Breite 100% */
    height: auto; /* Höhe passt sich an */
-   border-radius: 8px; /* Runde Ecken */
+   object-fit: cover;
+   border-radius: 15px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   transition: all 0.5s ease;
+   filter: brightness(0.95);
+}
+
+.Bild-rechts:hover {
+  transform: scale(1.03) translateY(-5px);
+  filter: brightness(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .Abschnitt2 {
@@ -224,7 +186,16 @@
    margin-top: 10%; /* Abstand oben */
    max-width: 100%; /* Maximale Breite 100% */
    height: auto; /* Höhe passt sich an */
-   border-radius: 8px; /* Runde Ecken */
+   border-radius: 15px; /* Runde Ecken */
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   transition: all 0.5s ease;
+   filter: brightness(0.95);
+}
+
+.Bild-links:hover {
+  transform: scale(1.03) translateY(-5px);
+  filter: brightness(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {

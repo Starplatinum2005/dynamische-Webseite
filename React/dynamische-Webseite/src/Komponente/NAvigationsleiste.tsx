@@ -73,7 +73,7 @@ export function Header() {
         </li>
         <li>
   {username ? (
-    <span className='span'>Willkommen, {username}!</span>
+    <Link to="/loggedin" className='span'>Willkommen, {username}!</Link>
   ) : (
     <Link to="/login" aria-label="LogIn">Log In</Link>
   )}

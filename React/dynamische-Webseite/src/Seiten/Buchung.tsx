@@ -4,7 +4,7 @@ import { Buchungsbox } from '../Komponente/Buchungbox'
 
 export function Buchung (){
     return (
-        <>
+    <>
         <main className="buchung_main">
     
         <div className="kurs-container">  
@@ -20,7 +20,7 @@ export function Buchung (){
         <Buchungsbox Kurse={BuchungInfo.Tauchschein} />
         <Buchungsbox Kurse={BuchungInfo.Höhlentauchen} />
 
-        <section className="Buchungs-Formular">
+        <section className="Buchungs-Formular" id="Test">
 
             <h1 className="Strich">Buchen Sie Ihren Tauchkurs</h1>
             <form className="Formular">

@@ -37,11 +37,11 @@ export function Header() {
             Angebote
           </Link>
           <ul className="dropdown-content">
-            <li><Link to="/Angebote">Schnuppertauchen</Link></li>
-            <li><Link to="/Angebote">Delfintauchen</Link></li>
-            <li><Link to="/Angebote">Korallentauchen</Link></li>
-            <li><Link to="/Angebote">Tauchschein</Link></li>
-            <li><Link to="/Angebote">Höhlentauchen</Link></li>
+            <li><Link to="/Buchung#Schnuppertauchen">Schnuppertauchen</Link></li>
+            <li><Link to="/Buchung#Delfintauchen">Delfintauchen</Link></li>
+            <li><Link to="/Buchung#Korallentauchen">Korallentauchen</Link></li>
+            <li><Link to="/Buchung#Tauchschein">Tauchschein</Link></li>
+            <li><Link to="/Buchung#Höhlentauchen">Höhlentauchen</Link></li>
           </ul>
         </li>
         <li>
@@ -73,9 +73,11 @@ export function Header() {
         </li>
         <li>
   {username ? (
-    <span className='span'>Willkommen, {username}!</span>
+    <Link to="/loggedin" className='span'>Willkommen, {username}!</Link>
   ) : (
-    <Link to="/login" aria-label="LogIn">Log In</Link>
+<Link to="/login" aria-label="LogIn" style={{ fontSize: '1.5rem', color: '#3498db' }}>
+  👤
+</Link>
   )}
 </li>
 

@@ -2,8 +2,8 @@ import './stylesheets/Datenschutz.css'
 
 export function Datenschutz (){
     return(
-        <>
-        <header className='header_Datenschutz'>
+    <>
+    <header className='header_Datenschutz'>
         <h1> Datenschutz </h1>
     </header>
 

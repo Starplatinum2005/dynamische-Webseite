@@ -47,6 +47,22 @@
 .Startseite_h1{
    color: var(--Unterüberschriften);
    font-size: 50px;
+   position: relative;
+}
+
+ .Startseite_h1::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: black;
+  transition: width 0.3s ease;
+ }
+
+.Startseite_h1:hover::after {
+   width: 100%;
 }
 
 .Neuigkeiten {
@@ -119,6 +135,7 @@
    font-size: 17px;
    margin-right: 40px;
    text-align: justify;
+   color: var(--Textfarbe);
 }
 
 .Bildcontainer1 {
@@ -158,9 +175,13 @@
 }
 
 .Textcontainer2 p {
-   margin-bottom: 5%; /* Abstand unten */
+   margin-bottom: 3%; /* Abstand unten */
    line-height: 1.6; /* Zeilenhöhe */
+   margin-top: 25px;
+   font-size: 17px;
+   margin-left: 40px;
    color: var(--Textfarbe); /* Marineblau */
+   text-align: justify;
 }
 
 .Bildcontainer2 {

@@ -9,11 +9,15 @@ export function Login() {
 
   const handleLogin = () => {
     if (username.trim() && password.trim()) {
+      if (password.length < 8) {
+        alert('Das Passwort muss mindestens 8 Zeichen lang sein.');
+        return;
+      }
       localStorage.setItem('username', username);
       localStorage.setItem('password', password);
       navigate('/');
-    }else {
-    alert('Bitte Benutzername und Passwort eingeben.');
+    } else {
+      alert('Bitte Benutzername und Passwort eingeben.');
     }
   };
 
@@ -27,13 +31,14 @@ export function Login() {
         onChange={(e) => setUsername(e.target.value)}
         required
       />
-      <input 
-      type="password"
-      placeholder="Passwort"
-      value={password}
-      onChange={(e) => setPassword(e.target.value)}
-      required
-      />
+      <input
+        type="password"
+        placeholder="Passwort (min. 8 Zeichen)"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+/>
+
       <button onClick={handleLogin}>Einloggen</button>
     </main>
   );

@@ -2,13 +2,11 @@ export const Bildungsprojekttext = {
     Bildungsprojekte:{
         h2: "Bildungsprojekte der Tauchschule Blue Ocean Dive",
         p1: "Die Tauchschule Blue Ocean Dive sieht ihre Aufgabe nicht nur darin, Menschen das Tauchen beizubringen, sondern auch ein tiefes Verständnis für die Meereswelt und ihren Schutz zu vermitteln.  Mit kostenlosen Bildungsprojekten richtet sich die Tauchschule besonders an Schüler und freiwillige Interessierte, um Wissen über den Schutz der Ozeane, ihrer Ökosysteme und Artenvielfalt zu verbreiten.",
-        //<br/> 
         p2:"Denn nur wer die Meere versteht, kann sich nachhaltig für ihren Erhalt einsetzen."
     },
     Workshops: {
         h2: "Meeres-Workshops für Schulen und Säuberungsaktionen",
         p1: "Schüler spielen eine entscheidende Rolle, wenn es um die Zukunft unserer Meere geht. Daher bietet Blue Ocean Dive spezielle Programme für Schulen an, um Umweltbewusstsein und Wissen über die Unterwasserwelt zu fördern. Interaktive Workshops erklären die Bedeutung der Meere für unser Klima und Leben.  Die Schüler erfahren, wie Korallenriffe als Lebensraum für Tausende von Arten dienen und wie Plastikverschmutzung und Klimawandel diese bedrohen.",
-        //<br/> 
         p2: "All diese Themen: Recycling, Schutz bedrohter Arten und verantwortungsbewusster Konsum werden praktisch, während gemeinsamen Säuberungsaktionen der Strände Mallorcas, den Schülern nähergebracht.",
     },
     Forschungsprojekte: {
@@ -20,7 +18,6 @@ export const Bildungsprojekttext = {
     Gemeinschaft: {
         h2: "Engagement für die Gemeinschaft",
         p1: "Diese freiwilligen Bildungsprojekte sind für Blue Ocean Dive ein Herzensanliegen. Sie zeigen, dass Tauchen weit über den Sport hinausgeht - es ist ein Mittel, Menschen zu inspirieren, Wissen zu teilen und gemeinsam für den Erhalt der Ozeane zu kämpfen. Die Tauchschule lädt alle Interessierten ein, Teil dieser Projekte zu werden und mit Leidenschaft und Engagement die Unterwasserwelt zu erkunden und zu schützen.",
-        //<br/>
         p2:"Gemeinsam können wir die Meere schützen - tauchen Sie mit uns ein!"
     },
 }

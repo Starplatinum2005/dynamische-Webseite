@@ -73,9 +73,11 @@ export function Header() {
         </li>
         <li>
   {username ? (
-    <span className='span'>Willkommen, {username}!</span>
+    <Link to="/loggedin" className='span'>Willkommen, {username}!</Link>
   ) : (
-    <Link to="/login" aria-label="LogIn">Log In</Link>
+<Link to="/login" aria-label="LogIn" style={{ fontSize: '1.5rem', color: '#3498db' }}>
+  👤
+</Link>
   )}
 </li>
 

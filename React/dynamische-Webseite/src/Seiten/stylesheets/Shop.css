@@ -4,6 +4,7 @@
     background: #001f3f;
     color: var(--SeitenÜberschrift);
     overflow-x: hidden;
+    margin-bottom: -17px;
   }
   
   .shop-title {

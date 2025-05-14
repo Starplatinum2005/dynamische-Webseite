@@ -17,6 +17,7 @@ import { ScrollToTop } from './Funktionen/ScrollToTop';
 import FAQ  from './Seiten/FAQ';
 import { Warenkorb } from './Seiten/Warenkorb';
 import { Login } from './Seiten/Account';
+import { LoggedInPage } from './Seiten/Logout';
 
 
 
@@ -41,6 +42,8 @@ function App() {
           <Route path='/FAQ' element = {<FAQ />} /> 
           <Route path='/warenkorb' element = {<Warenkorb />} />
           <Route path='/LogIn' element = {<Login />} />
+          <Route path='/loggedin' element = {<LoggedInPage />} />
+
         </Routes>
       </main>
     <Footer />

@@ -3,10 +3,7 @@ import './stylesheets/Login.css';
 import { useNavigate } from 'react-router-dom';
 
 export function LoggedInPage() {
-    const [username, setUsername] = useState<string | null>(null);
-
-
-  
+  const [username, setUsername] = useState<string | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {

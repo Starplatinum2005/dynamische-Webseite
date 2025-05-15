@@ -1,11 +1,11 @@
 import { Produktkachel } from "../Objects/Shop";
 
-type Props = {
+type Test = {
   product: Produktkachel;
   addToCart: (product: Produktkachel) => void;
 };
 
-export function ProductCard({ product, addToCart }: Props) {
+export function Artikel({ product, addToCart }: Test) {
   return (
     <div className="card">
       <img src={product.image} alt={product.name} />

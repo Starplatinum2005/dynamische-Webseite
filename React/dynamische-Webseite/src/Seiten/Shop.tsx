@@ -1,6 +1,8 @@
 import './stylesheets/shop.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Artikel } from '../Komponente/Artikel';
+import { produkte } from '../Objects/Shop';
 
 type Produkt = {
   id: number,
@@ -53,12 +55,7 @@ export function Shop () {
         <button className="btn" onClick={() => addToCart({id: 2, name: 'Speed Fins', price: 79.95})}>In den Warenkorb</button>
       </div>
 
-      <div className="card">
-        <img src="/neopren.png" alt="Neoprenanzug"/>
-        <h3 className = 'shop_h3'>Neoprenanzug</h3>
-        <div className="price">€129,00</div>
-        <button className="btn" onClick={() => addToCart({id: 3, name: 'Neoprenanzug', price: 129.00})}>In den Warenkorb</button>
-      </div>
+      <Artikel product={produkte.Produkt3} addToCart={addToCart}/>
 
       <div className="card">
         <img src="/kinderanzug.png" alt="KidFlex Anzug"/>

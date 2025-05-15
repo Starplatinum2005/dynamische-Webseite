@@ -21,13 +21,15 @@ export function Login() {
 
       }
       localStorage.setItem('username', username);
+      localStorage.setItem('eingeloggt', 'true')
       localStorage.setItem('password', password);
       Swal.fire({
         title: 'Erfolgreich eingeloggt!',
         text: 'Du wurdest erfolgreich eingeloggt.',
         icon: 'success',
         confirmButtonText: 'OK'
-      }).then(() => navigate('/'));
+      })
+      navigate('/');
     } else {
       Swal.fire({
         title: 'Fehler!',

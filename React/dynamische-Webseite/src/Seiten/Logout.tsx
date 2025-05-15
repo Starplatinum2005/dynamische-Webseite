@@ -14,6 +14,7 @@ export function LoggedInPage() {
 
     const logout = () => {
         localStorage.removeItem('username');
+        localStorage.setItem('eingeloggt', 'false')
         setUsername(null);
         localStorage.removeItem('password')
         Swal.fire({
@@ -21,7 +22,8 @@ export function LoggedInPage() {
                 text: 'Du wurdest erfolgreich ausgeloggt.',
                 icon: 'success',
                 confirmButtonText: 'OK'
-        }).then(() => navigate('/'));
+        })
+        navigate('/');
       };
 
   return (

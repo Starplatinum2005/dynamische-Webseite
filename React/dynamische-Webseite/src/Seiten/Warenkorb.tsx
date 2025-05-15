@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import './stylesheets/warenkorb.css';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 type Produkt = {
   id: number;
@@ -25,6 +27,37 @@ export function Warenkorb() {
         localStorage.setItem('cart', JSON.stringify(newCart));
         setCart(newCart);
       };
+      const navigate = useNavigate();
+      const handleBezahlen = () => {
+        if (localStorage.getItem('eingeloggt') === 'true') {
+          Swal.fire({
+          title: 'Vielen Dank für Ihren Einkauf!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        })
+        navigate('/')
+        } else {
+          Swal.fire({
+            title: 'Rabattcode verfügabr!',
+            text: 'Melde dich an um 10% Rabatt auf diesen Einkauf zu erhalten',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Einloggen',
+            cancelButtonText: 'Nein danke, ich bin zurückgeblieben!'
+          }).then((result) => {
+      if (result.isConfirmed) {
+        navigate('/login');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        navigate('/')
+        Swal.fire({
+          title: 'Vielen Dank für Ihren Einkauf!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+          })
+      }
+    });
+          };
+        }
 
     let content;
     if (cart.length === 0) {
@@ -66,6 +99,11 @@ export function Warenkorb() {
               🗑️ Warenkorb leeren
             </button>
           )}
+          <div className='bezahlen-container'>
+            <button className='bezahlen-button' onClick={handleBezahlen}>
+              Jetzt Bezahlen
+            </button>
+          </div>
         </main>
       );
     }

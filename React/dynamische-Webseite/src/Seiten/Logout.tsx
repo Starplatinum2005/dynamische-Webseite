@@ -21,7 +21,7 @@ export function LoggedInPage() {
                 text: 'Du wurdest erfolgreich ausgeloggt.',
                 icon: 'success',
                 confirmButtonText: 'OK'
-              }).then(() => navigate('/'));
+        }).then(() => navigate('/'));
       };
 
   return (

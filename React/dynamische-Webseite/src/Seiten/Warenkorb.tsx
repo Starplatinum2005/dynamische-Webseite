@@ -49,12 +49,13 @@ export function Warenkorb() {
       if (result.isConfirmed) {
         navigate('/login');
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        navigate('/')
+        navigate('/');
         Swal.fire({
           title: 'Vielen Dank für Ihren Einkauf!',
           icon: 'success',
           confirmButtonText: 'OK'
-          })
+          });
+          clearCart();
       }
     });
           };

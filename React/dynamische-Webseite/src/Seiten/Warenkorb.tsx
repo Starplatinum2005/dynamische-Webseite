@@ -35,6 +35,7 @@ export function Warenkorb() {
           icon: 'success',
           confirmButtonText: 'OK'
         })
+        clearCart();
         navigate('/')
         } else {
           Swal.fire({

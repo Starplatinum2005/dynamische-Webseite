@@ -8,7 +8,7 @@ export function Index(){
       <>
       <main className="startseite">
       <header className="header">
-        <img src="/Testt3.png" alt="Taucher unter Wasser" className="header-image" />
+        <img src="/blickfang_startseite.png" alt="Taucher unter Wasser" className="header-image" />
         <section className="header-content">
           <h1> {Startseite.Hauptüberschrift.h1} </h1>
           <p>{Startseite.Hauptüberschrift.p}</p>
@@ -20,9 +20,6 @@ export function Index(){
                   <h1 className='Startseite_h1'>{Startseite.Einführungstext.Überschrift}</h1>
                   <p>{Startseite.Einführungstext.text}</p>
               </article>
-              <a className="Bildcontainer1">
-                  <img className= "Bild-rechts" src="/Tauchbild_2.png" alt="Taucherbild"/>
-              </a>
           </section>
   
   

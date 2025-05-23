@@ -24,11 +24,11 @@ export function Footer(){
                <p>Folgen Sie uns auf:</p>
                <section className="social-icons">
                     <a href="https://instagram.com" aria-label="Link zu Instagram" className="icon-container">
-                        <img src="/Instagram Logo.webp" alt="Instagram Logo" className="icon-image"/>
+                        <img src="/instagram_logo.webp" alt="Instagram Logo" className="icon-image"/>
                         <span>Instagram</span>
                     </a>
                     <a href="https://facebook.com" aria-label="Link zu Facebook" className="icon-container">
-                        <img src="/Facebook Logo 2.webp" alt="Facebook Logo" className="icon-image"/>
+                        <img src="/facebook_logo.webp" alt="Facebook Logo" className="icon-image"/>
                         <span>Facebook</span>
                     </a>
                 </section>

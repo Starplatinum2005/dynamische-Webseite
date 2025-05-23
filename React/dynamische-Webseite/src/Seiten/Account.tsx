@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './stylesheets/account.css';
+import Swal from 'sweetalert2';
 
 export function Login() {
   const [username, setUsername] = useState('');
@@ -10,16 +11,36 @@ export function Login() {
   const handleLogin = () => {
     if (username.trim() && password.trim()) {
       if (password.length < 8) {
-        alert('Das Passwort muss mindestens 8 Zeichen lang sein.');
+        Swal.fire({
+          title: 'Fehler!',
+          text: 'Das Passwort muss mindestens 8 Zeichen lang sein.',
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
         return;
+
       }
       localStorage.setItem('username', username);
+      localStorage.setItem('eingeloggt', 'true')
       localStorage.setItem('password', password);
+      Swal.fire({
+        title: 'Erfolgreich eingeloggt!',
+        text: 'Du wurdest erfolgreich eingeloggt.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      })
       navigate('/');
     } else {
-      alert('Bitte Benutzername und Passwort eingeben.');
+      Swal.fire({
+        title: 'Fehler!',
+        text: 'Bitte Benutzername und Passwort eingeben.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
     }
   };
+
+
 
   return (
     <main className="login-container">

@@ -6,11 +6,11 @@ export function Angebotsbox({ angebot }: { angebot: Angebotsboxen }){
     const navigate = useNavigate();
     return(
         <>
-            <article className="Angebote-Boxen">
-                <img className="Boxen-Image" src= {angebot.src} alt={angebot.alt}/>
-                <p>{angebot.Kurs}</p>
-                <a className="Jetzt-buchen" aria-label="zur Seite buchen"><button onClick={() => navigate('/Buchung')}>Mehr dazu</button></a>
-            </article>
+        <article className="Angebote-Boxen">
+            <img className="Boxen-Image" src= {angebot.src} alt={angebot.alt}/>
+            <p>{angebot.Kurs}</p>
+            <a className="Jetzt-buchen" aria-label="zur Seite buchen"><button onClick={() => navigate('/Buchung')}>Mehr dazu</button></a>
+        </article>
         </>
     )
 }

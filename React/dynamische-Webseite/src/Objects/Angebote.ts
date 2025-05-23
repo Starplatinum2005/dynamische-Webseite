@@ -51,7 +51,7 @@ export const Boxen = {
     },
     Höhlentauchen: {
         Kurs: "Höhlentauchen",
-        src: "/Höhlentauchen.png",
+        src: "/höhlentauchen_angebote.png",
         alt: "Höhlentauchen"
     }
 }

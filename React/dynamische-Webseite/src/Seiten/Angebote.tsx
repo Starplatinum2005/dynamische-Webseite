@@ -9,7 +9,7 @@ export function Angebote (){
     <>
         <main>
         <section className="Anfangscontainer"> 
-            <img className="Anfangsbild" src="/Angebote Bild.jpg" alt="Unsere Angebote"/>
+            <img className="Anfangsbild" src="/blickfang_angebote.jpg" alt="Unsere Angebote"/>
             <header className="Anfangstext">
                 <h2>{Info.Header}</h2>
             </header>

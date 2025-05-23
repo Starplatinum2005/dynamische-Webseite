@@ -48,7 +48,7 @@ export const BuchungInfo = {
         h2: "Höhlentauchen",
         p: "Erkunden Sie die faszinierenden Höhlen unter Wasser und erleben Sie eine einzigartige Herausforderung.",
         Preis: "Preis: 130 €",
-        Bild: "/Höhlentauchen.png",
+        Bild: "/höhlentauchen_angebote.png",
         Alt: "Höhlentauchen",
         Id: "Höhlentauchen"
     }

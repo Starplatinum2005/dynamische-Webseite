@@ -32,18 +32,21 @@ export function Index(){
       
   
   
-      <span className="Abschnitt2"> 
-          <a className="Bildcontainer2">
-              <img className= "Bild-links" src="https://cdn.pixabay.com/photo/2017/01/22/18/00/cala-agulla-2000385_640.jpg" alt="Tauchen auf Mallorca"/>
-          </a>
+      <section className="Abschnitt2"> 
           <div className="Textcontainer2">
-              <h1 className="Strich Startseite_h1">{Startseite.Abschnitt2.h1}</h1>
+              <h1 className="Startseite_h1 Strich">{Startseite.Abschnitt2.h1}</h1>
               <p>{Startseite.Abschnitt2.p1}</p>
               <p>{Startseite.Abschnitt2.p2}</p>
               <p>{Startseite.Abschnitt2.p3}</p>
           </div>
-      </span>
-
+                <div className="Bildcontainer2">
+              <img 
+                className="Bild-links" 
+                src="https://cdn.pixabay.com/photo/2017/01/22/18/00/cala-agulla-2000385_640.jpg" 
+                alt="Tauchen auf Mallorca"
+              />
+          </div>
+        </section>
       </main>
       
       </>

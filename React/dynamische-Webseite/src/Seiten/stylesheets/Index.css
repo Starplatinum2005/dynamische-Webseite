@@ -17,7 +17,7 @@
    width: 100%;
    height: 100%;
    object-fit: cover;
-   filter: brightness(0.7);
+   filter: brightness(0.96);
  }
  
  .header-content {
@@ -60,10 +60,6 @@
   background-color: black;
   transition: width 0.3s ease;
  }
-
-.Startseite_h1:hover::after {
-   width: 100%;
-}
 
 .Neuigkeiten {
    display: flex; /* Flexibles Layout */
@@ -116,25 +112,26 @@
 }
 
 .Abschnitt1 {
-   display: flex; /* Flexibles Layout */
-   align-items: flex-start; /* Elemente oben ausrichten */
-   gap: 2em; /* Lücke zwischen Elementen */
-   margin: 5%; /* Außenabstand */
-   flex-wrap: wrap; /* Elemente umbrechen */
+   display: flex;
+   justify-content: center; /* Zentriert den Inhalt horizontal */
+   align-items: center; /* Zentriert den Inhalt vertikal */
+   gap: 2em;
+   margin: 5%;
+   flex-wrap: wrap;
 }
 
 .Textcontainer1 {
-   max-width: 60%; /* Maximale Breite 60% */
-   color: var(--Textfarbe); /* Marineblau */
+   max-width: 80%; /* Breite angepasst */
+   color: var(--Textfarbe);
+   margin: 0 auto; /* Zentriert den Container */
+   text-align: center; /* Zentriert den Text */
 }
 
 .Textcontainer1 p {
-   margin-bottom: 5%; /* Abstand nach unten */
-   line-height: 1.6; /* Zeilenhöhe */
+   line-height: 1.6;
    margin-top: 25px;
    font-size: 17px;
-   margin-right: 40px;
-   text-align: justify;
+   text-align: center; /* Text zentriert statt justify */
    color: var(--Textfarbe);
 }
 
@@ -148,43 +145,42 @@
 
 .Abschnitt2 {
    display: flex; /* Flexibles Layout */
-   align-items: flex-start; /* Elemente oben ausrichten */
+   align-items: center; /* Elemente oben ausrichten */
    gap: 20px; /* Abstand zwischen Elementen */
    margin: 5%; /* Außenabstand */
-   flex-wrap: wrap; /* Umbrechen bei Platzmangel */
+   flex-direction: column;
 }
 
 .Textcontainer2 {
-   max-width: 60%; /* Maximale Breite 60% */
+   max-width: 80%; /* Maximale Breite 60% */
+   text-align: center;
 }
 
 .Textcontainer2 p {
-   margin-bottom: 3%; /* Abstand unten */
    line-height: 1.6; /* Zeilenhöhe */
    margin-top: 25px;
    font-size: 17px;
    margin-left: 40px;
    color: var(--Textfarbe); /* Marineblau */
-   text-align: justify;
+   text-align: center;
 }
 
 .Bildcontainer2 {
-   margin-top: 12%; /* Abstand oben */
-   width: 35%; 
+   width: 60%; 
    display: flex; /* Flexibles Layout */
    justify-content: center; /* Zentriert Bild horizontal */
-   align-items: flex-start; /* Bild oben ausrichten */
 }
 
 .Strich {
-   margin-top: 5%; /* Abstand oben */
-   margin-bottom: 5%; /* Abstand unten */
-   text-align: center; /* Zentrierte Linie */
-   border-top: 2px solid var(--Textfarbe); /* Obere Rahmenlinie */
-   width: 80%; /* Breite 80% des Containers */
-   margin-left: auto; /* Zentriert horizontal */
-   margin-right: auto; /* Zentriert horizontal */
-   padding-top: 5%; /* Abstand oberhalb der Linie */
+   margin-top: 5%; /* Verringerter Abstand oben */
+   margin-bottom: 5%; /* Verringerter Abstand unten */
+   text-align: center;
+   border-top: 3px solid black; /* Dickere Linie und neue Farbe (hier: türkis) */
+   width: 60%; /* Schmalere Linie */
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 5%; /* Verringerter Abstand oberhalb der Linie */
+   white-space: nowrap;
 }
 
 .Bild-links {

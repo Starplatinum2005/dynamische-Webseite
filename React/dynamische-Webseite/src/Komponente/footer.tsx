@@ -7,8 +7,7 @@ export function Footer(){
         <footer className="footer">
             <section className="gridcontainer">
             <section className="ersteSpalte">
-                <p>Öffnungszeiten</p>
-                <p>Sommersaison:</p>
+                <p>Öffnungszeiten Sommersaison:</p>
                 <p>Mo.: Ruhetag</p>
                 <p>Di. - Fr.: 12:00 - 20:00</p>
                 <p>Sa. und So.: 10:00 - 20:00</p>

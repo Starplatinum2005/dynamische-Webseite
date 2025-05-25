@@ -1,4 +1,4 @@
-.Shop_main {
+.Shop-main {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #001f3f;
@@ -7,7 +7,7 @@
     margin-bottom: -17px;
   }
   
-  .shop-title {
+  .shop-titel {
     text-align: center;
     font-size: 3.5rem;
     margin: 2rem 0;
@@ -19,11 +19,11 @@
     50%     { transform: translateY(-8px); }
   }
   
-  .category {
+  .kategorie {
     padding: 1.5rem 2rem;
   }
 
-  .category h2 {
+  .kategorie h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid #00bcd4;
@@ -62,7 +62,7 @@
     color: var(--SeitenÜberschrift);
   }
 
-  .price {
+  .preis {
     color: #ffd700;
     font-weight: bold;
     margin-top: 0.3rem;
@@ -96,7 +96,7 @@
     background-color: #0097a7;
   }
   
-  .cart-button {
+  .warenkorb-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -111,7 +111,7 @@
     transition: background-color 0.3s, transform 0.2s;
   }
   
-  .cart-button:hover {
+  .warenkorb-button:hover {
     background-color: #0097a7;
     transform: scale(1.05);
   }
@@ -158,7 +158,7 @@
     display: block;
   }
 
-  .card p {
+  .warenkorb p {
     word-wrap: break-word;
     white-space: normal;
     overflow-wrap: anywhere;

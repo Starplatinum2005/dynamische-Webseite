@@ -31,8 +31,8 @@ export function Shop () {
     return (
   <>
     <main className='Shop_main'>
-    <h1 className="shop-title">Ocean Dive Shop</h1>
-    <section className="category">
+    <h1 className="shop-titel">Ocean Dive Shop</h1>
+    <section className="kategorie">
     <h2>Ausrüstung</h2>
     <div className="grid">
       <Artikel product={produkte.Produkt1} addToCart={addToCart}/>
@@ -42,7 +42,7 @@ export function Shop () {
     </div>
   </section>
 
-  <section className="category">
+  <section className="kategorie">
     <h2>Technik</h2>
     <div className="grid">
       <Artikel product={produkte.Produkt5} addToCart={addToCart}/>
@@ -52,7 +52,7 @@ export function Shop () {
     </div>
   </section>
 
-  <section className="category">
+  <section className="kategorie">
     <h2>Zubehör</h2>
     <div className="grid">
       <Artikel product={produkte.Produkt9} addToCart={addToCart}/>

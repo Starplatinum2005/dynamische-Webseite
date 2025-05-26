@@ -71,17 +71,17 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div key={index} className="faq-item">
               <div 
-                className={`faq-question ${activeIndex === index ? 'active' : ''}`} 
+                className={`faq-frage ${activeIndex === index ? 'active' : ''}`} 
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
               </div>
-              <div className={`faq-answer ${activeIndex === index ? 'active' : ''}`}>
+              <div className={`faq-antwort ${activeIndex === index ? 'active' : ''}`}>
                 {faq.answer}
               </div>
             </div>
           ))}
-      <div className='faq-not-found'>
+        <div className='faq-nicht-gefunden'>
           Frage nicht gefunden? Kontaktieren Sie uns telefonisch oder per Email!
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './stylesheets/Login.css';
+import './stylesheets/Logout.css';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -13,18 +13,18 @@ export function LoggedInPage() {
   }, []);
 
     const logout = () => {
-        localStorage.removeItem('username');
-        localStorage.setItem('eingeloggt', 'false')
-        setUsername(null);
-        localStorage.removeItem('password')
-        Swal.fire({
-                title: 'Erfolgreich ausgeloggt!',
-                text: 'Du wurdest erfolgreich ausgeloggt.',
-                icon: 'success',
-                confirmButtonText: 'OK'
-        })
-        navigate('/');
-      };
+      localStorage.removeItem('username');
+      localStorage.setItem('eingeloggt', 'false')
+      setUsername(null);
+      localStorage.removeItem('password')
+      Swal.fire({
+        title: 'Erfolgreich ausgeloggt!',
+        text: 'Du wurdest erfolgreich ausgeloggt.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      })
+      navigate('/');
+    };
 
   return (
     <main className="login-container">
@@ -32,7 +32,7 @@ export function LoggedInPage() {
       <p>Willkommen, {username || 'Gast'}!</p>
       <button onClick={logout}>
         Ausloggen
-        </button>
+      </button>
     </main>
   );
 }

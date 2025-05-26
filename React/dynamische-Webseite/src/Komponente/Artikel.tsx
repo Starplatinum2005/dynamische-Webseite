@@ -1,4 +1,5 @@
 import { Produktkachel } from "../Objects/Shop";
+import "./Artikel.css"
 
 type Test = {
   product: Produktkachel;

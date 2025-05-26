@@ -70,32 +70,6 @@
    margin-left: 15%;
 }
 
-.Thema {
-   display: flex; /* Flexibles Layout */
-   flex-direction: column; /* Elemente vertikal anordnen */
-   font-size: 20px; /* Schriftgröße */
-   border: 2px solid var(--Textfarbe); /* Rahmen in Marineblau */
-   background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe */
-   color: var(--Textfarbe); /* Textfarbe */
-   padding: 20px; /* Innenabstand */
-   border-radius: 8px; /* Runde Ecken */
-   width: 20vw; /* Breite */
-}
-
-.Thema p {
-    text-align: center; /* Zentrierter Text */
-    word-wrap: break-word; /* Längere Wörter umbrechen */
-    overflow-wrap: break-word; /* Alternative Wortumbruch */
-    margin: 0; /* Kein Außenabstand */
-}
-
-.Themabild {
-   width: 100%; /* Bildbreite füllt Container */
-   height: auto; /* Proportionale Höhe */
-   margin-bottom: 10px; /* Abstand unten */
-   border-radius: 15px;
-}
-
 .Anfangscontainer1 {
    position: relative; /* Position relativ zum Eltern-Element */
    width: 90%; /* Container nimmt 90% der Breite ein */

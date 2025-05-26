@@ -20,7 +20,7 @@
 
 
 .logo {
-   height: 100%;                     /* skaliert relativ zur Navbar (13vh) */
+   height: 150%;                     /* skaliert relativ zur Navbar (13vh) */
    padding-top: 1em;
    width: auto;                     /* behält Proportionen */
    flex-shrink: 0;                  /* schrumpft nie kleiner als 80% */

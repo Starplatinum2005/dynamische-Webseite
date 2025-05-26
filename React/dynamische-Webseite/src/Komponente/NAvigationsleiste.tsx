@@ -12,19 +12,17 @@ export function Header({ language, setLanguage }) {
     const storedUser = localStorage.getItem('username');
     setUsername(storedUser);
   }, [location]);
-  
+
   return (
     <nav className="navbar">
       <Link to="/" aria-label="Startseite">
         <img className="logo" src="/logo.png" alt="Taucher" />
       </Link>
 
-      <Sprachwechsel language={language} setLanguage={setLanguage} />
-
       <ul className="navbar-list">
         <li>
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             aria-label="Startseite"
             className={location.pathname === '/' ? 'active' : ''}
           >
@@ -32,8 +30,8 @@ export function Header({ language, setLanguage }) {
           </Link>
         </li>
         <li className="dropdown">
-          <Link 
-            to="/Angebote" 
+          <Link
+            to="/Angebote"
             className={`dropbtn ${location.pathname === '/Angebote' ? 'active' : ''}`}
             aria-label="Angebote"
           >
@@ -48,8 +46,8 @@ export function Header({ language, setLanguage }) {
           </ul>
         </li>
         <li>
-          <Link 
-            to="/Shop" 
+          <Link
+            to="/Shop"
             className={location.pathname === '/Shop' ? 'active' : ''}
             aria-label="Shop"
           >
@@ -57,8 +55,8 @@ export function Header({ language, setLanguage }) {
           </Link>
         </li>
         <li>
-          <Link 
-            to="/uberuns" 
+          <Link
+            to="/uberuns"
             className={location.pathname === '/uberuns' ? 'active' : ''}
             aria-label="Über uns"
           >
@@ -66,8 +64,8 @@ export function Header({ language, setLanguage }) {
           </Link>
         </li>
         <li>
-          <Link 
-            to="/Kontakt" 
+          <Link
+            to="/Kontakt"
             className={location.pathname === '/Kontakt' ? 'active' : ''}
             aria-label="Kontakt"
           >
@@ -75,15 +73,19 @@ export function Header({ language, setLanguage }) {
           </Link>
         </li>
         <li>
-  {username ? (
-    <Link to="/loggedin" className='span'>Willkommen, {username}!</Link>
-  ) : (
-<Link to="/login" aria-label="LogIn" style={{ fontSize: '1.5rem', color: '#3498db' }}>
-  👤
-</Link>
-  )}
-</li>
-
+          {username ? (
+            <Link to="/loggedin" className='span'>Willkommen, {username}!</Link>
+          ) : (
+            <Link to="/login" aria-label="LogIn" style={{ fontSize: '1.5rem', color: '#3498db' }}>
+              👤
+            </Link>
+          )}
+        </li>
+        <li>
+          <div className="übersetzung">
+            <Sprachwechsel language={language} setLanguage={setLanguage} />
+          </div>
+        </li>
       </ul>
     </nav>
   );

@@ -4,23 +4,23 @@
    line-height: 1.8;
    max-width: 1400px;
    margin: 0 auto;
- }
- 
- .header {
+}
+
+.header {
    position: relative;
    height: 90vh;
    overflow: hidden;
    margin-bottom: 60px;
- }
- 
- .header-image {
+}
+
+.header-image {
    width: 100%;
    height: 100%;
    object-fit: cover;
    filter: brightness(0.96);
- }
- 
- .header-content {
+}
+
+.header-content {
    position: absolute;
    top: 50%;
    left: 50%;
@@ -29,188 +29,200 @@
    color: white;
    z-index: 2;
    padding: 20px;
-   background: rgba(0, 0, 0, 0.3); /* Fügt einen leicht transparenten Hintergrund hinzu */
+   background: rgba(0, 0, 0, 0.3);
+   /* Fügt einen leicht transparenten Hintergrund hinzu */
    border-radius: 10px;
-   backdrop-filter: blur(5px); /* Fügt einen Blur-Effekt hinzu */
- }
-
-.Startseite_main {
-    margin: 0; /* Entfernt Standard-Außenabstand*/
-    font-family: Arial, sans-serif; 
-    display: flex; /* aktiviert Flex für  Body */
-    flex-direction: column; /* Ordnet Kinder-Elemente vertikal an*/
-    min-height: 100vh; /* Mindestens Höhe des Viewports(Volle Höhe des Bildschirms(in dem Fall die Farbe auch hinter der Navigationsleiste) */
-    box-sizing: border-box; /* padding und border werden in die angegebene Breite schon miteingerechnet, sodass keine extra Berchnung notwendig ist */
-    background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe (AliceBlue) */
+   backdrop-filter: blur(5px);
+   /* Fügt einen Blur-Effekt hinzu */
 }
 
-.Startseite_h1{
+.Startseite_main {
+   margin: 0;
+   /* Entfernt Standard-Außenabstand*/
+   font-family: Arial, sans-serif;
+   display: flex;
+   /* aktiviert Flex für  Body */
+   flex-direction: column;
+   /* Ordnet Kinder-Elemente vertikal an*/
+   min-height: 100vh;
+   /* Mindestens Höhe des Viewports(Volle Höhe des Bildschirms(in dem Fall die Farbe auch hinter der Navigationsleiste) */
+   box-sizing: border-box;
+   /* padding und border werden in die angegebene Breite schon miteingerechnet, sodass keine extra Berchnung notwendig ist */
+   background-color: var(--Hintergrundfarbe);
+   /* Hintergrundfarbe (AliceBlue) */
+}
+
+.Startseite_h1 {
    color: var(--Unterüberschriften);
    font-size: 50px;
    position: relative;
 }
 
- .Startseite_h1::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: black;
-  transition: width 0.3s ease;
- }
+.Startseite_h1::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 2px;
+   bottom: -5px;
+   left: 0;
+   background-color: black;
+   transition: width 0.3s ease;
+}
 
 .Neuigkeiten {
-   display: flex; /* Flexibles Layout */
-   justify-content: space-around; /* Elemente gleichmäßig verteilen */
-   gap: 20px; /* Lücke zwischen Elementen */
-   flex-wrap: wrap; /* Elemente umbrechen bei Platzmangel */
-   margin-right: 15%; /* Außenabstand */
+   display: flex;
+   /* Flexibles Layout */
+   justify-content: space-around;
+   /* Elemente gleichmäßig verteilen */
+   gap: 20px;
+   /* Lücke zwischen Elementen */
+   flex-wrap: wrap;
+   /* Elemente umbrechen bei Platzmangel */
+   margin-right: 15%;
+   /* Außenabstand */
    margin-left: 15%;
-}
-
-.Anfangscontainer1 {
-   position: relative; /* Position relativ zum Eltern-Element */
-   width: 90%; /* Container nimmt 90% der Breite ein */
-   
-   margin: 50px auto; /* Zentriert Container horizontal */
-   overflow: hidden; /* Überschuss verstecken */
-   border-radius: 15px; /* Runde Ecken */
-}
-
-.Anfangsbild1 {
-    width: 100%; /* Bild nimmt gesamte Breite ein */
-    height: auto; /* Höhe passt sich an */
-    display: block; /* Block-Layout */
 }
 
 .Abschnitt1 {
    display: flex;
-   justify-content: center; /* Zentriert den Inhalt horizontal */
-   align-items: center; /* Zentriert den Inhalt vertikal */
+   justify-content: center;
+   /* Zentriert den Inhalt horizontal */
+   align-items: center;
+   /* Zentriert den Inhalt vertikal */
    gap: 2em;
    margin: 5%;
    flex-wrap: wrap;
 }
 
 .Textcontainer1 {
-   max-width: 80%; /* Breite angepasst */
+   max-width: 80%;
+   /* Breite angepasst */
    color: var(--Textfarbe);
-   margin: 0 auto; /* Zentriert den Container */
-   text-align: center; /* Zentriert den Text */
+   margin: 0 auto;
+   /* Zentriert den Container */
+   text-align: center;
+   /* Zentriert den Text */
 }
 
 .Textcontainer1 p {
    line-height: 1.6;
    margin-top: 25px;
    font-size: 17px;
-   text-align: center; /* Text zentriert statt justify */
+   text-align: center;
+   /* Text zentriert statt justify */
    color: var(--Textfarbe);
 }
 
-.Bildcontainer1 {
-   margin-top: 3%; /* Abstand oben */
-   width: 35%; /* Breite des Containers */
-   display: flex; /* Flexibles Layout */
-   justify-content: center; /* Zentriert Bild horizontal */
-   align-items: flex-start; /* Bild oben ausrichten */
-}
-
 .Abschnitt2 {
-   display: flex; /* Flexibles Layout */
-   align-items: center; /* Elemente oben ausrichten */
-   gap: 20px; /* Abstand zwischen Elementen */
-   margin: 5%; /* Außenabstand */
+   display: flex;
+   /* Flexibles Layout */
+   align-items: center;
+   /* Elemente oben ausrichten */
+   margin: 5%;
+   /* Außenabstand */
    flex-direction: column;
 }
 
 .Textcontainer2 {
-   max-width: 80%; /* Maximale Breite 60% */
+   max-width: 80%;
+   /* Maximale Breite 80% */
    text-align: center;
 }
 
 .Textcontainer2 p {
-   line-height: 1.6; /* Zeilenhöhe */
+   line-height: 1.6;
+   /* Zeilenhöhe */
    margin-top: 25px;
    font-size: 17px;
    margin-left: 40px;
-   color: var(--Textfarbe); /* Marineblau */
+   color: var(--Textfarbe);
+   /* Marineblau */
    text-align: center;
 }
 
 .Bildcontainer2 {
-   width: 60%; 
-   display: flex; /* Flexibles Layout */
-   justify-content: center; /* Zentriert Bild horizontal */
+   display: flex;
+   /* Flexibles Layout */
+   justify-content: center;
+   /* Zentriert Bild horizontal */
+   margin-bottom: 50px;
+   max-width: 80%;
+   /* Maximale Breite 80% */
+   text-align: center;
 }
 
 .Strich {
-   margin-top: 5%; /* Verringerter Abstand oben */
-   margin-bottom: 5%; /* Verringerter Abstand unten */
+   margin-top: 5%;
+   /* Verringerter Abstand oben */
+   margin-bottom: 5%;
+   /* Verringerter Abstand unten */
    text-align: center;
-   border-top: 3px solid black; /* Dickere Linie und neue Farbe (hier: türkis) */
-   width: 60%; /* Schmalere Linie */
+   border-top: 3px solid black;
+   /* Dickere Linie und neue Farbe (hier: türkis) */
+   width: 60%;
+   /* Schmalere Linie */
    margin-left: auto;
    margin-right: auto;
-   padding-top: 5%; /* Verringerter Abstand oberhalb der Linie */
+   padding-top: 5%;
+   /* Verringerter Abstand oberhalb der Linie */
    white-space: nowrap;
 }
 
 .Bild-links {
-   margin-top: 10%; /* Abstand oben */
-   max-width: 100%; /* Maximale Breite 100% */
-   height: auto; /* Höhe passt sich an */
-   border-radius: 15px; /* Runde Ecken */
+   margin-top: 2%;
+   /* Abstand oben */
+   max-width: 100%;
+   /* Maximale Breite 100% */
+   height: auto;
+   /* Höhe passt sich an */
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
    transition: all 0.5s ease;
    filter: brightness(0.95);
 }
 
-.Bild-links:hover {
-  transform: scale(1.03) translateY(-5px);
-  filter: brightness(1.05);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
 @media (max-width: 768px) {
    .navbar-list {
-       justify-content: center; /* Zentriert die verbleibenden Elemente */
+      justify-content: center;
+      /* Zentriert die verbleibenden Elemente */
    }
 
-   .logo{
+   .logo {
       width: 11vw;
-  }
+   }
 
    .navbar-list li {
-       display: none; /* Versteckt alle Listenelemente */
+      display: none;
+      /* Versteckt alle Listenelemente */
    }
 
-   .navbar-list li:nth-child(1), /* Zeigt "Home" an */
-   .navbar-list li:nth-child(2) { /* Zeigt "Angebote" an */
-       display: block; /* Sichtbar machen */
+   .navbar-list li:nth-child(1),
+   /* Zeigt "Home" an */
+   .navbar-list li:nth-child(2) {
+      /* Zeigt "Angebote" an */
+      display: block;
+      /* Sichtbar machen */
    }
 
    .dropdown .dropdown-content {
-       display: none !important; /* Versteckt das Dropdown-Menü und durch !important erhält dies mehr Priorität */
+      display: none !important;
+      /* Versteckt das Dropdown-Menü und durch !important erhält dies mehr Priorität */
    }
 
    .Textcontainer1,
-   .Textcontainer2{
+   .Textcontainer2 {
       max-width: 90%;
-      
+
    }
-   
-   .Bildcontainer1,
-   .Bildcontainer2{
+
+   .Bildcontainer2 {
       margin-top: 1%;
       margin-left: auto;
       margin-right: auto;
       width: 50%;
    }
-   
-   .Thema{
+
+   .Thema {
       width: 250px;
    }
-   
+
 }

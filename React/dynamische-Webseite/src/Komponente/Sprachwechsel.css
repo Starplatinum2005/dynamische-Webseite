@@ -1,30 +1,27 @@
 .sprachwechsel-container {
   text-align: right;
+  user-select: none;
+  font-size: 15px;
 }
 
-.sprachwechsel-btn {
-  background: white;
-  color: #023e8a;
-  border: none;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  padding: 0.5em 1.2em;
-  border-radius: 5px;
-  font-weight: bold;
+.sprachwechsel-link {
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
-}
-
-.sprachwechsel-btn:disabled {
-  background: #023e8a;
   color: white;
-  cursor: default;
-  transform: scale(1.05);
+  font-weight: normal;
+  margin: 0 0.2em;
+  transition: font-weight 0.2s, color 0.2s;
 }
 
-.sprachwechsel-btn:not(:disabled):hover {
-  background: #023e8a;
-  color: #fff;
-  transform: scale(1.08);
+.sprachwechsel-link.active {
+  font-weight: bold;
+  color: white;
 }
 
+.sprachwechsel-link:hover:not(.active) {
+  text-decoration: underline;
+}
+
+.sprachwechsel-divider {
+  color: white;
+  margin: 0 0.2em;
+}

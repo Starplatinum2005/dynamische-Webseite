@@ -2,8 +2,9 @@ import './stylesheets/Index.css'
 import { Startseite } from '../Objects/Startseite';
 import { ProjektBoxen } from '../Komponente/ProjektBoxen';
 
+type Props = { t: (key: string) => string };
 
-export function Index(){
+export function Index({ t }: Props){
     return(
       <>
       <main className="startseite">
@@ -23,7 +24,7 @@ export function Index(){
           </section>
   
   
-          <h1 className="Startseite_h1 Strich">{Startseite.Projekte.h1}</h1>
+          <h1 className="Startseite_h1 Strich">{t("aktuelles")}</h1>
   
           <section className="Neuigkeiten">
               <ProjektBoxen Projekt={Startseite.Naturschutz} />

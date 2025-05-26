@@ -1,0 +1,30 @@
+.sprachwechsel-container {
+  text-align: right;
+}
+
+.sprachwechsel-btn {
+  background: white;
+  color: #023e8a;
+  border: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.5em 1.2em;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.sprachwechsel-btn:disabled {
+  background: #023e8a;
+  color: white;
+  cursor: default;
+  transform: scale(1.05);
+}
+
+.sprachwechsel-btn:not(:disabled):hover {
+  background: #023e8a;
+  color: #fff;
+  transform: scale(1.08);
+}
+

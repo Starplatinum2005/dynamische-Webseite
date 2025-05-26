@@ -1,9 +1,10 @@
 import './Navigationsleiste.css'
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Sprachwechsel } from './Sprachwechsel';
 
 
-export function Header() {
+export function Header({ language, setLanguage }) {
   const location = useLocation();
   const [username, setUsername] = useState<string | null>(null)
 
@@ -17,6 +18,8 @@ export function Header() {
       <Link to="/" aria-label="Startseite">
         <img className="logo" src="/logo.png" alt="Taucher" />
       </Link>
+
+      <Sprachwechsel language={language} setLanguage={setLanguage} />
 
       <ul className="navbar-list">
         <li>

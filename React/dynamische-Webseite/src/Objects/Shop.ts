@@ -3,10 +3,11 @@ export type Produktkachel = {
   name: string;
   price: number;
   image: string;
+  Bestseller?: boolean;
 };
 
 export const produkte ={ 
-  Produkt1:{ id: 1, name: 'ProDive Maske', price: 49.99, image: '/tauchmaske.png' },
+  Produkt1:{ id: 1, name: 'ProDive Maske', price: 49.99, image: '/tauchmaske.png', Bestseller: true},
   Produkt2:{ id: 2, name: 'Speed Fins', price: 79.95, image: '/flossen.png' },
   Produkt3:{ id: 3, name: 'Neoprenanzug', price: 129.00, image: '/neopren.png' },
   Produkt4:{ id: 4, name: 'KidFlex Anzug', price: 99.00, image: '/kinderanzug.png' },

@@ -8,6 +8,9 @@ type Test = {
 export function Artikel({ product, addToCart }: Test) {
   return (
     <div className="card">
+      {product.Bestseller && ( 
+        <span className="badge">Bestseller</span>
+      )}
       <img src={product.image} alt={product.name} />
       <h3 className="shop_h3">{product.name}</h3>
       <div className="price">€{product.price.toFixed(2).replace('.', ',')}</div>

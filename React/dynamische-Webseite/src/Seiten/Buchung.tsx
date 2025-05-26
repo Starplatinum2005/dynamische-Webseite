@@ -1,8 +1,41 @@
 import './stylesheets/buchung.css'
 import { BuchungInfo} from '../Objects/Buchung'
 import { Buchungsbox } from '../Komponente/Buchungbox'
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 export function Buchung (){
+      const navigate = useNavigate();
+      const handleBezahlen = () => {
+        if (localStorage.getItem('eingeloggt') === 'true') {
+          Swal.fire({
+          title: 'Vielen Dank für Ihren Einkauf!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+          });
+          navigate('/');
+        } else {
+          Swal.fire({
+            title: 'Rabattcode verfügabr!',
+            text: 'Melde dich an um 10% Rabatt auf diesen Einkauf zu erhalten',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Einloggen',
+            cancelButtonText: 'Nein danke, ich bin zurückgeblieben!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate('/login');
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+            navigate('/');
+            Swal.fire({
+              title: 'Vielen Dank für Ihren Einkauf!',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
+            }
+          });
+        };
+      }
     return (
     <>
         <main className="buchung_main">
@@ -23,7 +56,15 @@ export function Buchung (){
         <section className="Buchungs-Formular" id="Test">
 
             <h1 className="Strich">Buchen Sie Ihren Tauchkurs</h1>
-            <form className="Formular">
+                <form className="Formular" onSubmit={(e) => {
+                    e.preventDefault();
+                    const form = e.target as HTMLFormElement;
+                    if (form.checkValidity()) {
+                        handleBezahlen();
+                    } else {
+                        form.reportValidity();
+                    }
+                }}>
                 <label htmlFor="name">Name:</label>
                 <input type="text"  id="name" required placeholder="Max Mustermann" /><br />
 

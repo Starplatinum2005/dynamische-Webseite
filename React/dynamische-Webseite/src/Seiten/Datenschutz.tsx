@@ -164,7 +164,7 @@ export function Datenschutz (){
     <br/>
 
     <br/>
-    <strong> Stand: 24.11.2024 </strong>
+    <strong> Stand: 23.05.2025 </strong>
 
     </main>
     </>

@@ -63,14 +63,14 @@ export function Warenkorb() {
 
   let content;
   if (cart.length === 0) {
-    content = <p className="cart-empty">Warenkorb ist leer.</p>;
+    content = <p className="warenkorb-leer">Warenkorb ist leer.</p>;
   } else {
     content = (
-      <ul className="cart-list">
+      <ul className="warenkorb-liste">
         {cart.map((item, index) => (
-          <li key={index} className="cart-item">
+          <li key={index} className="warenkorb-item">
             <span>{item.name} – €{item.price.toFixed(2)}</span>
-            <button className="remove-btn" onClick={ () => removeFromCart(index)}>
+            <button className="entfernen-button" onClick={ () => removeFromCart(index)}>
               Entfernen
             </button>
           </li>
@@ -82,8 +82,8 @@ export function Warenkorb() {
   const total = cart.reduce((sum, item) => sum + item.price, 0)
    
   return (
-      <main className="cart-main">
-        <h1 className="cart-title">🛒 Dein Warenkorb</h1>
+      <main className="warenkorb-main">
+        <h1 className="warenkorb-titel">🛒 Dein Warenkorb</h1>
         {content}
 
         {cart.length > 0 && (
@@ -93,7 +93,7 @@ export function Warenkorb() {
         )}
   
         {cart.length > 0 && (
-          <button className="clear-cart-button" onClick={clearCart}>
+          <button className="warenkorb-leeren-button" onClick={clearCart}>
             🗑️ Warenkorb leeren
           </button>
         )}

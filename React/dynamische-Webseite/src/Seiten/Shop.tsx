@@ -35,13 +35,7 @@ export function Shop () {
     <section className="category">
     <h2>Ausrüstung</h2>
     <div className="grid">
-      <div className="card">
-        <span className="badge">Bestseller</span>
-        <img src="/tauchmaske.png" alt="Tauchmaske" />
-        <h3 className = 'shop_h3'>Tauchmaske</h3>
-        <div className="price">€49,99</div>
-        <button className="btn" onClick={() => addToCart({id: 1, name: 'ProDive Maske', price: 49.99})}>In den Warenkorb</button>
-      </div>
+      <Artikel product={produkte.Produkt1} addToCart={addToCart}/>
       <Artikel product={produkte.Produkt2} addToCart={addToCart}/>
       <Artikel product={produkte.Produkt3} addToCart={addToCart}/>
       <Artikel product={produkte.Produkt4} addToCart={addToCart}/>

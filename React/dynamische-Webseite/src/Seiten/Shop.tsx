@@ -7,7 +7,7 @@ import { produkte } from '../Objects/Shop';
 type Produkt = {
   id: number,
   name: string,
-  price: number
+  price: string
 }
 
 export function Shop () {

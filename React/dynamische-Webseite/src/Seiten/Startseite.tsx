@@ -46,7 +46,6 @@ export function Index({ t }: Props) {
           </div>
         </section>
       </main>
-      </body>
     </>
   )
 }

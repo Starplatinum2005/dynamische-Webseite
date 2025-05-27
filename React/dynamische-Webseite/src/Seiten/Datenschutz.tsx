@@ -3,6 +3,10 @@ import './stylesheets/Datenschutz.css'
 export function Datenschutz (){
     return(
     <>
+    <head>
+        <title> Blue Ocean dive - Startseite </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    </head>
     <header className='header_Datenschutz'>
         <h1> Datenschutz </h1>
     </header>

@@ -4,6 +4,10 @@ import { Bildungsprojekttext } from '../Objects/Bildungsprojekt';
 export function Bildungsprojekt (){
     return(
     <>  
+    <head>
+        <title> Blue Ocean dive - Startseite </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    </head>
     <main className='main_Bildungsprojekt'>
 
         <h1 className='h1_Bildungsprojekt'> {Bildungsprojekttext.Bildungsprojekte.h2}</h1>

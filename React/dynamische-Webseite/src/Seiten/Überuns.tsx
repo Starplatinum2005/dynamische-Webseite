@@ -2,6 +2,11 @@ import './stylesheets/Überuns.css';
 
 export function Überuns() {
   return (
+    <>
+    <head>
+        <title> Blue Ocean dive - Startseite </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    </head>
     <main className="überuns">
       <header className="header">
         <img src="/blickfang_überuns.png" alt="Taucher unter Wasser" className="header-Bild" />
@@ -70,5 +75,6 @@ export function Überuns() {
         </article>
       </section>
     </main>
+    </>
   );
 }

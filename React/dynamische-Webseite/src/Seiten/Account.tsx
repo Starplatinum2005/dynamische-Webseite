@@ -43,6 +43,11 @@ export function Login() {
 
 
   return (
+    <>
+    <head>
+        <title> Blue Ocean dive - Startseite </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    </head>
     <main className="login-container">
       <h1>Login</h1>
       <input
@@ -58,9 +63,9 @@ export function Login() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
-/>
-
+      />
       <button onClick={handleLogin}>Einloggen</button>
     </main>
+    </>
   );
 }

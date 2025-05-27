@@ -1,8 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { useState } from "react";
 import { übersetzung } from './Übersetzung';
-import { Sprachwechsel } from './Komponente/Sprachwechsel';
-
+//import { Sprachwechsel } from './Komponente/Sprachwechsel';
 import { Footer } from './Komponente/footer';
 import { Index } from './Seiten/Startseite';
 import { Angebote } from './Seiten/Angebote';
@@ -22,8 +21,10 @@ import { Warenkorb } from './Seiten/Warenkorb';
 import { Login } from './Seiten/Account';
 import { LoggedInPage } from './Seiten/Logout';
 
+export type language = 'de' | 'en' | 'es';
+
 function App() {
-  const [language, setLanguage] = useState('de');
+  const [language, setLanguage] = useState<language>('de');
   const t = (key: string) => übersetzung[language][key] || key;
 
   return (

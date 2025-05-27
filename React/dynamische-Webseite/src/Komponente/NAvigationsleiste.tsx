@@ -2,9 +2,15 @@ import './Navigationsleiste.css'
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Sprachwechsel } from './Sprachwechsel';
+import { Dispatch, SetStateAction } from 'react'
+import { language } from '../App';
 
+interface HeaderProps {
+  language: language;
+  setLanguage: Dispatch<SetStateAction<language>>;
+}
 
-export function Header({ language, setLanguage }) {
+export function Header({ language, setLanguage }: HeaderProps) {
   const location = useLocation();
   const [username, setUsername] = useState<string | null>(null)
 

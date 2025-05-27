@@ -1,4 +1,6 @@
-export const übersetzung = {
+import { language } from "./App";
+
+export const übersetzung: Record<language, Record<string, string>> = {
     de: {
         index_welcome: "Willkommen bei Blue Ocean Dive",
         index_zitat: '"Tauche ein in die Welt der Unterwasser-Abenteuer!"',

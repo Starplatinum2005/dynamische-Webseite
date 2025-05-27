@@ -1,8 +1,9 @@
 import './Sprachwechsel.css';
+import { language } from '../App';
 
 type Props = {
-  language: string;
-  setLanguage: (lang: string) => void;
+  language: language;
+  setLanguage: React.Dispatch<React.SetStateAction<language>>;
 };
 
 export function Sprachwechsel({ language, setLanguage }: Props) {

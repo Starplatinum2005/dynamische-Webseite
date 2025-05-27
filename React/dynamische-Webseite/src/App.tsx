@@ -50,7 +50,7 @@ function App() {
           <Route path='/loggedin' element={<LoggedInPage />} />
         </Routes>
       </main>
-      <Footer />
+      <Footer t={t}/>
     </>
   );
 }

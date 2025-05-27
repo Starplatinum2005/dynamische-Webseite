@@ -8,9 +8,26 @@ type Props = {
 export function Sprachwechsel({ language, setLanguage }: Props) {
   return (
     <div className="sprachwechsel-container">
-      <button className="sprachwechsel-btn" onClick={() => setLanguage("de")} disabled={language === "de"}>DE</button>
-      <button className="sprachwechsel-btn" onClick={() => setLanguage("en")} disabled={language === "en"}>EN</button>
-      <button className="sprachwechsel-btn" onClick={() => setLanguage("es")} disabled={language === "es"}>ES</button>
+      <span
+        className={`sprachwechsel-link${language === "de" ? " active" : ""}`}
+        onClick={() => setLanguage("de")}
+      >
+        DE
+      </span>
+      <span className="sprachwechsel-divider">/</span>
+      <span
+        className={`sprachwechsel-link${language === "en" ? " active" : ""}`}
+        onClick={() => setLanguage("en")}
+      >
+        EN
+      </span>
+      <span className="sprachwechsel-divider">/</span>
+      <span
+        className={`sprachwechsel-link${language === "es" ? " active" : ""}`}
+        onClick={() => setLanguage("es")}
+      >
+        ES
+      </span>
     </div>
   );
 }

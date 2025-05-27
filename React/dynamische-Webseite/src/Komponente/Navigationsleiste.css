@@ -1,36 +1,52 @@
-.navbar { 
-   display: flex;                   
-   justify-content: space-between;  /* Logo links, Links rechts */
-   align-items: center;             /* vertikale Zentrierung aller Items */
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   /* Logo links, Links rechts */
+   align-items: center;
+   /* vertikale Zentrierung aller Items */
    background-color: var(--Navigationsleiste);
-   padding: 0 20px;                 /* nur horizontaler Innenabstand */
-   position: fixed; top: 0; left: 0;
+   padding: 0 20px;
+   /* nur horizontaler Innenabstand */
+   position: fixed;
+   top: 0;
+   left: 0;
    width: 100%;
-   height: var(--navbarhöhe);                    /* Im root Ordner als Variable gespeichert */
+   height: var(--navbarhöhe);
+   /* Im root Ordner als Variable gespeichert */
    z-index: 1000;
 }
 
 
-.navbar  a {  /*oder .navbar > a   */
-   display: flex;                   /* macht das <a> selbst zur Flexbox */
-   align-items: center;             /* zentriert das <img> */
-   height: 100%;                    /* füllt die komplette Navbar-Höhe */
-   padding: 0;                      /* entfernt ggf. Default-Padding */
+.navbar a {
+   /*oder .navbar > a   */
+   display: flex;
+   /* macht das <a> selbst zur Flexbox */
+   align-items: center;
+   /* zentriert das <img> */
+   height: 100%;
+   /* füllt die komplette Navbar-Höhe */
+   padding: 0;
+   /* entfernt ggf. Default-Padding */
 }
 
 
 .logo {
-   height: 150%;                     /* skaliert relativ zur Navbar (13vh) */
+   height: 150%;
+   /* skaliert relativ zur Navbar (13vh) */
    padding-top: 1em;
-   width: auto;                     /* behält Proportionen */
-   flex-shrink: 0;                  /* schrumpft nie kleiner als 80% */
+   width: auto;
+   /* behält Proportionen */
+   flex-shrink: 0;
+   /* schrumpft nie kleiner als 80% */
 }
 
 /* Liste der Navigationslinks */
 .navbar-list {
    display: flex;
-   align-items: center;             /* zentriert jedes <li> vertikal */
-   height: 100%;                    /* volle Navbar-Höhe */
+   align-items: center;
+   /* zentriert jedes <li> vertikal */
+   height: 100%;
+   /* volle Navbar-Höhe */
    margin: 0;
    padding: 0;
    list-style: none;
@@ -40,11 +56,16 @@
 /* Die eigentlichen Links (und Dropdown-Button) */
 .navbar-list a,
 .dropbtn {
-   display: flex;                   /* Flexbox, um innen zu zentrieren */
-   align-items: center;             /* Text vertikal zentrieren */
-   justify-content: center;         /* Text horizontal zentrieren */
-   height: 100%;                    /* volle Navbar-Höhe */
-   padding: 12px 20px;                 /* nur horizontaler Abstand */
+   display: flex;
+   /* Flexbox, um innen zu zentrieren */
+   align-items: center;
+   /* Text vertikal zentrieren */
+   justify-content: center;
+   /* Text horizontal zentrieren */
+   height: 100%;
+   /* volle Navbar-Höhe */
+   padding: 12px 20px;
+   /* nur horizontaler Abstand */
    font-size: 16px;
    color: var(--SeitenÜberschrift);
    text-decoration: none;
@@ -57,9 +78,9 @@
 .navbar-list a.active {
    font-weight: 700;
    position: relative;
- }
- 
- .navbar-list a.active::after {
+}
+
+.navbar-list a.active::after {
    content: '';
    position: absolute;
    bottom: 0;
@@ -67,7 +88,7 @@
    width: 100%;
    height: 2px;
    background-color: var(--Hintergrundfarbe);
- }
+}
 
 .navbar-list a:hover,
 .dropdown:hover .dropbtn {
@@ -84,10 +105,11 @@
 .dropdown-content {
    display: none;
    position: absolute;
-   top: 100%; left: 0;
+   top: 100%;
+   left: 0;
    background-color: var(--Dropdownhintergrund);
    min-width: 160px;
-   box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
    z-index: 1;
    padding: 0;
    list-style: none;
@@ -113,5 +135,9 @@
    border: 2px solid white;
    padding: 6px 12px;
    border-radius: 6px;
- }
- 
+}
+
+.übersetzung {
+   display: flex;
+   align-items: center;
+}

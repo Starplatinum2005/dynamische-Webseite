@@ -7,11 +7,6 @@ type Props = { t: (key: string) => string };
 export function Index({ t }: Props) {
   return (
     <>
-      <head>
-        <title> Blue Ocean dive - Startseite </title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
-      </head>
-      <body>
       <main className="startseite">
         <header className="header">
           <img src="/blickfang_startseite.png" alt="Taucher unter Wasser" className="header-image" />

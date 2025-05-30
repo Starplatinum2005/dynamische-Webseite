@@ -30,20 +30,21 @@ export function Index({ t }: Props) {
           <ProjektBoxen Projekt={Startseite.Bildungsprojekt} />
         </section>
 
+        <h1 className="Startseite_h1 Strich">{t("index_tauchen")}</h1>
+
         <section className="Abschnitt2">
-          <div className="Textcontainer2">
-            <h1 className="Startseite_h1 Strich">{t("index_tauchen")}</h1>
+          <article className="Textcontainer2">
             <div className="Bildcontainer2">
               <img
-                className="Bild-links"
-                src="https://cdn.pixabay.com/photo/2017/01/22/18/00/cala-agulla-2000385_640.jpg"
+                className="Bild-mitte"
+                src="/mallorca.png"
                 alt="Tauchen auf Mallorca"
               />
             </div>
             <p>{t("index_p1")}</p>
             <p>{t("index_p2")}</p>
             <p>{t("index_p3")}</p>
-          </div>
+          </article>
         </section>
       </main>
     </>

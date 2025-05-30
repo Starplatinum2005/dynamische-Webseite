@@ -58,17 +58,6 @@
    position: relative;
 }
 
-.Startseite_h1::after {
-   content: '';
-   position: absolute;
-   width: 0;
-   height: 2px;
-   bottom: -5px;
-   left: 0;
-   background-color: black;
-   transition: width 0.3s ease;
-}
-
 .Neuigkeiten {
    display: flex;
    /* Flexibles Layout */
@@ -141,14 +130,9 @@
 }
 
 .Bildcontainer2 {
-   display: flex;
-   /* Flexibles Layout */
-   justify-content: center;
-   /* Zentriert Bild horizontal */
-   margin-bottom: 50px;
-   max-width: 80%;
-   /* Maximale Breite 80% */
-   text-align: center;
+   margin: 0 auto 70px;
+   width: 80%;
+   margin-top: -2%;
 }
 
 .Strich {
@@ -168,7 +152,7 @@
    white-space: nowrap;
 }
 
-.Bild-links {
+.Bild-mitte {
    margin-top: 2%;
    /* Abstand oben */
    max-width: 100%;

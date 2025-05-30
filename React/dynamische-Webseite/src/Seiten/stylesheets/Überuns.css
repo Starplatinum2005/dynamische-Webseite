@@ -1,5 +1,5 @@
 .überuns {
-  font-family: 'Helvetica', Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   color: var(--Textfarbe);
   line-height: 1.8;
   max-width: 1400px;
@@ -18,7 +18,8 @@
   position: absolute;
   top: 7%;
   left: 50%;
-  transform: translateX(-50%); /* Nur horizontal zentrieren */
+  transform: translateX(-50%);
+  /* Nur horizontal zentrieren */
   text-align: center;
   color: white;
   display: flex;
@@ -81,7 +82,7 @@
 }
 
 .section-Bild {
-  width: 100%;
+  width: 95%;
   height: 430px;
   object-fit: cover;
   border-radius: 15px;
@@ -106,7 +107,7 @@
 .section-Inhalt h2 {
   position: relative;
   display: inline-block;
-  font-size: 2.2rem;
+  font-size: 3rem;
   color: #001f3f;
   margin-bottom: 20px;
   font-weight: 550;
@@ -128,7 +129,7 @@
 }
 
 .section-Inhalt p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: #001f3f;
 }
@@ -186,20 +187,20 @@
   .section-container {
     grid-template-columns: 1fr;
   }
-  
+
   .header h1 {
     font-size: 2.5rem;
   }
-  
+
   .section-Inhalt h2 {
     font-size: 1.8rem;
   }
-  
+
   .Zahl-conatainer {
     flex-direction: column;
     padding: 20px;
   }
-  
+
   .Zahl {
     margin-bottom: 20px;
   }

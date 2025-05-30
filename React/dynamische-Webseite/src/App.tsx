@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useState } from "react";
 import { übersetzung } from './Übersetzung';
-//import { Sprachwechsel } from './Komponente/Sprachwechsel';
 import { Footer } from './Komponente/footer';
 import { Index } from './Seiten/Startseite';
 import { Angebote } from './Seiten/Angebote';
@@ -30,11 +29,11 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <Header language={language} setLanguage={setLanguage} />
+      <Header language={language} setLanguage={setLanguage} t = {t} />
       <main>
         <Routes>
           <Route path="/" element={<Index t={t} />} />
-          <Route path="/Angebote" element={<Angebote />} />
+          <Route path="/Angebote" element={<Angebote t={t} />} />
           <Route path='/uberuns' element={<Überuns />} />
           <Route path='/Kontakt' element={<Kontakt />} />
           <Route path='/Impressum' element={<Impressum />} />

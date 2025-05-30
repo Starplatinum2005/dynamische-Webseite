@@ -26,6 +26,19 @@ export const übersetzung: Record<language, Record<string, string>> = {
         footer_socialmedia: "Folgen Sie uns auf:",
         footer_insta: "Instagram",
         footer_facebook: "Facebook",
+
+        header_home: "Home",
+        header_angebote: "Angebote",
+        header_schnuppertauchen: "Schnuppertauchen",
+        header_delfintauchen: "Delfintauchen",
+        header_korallentauchen: "Korallentauchen",
+        header_tauchschein: "Tauchschein",
+        header_höhlentauchen: "Höhlentauchen",
+        header_shop: "Shop",
+        header_überuns: "Über Uns",
+        header_kontakt: "Kontakt",
+
+        angebote_überschrift: "Aktuelle Tauchkurse und Angebote"
     },
 
     en: {
@@ -53,6 +66,19 @@ export const übersetzung: Record<language, Record<string, string>> = {
         footer_socialmedia: "Follow us on:",
         footer_insta: "Instagram",
         footer_facebook: "Facebook",
+
+        header_home: "Home",
+        header_angebote: "Offers",
+        header_schnuppertauchen: "Intro Dive",
+        header_delfintauchen: "Dolphin Diving",
+        header_korallentauchen: "Coral Diving",
+        header_tauchschein: "Diving License",
+        header_höhlentauchen: "Cave Diving",
+        header_shop: "Shop",
+        header_überuns: "About Us",
+        header_kontakt: "Contact",
+
+        angebote_überschrift: "Current Diving Courses and Offers"
     },
 
     es: {
@@ -80,5 +106,18 @@ export const übersetzung: Record<language, Record<string, string>> = {
         footer_socialmedia: "Síguenos en:",
         footer_insta: "Instagram",
         footer_facebook: "Facebook",
+
+        header_home: "Inicio",
+        header_angebote: "Ofertas",
+        header_schnuppertauchen: "Buceo de Iniciación",
+        header_delfintauchen: "Buceo con Delfines",
+        header_korallentauchen: "Buceo en Arrecifes",
+        header_tauchschein: "Licencia de Buceo",
+        header_höhlentauchen: "Buceo en Cuevas",
+        header_shop: "Tienda",
+        header_überuns: "Sobre Nosotros",
+        header_kontakt: "Contacto",
+
+        angebote_überschrift: "Cursos de Buceo y Ofertas Actuales"
     }
 };

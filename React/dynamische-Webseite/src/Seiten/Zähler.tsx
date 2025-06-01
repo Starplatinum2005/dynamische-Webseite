@@ -72,7 +72,7 @@ return (
     <div className = "spendenbox">
        <h2>{anzeigeSpende}€ bereits gespendet</h2> 
        <p className = "spendenhinweis">Du willst auch helfen? </p>
-       <button className = "spendenbutton" onClick = {() => navigate("/spendenformular")}>
+       <button className = "spendenbutton" onClick = {() => navigate('/Spendenformular')}>
         Jetzt spenden
         </button>
     </div>

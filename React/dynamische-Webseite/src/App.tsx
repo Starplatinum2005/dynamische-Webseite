@@ -16,6 +16,7 @@ import { Hochzaehler } from './Seiten/Zähler';
 import { ScrollToTop } from './Funktionen/ScrollToTop';
 import FAQ  from './Seiten/FAQ';
 import { Warenkorb } from './Seiten/Warenkorb';
+import { Spendenformular } from './Seiten/Spendenformular';
 
 
 
@@ -39,6 +40,7 @@ function App() {
           <Route path='/Buchung' element = {<Buchung />} />
           <Route path='/FAQ' element = {<FAQ />} /> 
           <Route path='/warenkorb' element = {<Warenkorb />} />
+          <Route path='/Spendenformular' element = {<Spendenformular />} />
         </Routes>
       </main>
     <Footer />

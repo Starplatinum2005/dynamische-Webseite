@@ -5,6 +5,8 @@
     border: 3px solid var(--Navigationsleiste);
     border-radius: 10px; /* Runde Ecken */
     box-shadow: 0 1px 15px rgba(0, 120, 150, 0.4); /* X, Y (2px nach unten), Weite-> wie verlaufen der Schatten sein soll, rgb (leicht türkis), a = 40% */
+    font-family: 'Segoe UI', sans-serif;
+    /*font-family: Arial, sans-serif; */
     font-size: 1.2rem;
     text-align: center; 
     max-width: 500px;

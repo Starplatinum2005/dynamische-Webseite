@@ -3,10 +3,6 @@ import './stylesheets/Impressum.css'
 export function Impressum() {
     return(
         <>
-    <head>
-        <title> Blue Ocean dive - Startseite </title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
-    </head>
     <header className='impressum_header'>
         <h1>Impressum</h1>
     </header>

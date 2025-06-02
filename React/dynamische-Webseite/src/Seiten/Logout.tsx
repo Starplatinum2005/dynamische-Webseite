@@ -28,10 +28,6 @@ export function LoggedInPage() {
 
   return (
     <>
-    <head>
-        <title> Blue Ocean dive - Startseite </title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
-    </head>
     <main className="login-container">
       <h1>Sie sind eingeloggt</h1>
       <p>Willkommen, {username || 'Gast'}!</p>

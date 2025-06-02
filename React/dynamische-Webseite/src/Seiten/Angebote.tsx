@@ -8,10 +8,6 @@ type Props = { t: (key: string) => string };
 export function Angebote ({ t }: Props){
     return(
     <>
-    <head>
-        <title> Blue Ocean dive - Startseite </title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
-    </head>
         <main>
         <section className="Anfangscontainer"> 
             <img className="Anfangsbild" src="/blickfang_angebote.jpg" alt="Unsere Angebote"/>

@@ -13,7 +13,34 @@ export const übersetzung: Record<language, Record<string, string>> = {
         index_p1: "Erlebe die faszinierende Unterwasserwelt Mallorcas! Die Insel bietet dir nicht nur traumhafte Strände und kristallklares Wasser, sondern auch eine beeindruckende Vielfalt an Tauchrevieren. Von bunten Korallenriffen über geheimnisvolle Höhlen bis hin zu faszinierenden Wracks – Mallorcas Unterwasserwelt hat für Anfänger und erfahrene Taucher gleichermaßen einiges zu bieten.",
         index_p2: "Tauche in kleinen Gruppen an den schönsten Spots der Insel. Entdecke Meeresschildkröten, Zackenbarsche und eine beeindruckende Vielfalt an Fischen, während die Sonne die Wasseroberfläche in ein schimmerndes Lichtspiel verwandelt. Sicherheit, Spaß und nachhaltiges Tauchen stehen dabei immer im Mittelpunkt.",
         index_p3: "Mallorca wartet darauf, von dir entdeckt zu werden – und wir freuen uns, dich dabei zu begleiten! Tauche mit uns ein und erlebe unvergessliche Momente unter der Wasseroberfläche.",
+
+        footer_öffnungszeiten: "Öffnungszeiten Sommersaison:",
+        footer_montag: "Mo.: Ruhetag",
+        footer_woche: "Di. - Fr.: 12:00 - 20:00",
+        footer_wochenende: "Sa. und So.: 10:00 - 20:00",
+        footer_impressum: "Impressum",
+        footer_datenschutz: "Datenschutz",
+        footer_überuns: "Über uns",
+        footer_kontakt: "Kontakt",
+        footer_faq: "FAQ",
+        footer_socialmedia: "Folgen Sie uns auf:",
+        footer_insta: "Instagram",
+        footer_facebook: "Facebook",
+
+        header_home: "Home",
+        header_angebote: "Angebote",
+        header_schnuppertauchen: "Schnuppertauchen",
+        header_delfintauchen: "Delfintauchen",
+        header_korallentauchen: "Korallentauchen",
+        header_tauchschein: "Tauchschein",
+        header_höhlentauchen: "Höhlentauchen",
+        header_shop: "Shop",
+        header_überuns: "Über Uns",
+        header_kontakt: "Kontakt",
+
+        angebote_überschrift: "Aktuelle Tauchkurse und Angebote"
     },
+
     en: {
         index_welcome: "Welcome to Blue Ocean Dive",
         index_zitat: '"Dive into the world of underwater adventures!"',
@@ -26,7 +53,34 @@ export const übersetzung: Record<language, Record<string, string>> = {
         index_p1: "Experience the fascinating underwater world of Mallorca! The island not only offers you stunning beaches and crystal-clear waters, but also an impressive variety of dive sites. From colorful coral reefs and mysterious caves to fascinating wrecks – Mallorca’s underwater world has something to offer for both beginners and experienced divers alike.",
         index_p2: "Dive in small groups at the most beautiful spots on the island. Discover sea turtles, groupers, and an impressive variety of fish as the sun transforms the water’s surface into a shimmering play of light. Safety, fun, and sustainable diving are always at the heart of the experience.",
         index_p3: "Mallorca is waiting to be discovered by you – and we’re excited to be part of your journey! Dive in with us and experience unforgettable moments beneath the surface.",
+
+        footer_öffnungszeiten: "Opening Hours – Summer Season:",
+        footer_montag: "Mon: Closed",
+        footer_woche: "Tue – Fri: 12:00 PM – 8:00 PM",
+        footer_wochenende: "Sat & Sun: 10:00 AM – 8:00 PM",
+        footer_impressum: "Imprint",
+        footer_datenschutz: "Privacy Policy",
+        footer_überuns: "About Us",
+        footer_kontakt: "Contact",
+        footer_faq: "FAQ",
+        footer_socialmedia: "Follow us on:",
+        footer_insta: "Instagram",
+        footer_facebook: "Facebook",
+
+        header_home: "Home",
+        header_angebote: "Offers",
+        header_schnuppertauchen: "Intro Dive",
+        header_delfintauchen: "Dolphin Diving",
+        header_korallentauchen: "Coral Diving",
+        header_tauchschein: "Diving License",
+        header_höhlentauchen: "Cave Diving",
+        header_shop: "Shop",
+        header_überuns: "About Us",
+        header_kontakt: "Contact",
+
+        angebote_überschrift: "Current Diving Courses and Offers"
     },
+
     es: {
         index_welcome: "Bienvenido a Blue Ocean Dive",
         index_zitat: '"¡Sumérgete en el mundo de las aventuras submarinas!"',
@@ -39,5 +93,31 @@ export const übersetzung: Record<language, Record<string, string>> = {
         index_p1: "¡Descubre el fascinante mundo submarino de Mallorca! La isla no solo te ofrece playas de ensueño y aguas cristalinas, sino también una impresionante variedad de zonas de buceo. Desde coloridos arrecifes de coral y misteriosas cuevas hasta fascinantes naufragios: el mundo submarino de Mallorca tiene mucho que ofrecer tanto a principiantes como a buceadores experimentados.",
         index_p2: "Bucea en pequeños grupos en los lugares más hermosos de la isla. Descubre tortugas marinas, meros y una impresionante variedad de peces, mientras el sol convierte la superficie del agua en un juego de luces resplandeciente. La seguridad, la diversión y el buceo sostenible siempre están en el centro de la experiencia.",
         index_p3: "Mallorca está esperando a ser descubierta por ti – ¡y estamos encantados de acompañarte en esta aventura! Sumérgete con nosotros y vive momentos inolvidables bajo la superficie del agua.",
+
+        footer_öffnungszeiten: "Horario de apertura – Temporada de verano:",
+        footer_montag: "Lun: Cerrado",
+        footer_woche: "Mar – Vie: 12:00 – 20:00",
+        footer_wochenende: "Sáb y Dom: 10:00 – 20:00",
+        footer_impressum: "Aviso legal",
+        footer_datenschutz: "Política de privacidad",
+        footer_überuns: "Sobre nosotros",
+        footer_kontakt: "Contacto",
+        footer_faq: "Preguntas frecuentes",
+        footer_socialmedia: "Síguenos en:",
+        footer_insta: "Instagram",
+        footer_facebook: "Facebook",
+
+        header_home: "Inicio",
+        header_angebote: "Ofertas",
+        header_schnuppertauchen: "Buceo de Iniciación",
+        header_delfintauchen: "Buceo con Delfines",
+        header_korallentauchen: "Buceo en Arrecifes",
+        header_tauchschein: "Licencia de Buceo",
+        header_höhlentauchen: "Buceo en Cuevas",
+        header_shop: "Tienda",
+        header_überuns: "Sobre Nosotros",
+        header_kontakt: "Contacto",
+
+        angebote_überschrift: "Cursos de Buceo y Ofertas Actuales"
     }
 };

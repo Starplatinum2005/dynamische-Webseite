@@ -1,5 +1,5 @@
 .überuns {
-  font-family: 'Helvetica', Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   color: var(--Textfarbe);
   line-height: 1.8;
   max-width: 1400px;
@@ -11,30 +11,57 @@
   height: 90vh;
   overflow: hidden;
   margin-bottom: 60px;
-}
-
-.header-Bild {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.9);
+  background-color: #001f3f;
 }
 
 .header-Inhalt {
   position: absolute;
-  top: 50%;
+  top: 7%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  /* Nur horizontal zentrieren */
   text-align: center;
   color: white;
-  z-index: 2;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.3); /* Fügt einen leicht transparenten Hintergrund hinzu */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auszeichnungen-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: nowrap;
+}
+
+.auszeichnung_links {
+  margin-right: 50px;
+}
+
+.auszeichnung_rechts {
+  margin-left: 50px;
+}
+
+.auszeichnung_links,
+.auszeichnung_rechts,
+.logo_überuns {
+  width: 200px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
-  backdrop-filter: blur(5px); /* Fügt einen Blur-Effekt hinzu */
+}
+
+.auszeichnung_links:hover,
+.auszeichnung_rechts:hover,
+.logo_überuns:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .header h1 {
+  white-space: nowrap;
   font-size: 3.5rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -46,31 +73,6 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.Zahl-conatainer {
-  display: flex;
-  justify-content: space-around;
-  padding: 40px;
-  background: linear-gradient(45deg, var(--Navigationsleiste), var(--hovern));
-  border-radius: 15px;
-  margin: 60px 40px;
-  color: white;
-}
-
-.Zahl {
-  text-align: center;
-  padding: 20px;
-}
-
-.Zahl h3 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.Zahl p {
-  font-size: 1.1rem;
-  opacity: 0.9;
-}
-
 .section-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -80,7 +82,7 @@
 }
 
 .section-Bild {
-  width: 100%;
+  width: 95%;
   height: 430px;
   object-fit: cover;
   border-radius: 15px;
@@ -105,8 +107,8 @@
 .section-Inhalt h2 {
   position: relative;
   display: inline-block;
-  font-size: 2.2rem;
-  color: var(--Textfarbe);
+  font-size: 3rem;
+  color: #001f3f;
   margin-bottom: 20px;
   font-weight: 550;
 }
@@ -118,7 +120,7 @@
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: var(--Textfarbe);
+  background-color: #001f3f;
   transition: width 0.3s ease;
 }
 
@@ -127,9 +129,9 @@
 }
 
 .section-Inhalt p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
-  color: var(--Textfarbe);
+  color: #001f3f;
 }
 
 .Interaktiv {
@@ -140,6 +142,7 @@
   margin: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  color: #073869;
 }
 
 .Interaktiv:hover {
@@ -160,7 +163,7 @@
 .interaktiv-Inhalt a {
   display: inline-block;
   padding: 12px 25px;
-  background-color: var(--Textfarbe);
+  background-color: #001f3f;
   color: white;
   text-decoration: none;
   border-radius: 25px;
@@ -169,14 +172,14 @@
 }
 
 .interaktiv-Inhalt a:hover {
-  background-color: var(--hovern);
+  background-color: #073869;
   transform: translateY(-2px);
 }
 
 .interaktiv-Inhalt blockquote {
   font-size: 1.3rem;
   font-style: italic;
-  color: var(--Textfarbe);
+  color: #001f3f;
   margin: 30px 0;
 }
 
@@ -184,20 +187,20 @@
   .section-container {
     grid-template-columns: 1fr;
   }
-  
+
   .header h1 {
     font-size: 2.5rem;
   }
-  
+
   .section-Inhalt h2 {
     font-size: 1.8rem;
   }
-  
+
   .Zahl-conatainer {
     flex-direction: column;
     padding: 20px;
   }
-  
+
   .Zahl {
     margin-bottom: 20px;
   }

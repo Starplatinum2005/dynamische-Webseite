@@ -27,6 +27,7 @@ export function LoggedInPage() {
     };
 
   return (
+    <>
     <main className="login-container">
       <h1>Sie sind eingeloggt</h1>
       <p>Willkommen, {username || 'Gast'}!</p>
@@ -34,5 +35,6 @@ export function LoggedInPage() {
         Ausloggen
       </button>
     </main>
+    </>
   );
 }

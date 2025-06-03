@@ -43,6 +43,7 @@ export function Login() {
 
 
   return (
+    <>
     <main className="login-container">
       <h1>Login</h1>
       <input
@@ -58,9 +59,9 @@ export function Login() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         required
-/>
-
+      />
       <button onClick={handleLogin}>Einloggen</button>
     </main>
+    </>
   );
 }

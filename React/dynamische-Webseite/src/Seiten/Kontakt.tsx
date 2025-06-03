@@ -4,7 +4,6 @@ import { Kontaktformular } from '../Komponente/Kontaktformular'
 export function Kontakt (){
     return(
     <>
- 
     <header className='Kontakt_header'>
         <h1>Kontakt</h1>
     </header>

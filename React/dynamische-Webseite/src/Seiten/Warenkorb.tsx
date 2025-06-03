@@ -82,6 +82,7 @@ export function Warenkorb() {
   const total = cart.reduce((sum, item) => sum + item.price, 0)
    
   return (
+    <>
       <main className="warenkorb-main">
         <h1 className="warenkorb-titel">🛒 Dein Warenkorb</h1>
         {content}
@@ -103,5 +104,6 @@ export function Warenkorb() {
           </button>
         </div>
       </main>
+    </>
   );
 }

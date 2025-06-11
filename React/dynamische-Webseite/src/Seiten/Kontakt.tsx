@@ -1,33 +1,22 @@
 import './stylesheets/Kontakt.css'
+import { Kontaktformular } from '../Komponente/Kontaktformular'
 
 export function Kontakt (){
     return(
-        <>
- 
+    <>
+    <head>
+        <title> Blue Ocean dive - Startseite </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    </head>
     <header className='Kontakt_header'>
         <h1>Kontakt</h1>
     </header>
     <main>
-    <section className="Kontakt">
-        <h2>Kontaktformular</h2>
-        <form action="Sendebestätigung.html" className="Kontaktformular">
-            
-            <label htmlFor="Vorname">Vorname:</label>
-            <input type="text" id="Vorname" placeholder="Vorname" required/>
-        
-            <label htmlFor="Nachname">Nachname:</label>
-            <input type="text" id="Nachname" placeholder="Nachname" required/>
-        
-            <label htmlFor="E-mail">E-Mail:</label>
-            <input type="email" id="E-mail" placeholder="Ihre E-Mail-Adresse" required/>
-        
-            <label htmlFor="Ihr Anliegen">Ihr Anliegen:</label>
-            <textarea id="Ihr Anliegen" placeholder="Ihre Nachricht" rows={5} required></textarea>
-        
-            <button type="submit" className="button">Absenden</button>
-        </form>
-    </section>
+        <section className="Kontakt">
+            <h2>Kontaktformular</h2>
+            <Kontaktformular/>
+        </section>
     </main>
-        </>
+    </>
     )
 }

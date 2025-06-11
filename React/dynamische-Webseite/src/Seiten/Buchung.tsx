@@ -1,8 +1,47 @@
 import './stylesheets/buchung.css'
+import { BuchungInfo} from '../Objects/Buchung'
+import { Buchungsbox } from '../Komponente/Buchungbox'
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 export function Buchung (){
+      const navigate = useNavigate();
+      const handleBezahlen = () => {
+        if (localStorage.getItem('eingeloggt') === 'true') {
+          Swal.fire({
+          title: 'Vielen Dank für Ihren Einkauf!',
+          icon: 'success',
+          confirmButtonText: 'OK'
+          });
+          navigate('/');
+        } else {
+          Swal.fire({
+            title: 'Rabattcode verfügabr!',
+            text: 'Melde dich an um 10% Rabatt auf diesen Einkauf zu erhalten',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Einloggen',
+            cancelButtonText: 'Nein danke, ich bin zurückgeblieben!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              navigate('/login');
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+            navigate('/');
+            Swal.fire({
+              title: 'Vielen Dank für Ihren Einkauf!',
+              icon: 'success',
+              confirmButtonText: 'OK'
+            });
+            }
+          });
+        };
+      }
     return (
-        <>
+    <>
+      <head>
+        <title> Blue Ocean dive - Startseite </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    </head>
         <main className="buchung_main">
     
         <div className="kurs-container">  
@@ -12,56 +51,24 @@ export function Buchung (){
             </div>
         </div>
 
-        <div className="kurs-container"> 
-            <img className="kurs-bild" src="https://cdn.pixabay.com/photo/2012/02/23/08/57/woman-15840_1280.jpg" alt="Schnuppertauchen"/>
-            <div className="kurs-info">
-                <h2>Schnuppertauchen</h2>
-                <p>Der perfekte Einstieg in die Unterwasserwelt für Neugierige und Anfänger. Probieren Sie das Tauchen unter Anleitung aus!</p>
-                <p className="kurs-preis">Preis: 60 €</p>
-            </div>
-        </div>
+        <Buchungsbox Kurse={BuchungInfo.Schnuppertauchen} />
+        <Buchungsbox Kurse={BuchungInfo.Delfintauchen} />
+        <Buchungsbox Kurse={BuchungInfo.Korallentauchen} />
+        <Buchungsbox Kurse={BuchungInfo.Tauchschein} />
+        <Buchungsbox Kurse={BuchungInfo.Höhlentauchen} />
 
-
-        <div className="kurs-container">
-            <img className="kurs-bild" src="https://cdn.pixabay.com/photo/2015/06/11/23/45/dolphin-806359_1280.jpg" alt="Delfintauchen"/>
-            <div className="kurs-info">
-                <h2>Delfintauchen</h2>
-                <p>Erleben Sie ein unvergessliches Abenteuer beim Tauchen mit Delfinen. Perfekt für Naturliebhaber.</p>
-                <p className="kurs-preis">Preis: 110 €</p>
-            </div>
-        </div>
-
-        <div className="kurs-container">
-            <img className="kurs-bild" src="https://cdn.pixabay.com/photo/2016/04/26/22/35/coral-1355474_1280.jpg" alt="Korallentauchen"/>
-            <div className="kurs-info">
-                <h2>Korallentauchen</h2>
-                <p>Entdecken Sie die faszinierende Welt der Korallenriffe. Geeignet für erfahrene Taucher.</p>
-                <p className="kurs-preis">Preis: 80 €</p>
-            </div>
-        </div>
-
-        <div className="kurs-container">
-            <img className="kurs-bild" src="https://cdn.pixabay.com/photo/2015/03/11/15/19/divers-668777_1280.jpg" alt="Tauchschein"/>
-            <div className="kurs-info">
-                <h2>Tauchschein</h2>
-                <p>Erlernen Sie die Grundlagen des Tauchens mit einem professionellen Trainer. Ideal für Anfänger und Fortgeschrittene.</p>
-                <p className="kurs-preis">Preis: 300 €</p>
-            </div>
-        </div>
-
-        <div className="kurs-container">
-            <img className="kurs-bild" src="https://cdn.pixabay.com/photo/2012/02/23/08/35/below-15685_1280.jpg" alt="Höhlentauchen"/>
-            <div className="kurs-info">
-                <h2>Höhlentauchen</h2>
-                <p>Erkunden Sie die faszinierenden Höhlen unter Wasser und erleben Sie eine einzigartige Herausforderung.</p>
-                <p className="kurs-preis">Preis: 130 €</p>
-            </div>
-        </div>
-
-        <section className="Buchungs-Formular">
+        <section className="Buchungs-Formular" id="Test">
 
             <h1 className="Strich">Buchen Sie Ihren Tauchkurs</h1>
-            <form className="Formular">
+                <form className="Formular" onSubmit={(e) => {
+                    e.preventDefault();
+                    const form = e.target as HTMLFormElement;
+                    if (form.checkValidity()) {
+                        handleBezahlen();
+                    } else {
+                        form.reportValidity();
+                    }
+                }}>
                 <label htmlFor="name">Name:</label>
                 <input type="text"  id="name" required placeholder="Max Mustermann" /><br />
 

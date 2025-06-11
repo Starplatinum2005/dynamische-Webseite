@@ -1,0 +1,27 @@
+.sprachwechsel-container {
+  text-align: right;
+  user-select: none;
+  font-size: 15px;
+}
+
+.sprachwechsel-link {
+  cursor: pointer;
+  color: white;
+  font-weight: normal;
+  margin: 0 0.2em;
+  transition: font-weight 0.2s, color 0.2s;
+}
+
+.sprachwechsel-link.active {
+  font-weight: bold;
+  color: white;
+}
+
+.sprachwechsel-link:hover:not(.active) {
+  text-decoration: underline;
+}
+
+.sprachwechsel-divider {
+  color: white;
+  margin: 0 0.2em;
+}

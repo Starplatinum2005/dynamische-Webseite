@@ -1,0 +1,88 @@
+.Boxen-Image {
+    max-width: 100%; /* Maximale Breite des Containers */
+    height: auto; /* automatische Proportionale Höhe */
+    display: block; /* Block-Layout */
+    border-top-left-radius: 8px; /* Runde linke obere Ecke */
+    border-top-right-radius: 8px; /* Runde rechte obere Ecke */
+}
+
+.Angebote-Boxen {
+    border: 2px solid var(--Textfarbe); /* Rahmen in Marineblau */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Leichter Schlagschatten */
+    margin-left: 2.5%; 
+    margin-right: 2.5%;
+    display: flex; /* Flexibles Layout */
+    flex-direction: column; /* Kinder-Elemente werden vertikal angeordnet */
+    justify-content: flex-start; /* Elemente oben ausrichten, da primäre Achse von oben nach unten geht (column) */
+    color: var(--Textfarbe); /* Textfarbe Marineblau */
+    font-size: 1.2rem; /* Schriftgröße */
+    background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe AliceBlue */
+    border-radius: 10px; /* Runde Ecken */
+    width: 20vw; /* Breite des Containers */
+    box-sizing: border-box; /* Padding und Rahmen in Breite einbeziehen */
+}
+
+.Angebote-Boxen p {
+    margin: 10px; /* Außenabstand */
+    text-align: center; /* Text zentrieren */
+    font-size: 1.2rem;
+}
+
+.Jetzt-buchen {
+    height: 100px; /* Höhe des Containers */
+    display: flex; /* Flexibles Layout */
+    justify-content: center; /* Inhalte horizontal zentrieren */
+    align-items: center; /* Inhalte vertikal zentrieren */
+    margin-top: auto; /* Automatischer Abstand nach oben */
+    text-align: center; /* Text zentrieren */
+    padding: 10px 0; /* Vertikaler Innenabstand */
+    background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe AliceBlue */
+    border-top: 2px solid var(--Hintergrundfarbe); /* Oberer Rahmen in Hintergrundfarbe */
+    border-bottom-left-radius: 8px; /* Runde linke untere Ecke */
+    border-bottom-right-radius: 8px; /* Runde rechte untere Ecke */
+    text-decoration: none;
+    
+}
+
+.Jetzt-buchen:hover {
+    animation: bounce 1s linear; /* Animation beim Hover */
+}
+
+@keyframes bounce { /* Definiert "Hüpfen"-Animation */
+    0% { /*Start der Animation*/
+        transform: translateY(0); /* Keine Verschiebung */
+    }
+    25% { /*passiert bei einem viertel der Animation usw.*/
+        transform: translateY(-5px); /* Nach oben bewegen */
+    }
+    50% {
+        transform: translateY(0); /* Zurück in die Ausgangsposition */
+    }
+    75% {
+        transform: translateY(-3px); /* Leichter nach oben bewegen */
+    }
+    100% {
+        transform: translateY(0); /* Zurück in die Ausgangsposition */
+    }
+}
+
+@media (prefers-reduced-motion: reduce) { /*Bewegungseffekte sollen je nach Einstellung optional sein*/
+    .Jetzt-buchen:hover {
+      animation: none;
+    }
+}
+  
+.Jetzt-buchen button {
+    background-color: var(--Hintergrundfarbe); /* Hintergrundfarbe AliceBlue */
+    color: var(--Textfarbe); /* Textfarbe Marineblau */
+    border: 2px solid var(--Textfarbe); /* Rahmen in Marineblau */
+    border-radius: 5px; /* Runde Ecken */
+    padding: 5px 10px; /* Innenabstand */
+    font-size: 16px; /* Schriftgröße */
+    cursor: pointer; /* Zeiger-Symbol bei Hover */
+}
+
+.Jetzt-buchen button:hover {
+    background-color: var(--Textfarbe); /* Hintergrundfarbe Marineblau beim Hover */
+    color: var(--Hintergrundfarbe); /* Textfarbe AliceBlue beim Hover */
+}

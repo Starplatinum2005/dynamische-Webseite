@@ -3,6 +3,10 @@ import './stylesheets/Impressum.css'
 export function Impressum() {
     return(
         <>
+    <head>
+        <title> Blue Ocean dive - Startseite </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    </head>
     <header className='impressum_header'>
         <h1>Impressum</h1>
     </header>
@@ -52,7 +56,7 @@ export function Impressum() {
         </ul>
     </section>
     
-    <p className='p'>Alle genannten Daten auf der Website sind frei erfunden. Wir haften für nichts!</p>
+    <p className='p'>Bei dieser Website handelt es sich um ein studentisches Projekt. Alle genannten Daten sind frei erfunden, daher übernehmen wir keinerlei Haftung!</p>
     </main>
         </>
     )

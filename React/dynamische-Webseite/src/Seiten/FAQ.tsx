@@ -65,23 +65,27 @@ const FAQ = () => {
 
   return (
     <>
+      <head>
+        <title> Blue Ocean dive - Startseite </title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+    </head>
       <main>
         <div className="faq-container">
           <h2 className='h2_FAQ'>FAQ - Häufig gestellte Fragen</h2>
           {faqs.map((faq, index) => (
             <div key={index} className="faq-item">
               <div 
-                className={`faq-question ${activeIndex === index ? 'active' : ''}`} 
+                className={`faq-frage ${activeIndex === index ? 'active' : ''}`} 
                 onClick={() => toggleFAQ(index)}
               >
                 {faq.question}
               </div>
-              <div className={`faq-answer ${activeIndex === index ? 'active' : ''}`}>
+              <div className={`faq-antwort ${activeIndex === index ? 'active' : ''}`}>
                 {faq.answer}
               </div>
             </div>
           ))}
-      <div className='faq-not-found'>
+        <div className='faq-nicht-gefunden'>
           Frage nicht gefunden? Kontaktieren Sie uns telefonisch oder per Email!
         </div>
       </div>

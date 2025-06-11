@@ -6,7 +6,7 @@
   margin: 0 auto;
 }
 
-.header {
+.header_überuns {
   position: relative;
   height: 90vh;
   overflow: hidden;
@@ -14,7 +14,7 @@
   background-color: #001f3f;
 }
 
-.header-Inhalt {
+.header_überuns-Inhalt {
   position: absolute;
   top: 7%;
   left: 50%;
@@ -45,12 +45,25 @@
 }
 
 .auszeichnung_links,
-.auszeichnung_rechts,
-.logo_überuns {
-  width: 200px;
-  height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.auszeichnung_rechts {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
   border-radius: 10px;
+  border: 1px solid #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 10px;
+}
+
+.logo_überuns {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 10px;
+  align-self: flex-end;
+  transform: translateY(20px);
 }
 
 .auszeichnung_links:hover,
@@ -60,20 +73,25 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-.header h1 {
+.header_überuns h1 {
   white-space: nowrap;
   font-size: 3.5rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;      /* Dünne weiße Umrandung */
+  border-radius: 8px;
+  padding: 10px 24px;
+  background: rgba(0,0,0,0.15); /* Optional: leicht dunkler Hintergrund für bessere Lesbarkeit */
+  display: inline-block;
 }
 
-.header p {
+.header_überuns p {
   font-size: 1.5rem;
   font-style: italic;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.section-container {
+.section-container_überuns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -81,7 +99,7 @@
   margin-bottom: 60px;
 }
 
-.section-Bild {
+.section-Bild_überuns {
   width: 95%;
   height: 430px;
   object-fit: cover;
@@ -91,20 +109,20 @@
   filter: brightness(0.95);
 }
 
-.section-Bild:hover {
+.section-Bild_überuns:hover {
   transform: scale(1.03) translateY(-5px);
   filter: brightness(1.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.section-Inhalt {
+.section-Inhalt_überuns {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
 }
 
-.section-Inhalt h2 {
+.section-Inhalt_überuns h2 {
   position: relative;
   display: inline-block;
   font-size: 3rem;
@@ -113,7 +131,7 @@
   font-weight: 550;
 }
 
-.section-Inhalt h2::after {
+.section-Inhalt_überuns h2::after {
   content: '';
   position: absolute;
   width: 0;
@@ -124,17 +142,17 @@
   transition: width 0.3s ease;
 }
 
-.section-Inhalt h2:hover::after {
+.section-Inhalt_überuns h2:hover::after {
   width: 100%;
 }
 
-.section-Inhalt p {
-  font-size: 1.2rem;
+.section-Inhalt_überuns p {
+  font-size: 20px;
   line-height: 1.8;
   color: #001f3f;
 }
 
-.Interaktiv {
+.Interaktiv_überuns {
   background: linear-gradient(45deg, var(--Hintergrundfarbe), white);
   padding: 60px 40px;
   text-align: center;
@@ -145,22 +163,22 @@
   color: #073869;
 }
 
-.Interaktiv:hover {
+.Interaktiv_überuns:hover {
   transform: translateY(-5px);
 }
 
-.interaktiv-Inhalt {
+.interaktiv-Inhalt_überuns {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.Verlinkung {
+.Verlinkung_überuns {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.interaktiv-Inhalt a {
+.interaktiv-Inhalt_überuns a {
   display: inline-block;
   padding: 12px 25px;
   background-color: #001f3f;
@@ -171,12 +189,12 @@
   transition: all 0.3s ease;
 }
 
-.interaktiv-Inhalt a:hover {
+.interaktiv-Inhalt_überuns a:hover {
   background-color: #073869;
   transform: translateY(-2px);
 }
 
-.interaktiv-Inhalt blockquote {
+.interaktiv-Inhalt_überuns blockquote {
   font-size: 1.3rem;
   font-style: italic;
   color: #001f3f;
@@ -184,24 +202,15 @@
 }
 
 @media (max-width: 968px) {
-  .section-container {
+  .section-container_überuns {
     grid-template-columns: 1fr;
   }
 
-  .header h1 {
+  .header_überuns h1 {
     font-size: 2.5rem;
   }
 
-  .section-Inhalt h2 {
+  .section-Inhalt_überuns h2 {
     font-size: 1.8rem;
-  }
-
-  .Zahl-conatainer {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .Zahl {
-    margin-bottom: 20px;
   }
 }

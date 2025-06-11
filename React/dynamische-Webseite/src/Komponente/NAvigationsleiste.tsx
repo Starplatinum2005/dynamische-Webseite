@@ -2,7 +2,6 @@ import './Navigationsleiste.css'
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Sprachwechsel } from './Sprachwechsel';
-/* import { Dispatch, SetStateAction } from 'react' */
 import { language } from '../App';
 
 interface HeaderProps {

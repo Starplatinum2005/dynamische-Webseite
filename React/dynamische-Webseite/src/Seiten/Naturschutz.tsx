@@ -5,10 +5,6 @@ import {Hochzaehler} from './Zähler';
 export function Naturschutz (){
     return(
     <>
-    <head>
-        <title> Blue Ocean dive - Startseite </title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
-    </head>
     <main className='main_Naturschutzgebiet'>
         <h1 className='h1_Naturschutzgebiet'>{Naturschutztext.Naturschutzgebiet.h1}</h1>
 

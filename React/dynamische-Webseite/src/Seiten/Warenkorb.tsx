@@ -83,10 +83,6 @@ export function Warenkorb() {
    
   return (
     <>
-      <head>
-        <title> Blue Ocean dive - Startseite </title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
-      </head>
       <main className="warenkorb-main">
         <h1 className="warenkorb-titel">🛒 Dein Warenkorb</h1>
         {content}

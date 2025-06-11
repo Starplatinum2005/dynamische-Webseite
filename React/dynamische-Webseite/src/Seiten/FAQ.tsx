@@ -65,10 +65,6 @@ const FAQ = () => {
 
   return (
     <>
-      <head>
-        <title> Blue Ocean dive - Startseite </title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
-    </head>
       <main>
         <div className="faq-container">
           <h2 className='h2_FAQ'>FAQ - Häufig gestellte Fragen</h2>

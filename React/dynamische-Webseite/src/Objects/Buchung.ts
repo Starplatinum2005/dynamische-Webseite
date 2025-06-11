@@ -16,7 +16,7 @@ export const BuchungInfo = {
         h2: "Schnuppertauchen",
         p: "Der perfekte Einstieg in die Unterwasserwelt für Neugierige und Anfänger. Probieren Sie das Tauchen unter Anleitung aus!",
         Preis: "Preis: 60 €",
-        Bild: "https://cdn.pixabay.com/photo/2012/02/23/08/57/woman-15840_1280.jpg",
+        Bild: "/schnuppertauchen.png",
         Alt: "Schnuppertauchen",
         Id: "Schnuppertauchen"
     },

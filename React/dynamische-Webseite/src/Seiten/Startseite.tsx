@@ -7,7 +7,7 @@ export function Index() {
     <>
       <main className="startseite">
         <header className="header">
-          <img src="/blickfang_startseite.png" alt="Taucher unter Wasser" className="header-image" />
+          <img src="/Titelbild.png" alt="Taucher unter Wasser" className="header-image" />
           <section className="header-content">
             <h1>Willkommen bei Blue Ocean Dive</h1>
             <p>"Tauche ein in die Welt der Unterwasser-Abenteuer!"</p>

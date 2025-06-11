@@ -1,16 +1,8 @@
 import './Navigationsleiste.css'
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { Sprachwechsel } from './Sprachwechsel';
-import { language } from '../App';
 
-interface HeaderProps {
-  language: language;
-  setLanguage: React.Dispatch<React.SetStateAction<language>>;
-  t: (key: string) => string;
-}
-
-export function Header({ language, setLanguage, t }: HeaderProps) {
+export function Header() {
   const location = useLocation();
   const [username, setUsername] = useState<string | null>(null)
 
@@ -32,7 +24,7 @@ export function Header({ language, setLanguage, t }: HeaderProps) {
             aria-label="Startseite"
             className={location.pathname === '/' ? 'active' : ''}
           >
-            {t("header_home")}
+            Home
           </Link>
         </li>
         <li className="dropdown">
@@ -41,14 +33,14 @@ export function Header({ language, setLanguage, t }: HeaderProps) {
             className={`dropbtn ${location.pathname === '/Angebote' ? 'active' : ''}`}
             aria-label="Angebote"
           >
-            {t("header_angebote")}
+            Angebote
           </Link>
           <ul className="dropdown-content">
-            <li><Link to="/Buchung#Schnuppertauchen">{t("header_schnuppertauchen")}</Link></li>
-            <li><Link to="/Buchung#Delfintauchen">{t("header_delfintauchen")}</Link></li>
-            <li><Link to="/Buchung#Korallentauchen">{t("header_korallentauchen")}</Link></li>
-            <li><Link to="/Buchung#Tauchschein">{t("header_tauchschein")}</Link></li>
-            <li><Link to="/Buchung#Höhlentauchen">{t("header_höhlentauchen")}</Link></li>
+            <li><Link to="/Buchung#Schnuppertauchen">Schnuppertauchen</Link></li>
+            <li><Link to="/Buchung#Delfintauchen">Delfintauchen</Link></li>
+            <li><Link to="/Buchung#Korallentauchen">Korallentauchen</Link></li>
+            <li><Link to="/Buchung#Tauchschein">Tauchschein</Link></li>
+            <li><Link to="/Buchung#Höhlentauchen">Höhlentauchen</Link></li>
           </ul>
         </li>
         <li>
@@ -57,7 +49,7 @@ export function Header({ language, setLanguage, t }: HeaderProps) {
             className={location.pathname === '/Shop' ? 'active' : ''}
             aria-label="Shop"
           >
-            {t("header_shop")}
+            Shop
           </Link>
         </li>
         <li>
@@ -66,7 +58,7 @@ export function Header({ language, setLanguage, t }: HeaderProps) {
             className={location.pathname === '/uberuns' ? 'active' : ''}
             aria-label="Über uns"
           >
-            {t("header_überuns")}
+            Über Uns
           </Link>
         </li>
         <li>
@@ -75,7 +67,7 @@ export function Header({ language, setLanguage, t }: HeaderProps) {
             className={location.pathname === '/Kontakt' ? 'active' : ''}
             aria-label="Kontakt"
           >
-            {t("header_kontakt")}
+            Kontakt
           </Link>
         </li>
         <li>
@@ -86,11 +78,6 @@ export function Header({ language, setLanguage, t }: HeaderProps) {
               👤
             </Link>
           )}
-        </li>
-        <li>
-          <div className="übersetzung">
-            <Sprachwechsel language={language} setLanguage={setLanguage} />
-          </div>
         </li>
       </ul>
     </nav>

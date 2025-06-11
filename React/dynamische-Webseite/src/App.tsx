@@ -1,6 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from "react";
-import { übersetzung } from './Übersetzung';
 import { Footer } from './Komponente/footer';
 import { Index } from './Seiten/Startseite';
 import { Angebote } from './Seiten/Angebote';
@@ -20,20 +18,16 @@ import { Warenkorb } from './Seiten/Warenkorb';
 import { Login } from './Seiten/Account';
 import { LoggedInPage } from './Seiten/Logout';
 
-export type language = 'de' | 'en' | 'es';
-
 function App() {
-  const [language, setLanguage] = useState<language>('de');
-  const t = (key: string) => übersetzung[language][key] || key;
 
   return (
     <>
       <ScrollToTop />
-      <Header language={language} setLanguage={setLanguage} t = {t} />
+      <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Index t={t} />} />
-          <Route path="/Angebote" element={<Angebote t={t} />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/Angebote" element={<Angebote />} />
           <Route path='/uberuns' element={<Überuns />} />
           <Route path='/Kontakt' element={<Kontakt />} />
           <Route path='/Impressum' element={<Impressum />} />
@@ -49,7 +43,7 @@ function App() {
           <Route path='/loggedin' element={<LoggedInPage />} />
         </Routes>
       </main>
-      <Footer t={t}/>
+      <Footer />
     </>
   );
 }

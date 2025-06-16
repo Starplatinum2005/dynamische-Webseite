@@ -16,39 +16,6 @@ export const Hochzaehler = () =>{
       setGesamtSpende(prev => prev+eingabe); //Funktion erhöht die gesamtSpende (falls gespendet wurde)
     };
     
-/*useEffect(() => {
-    let timer;
-
-    const updateSpeed = () => {
-      const differenz = gesamtSpende - anzeigeSpende;
-
-      let delay;
-      if (differenz>20) {
-        delay = 20; //sehr schnelles Zählen
-      } else if (differenz <= 20&& differenz>5) {
-        delay = 80;
-      } else if(differenz <=5) {
-        delay = 200;
-      }
-
-      timer = setTimeout(() => {
-        setAnzeigeSpende(prev => {
-          if (prev < gesamtSpende) {
-            updateSpeed();
-            return prev + 1;
-          }
-          return prev;
-        });
-      }, delay);
-    };
-
-    if (anzeigeSpende < gesamtSpende) {
-      updateSpeed();
-    }
-
-    return () => clearTimeout(timer);
-  }, [gesamtSpende, anzeigeSpende]); */
-
 
   useEffect (() =>{
     const timer = setInterval(() =>{

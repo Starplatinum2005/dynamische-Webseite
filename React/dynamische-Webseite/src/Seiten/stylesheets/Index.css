@@ -6,7 +6,11 @@
    margin: 0 auto;
 }
 
-.header {
+ .header {
+   background-image: url('/Titelbild.jpg');
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
    position: relative;
    width: 100vw;      /* Volle Bildschirmbreite */
    height: auto;      /* Höhe passt sich dem Inhalt an */
@@ -40,7 +44,6 @@
    /* Fügt einen leicht transparenten Hintergrund hinzu */
    border-radius: 10px;
    backdrop-filter: blur(5px);
-   /* Fügt einen Blur-Effekt hinzu */
 }
 
 .header-content h1 {
@@ -50,6 +53,47 @@
 .header-content p {
    font-size: 20px;
 }
+
+.cta-buttons {
+   display: flex;
+   justify-content: center;
+   gap: 16px;
+   margin-top: 20px;
+ }
+ 
+ .jetzt-entdecken-button, .mehr-erfahren-button {
+   padding: 12px 28px;
+   font-size: 16px;
+   font-weight: 600;
+   border-radius: 50px;
+   border: 2px solid transparent;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ }
+ 
+ .jetzt-entdecken-button {
+   background-color: #5d899b;
+   color: white;
+   border-color: #5d899b;
+ }
+ 
+ .jetzt-entdecken-button:hover {
+   background-color: #8fb4c0;
+   border-color: #8fb4c0;
+   transform: translateY(-2px);
+ }
+ 
+ .mehr-erfahren-button {
+   background-color: #e0e0e0;
+   color: #5d899b;
+   border-color: #5d899b;
+ }
+ 
+ .mehr-erfahren-button:hover {
+   background-color: #e0f6ff;
+   transform: translateY(-2px);
+ } 
 
 .Startseite_main {
    margin: 0;

@@ -1,8 +1,10 @@
 import './stylesheets/Index.css'
 import { Startseite } from '../Objects/Startseite';
 import { ProjektBoxen } from '../Komponente/ProjektBoxen';
+import { useNavigate} from 'react-router-dom';
 
 export function Index() {
+  const navigate = useNavigate();
   return (
     <>
       <main className="startseite">
@@ -10,7 +12,15 @@ export function Index() {
           <img src="/Titelbild.jpg" alt="Taucher unter Wasser" className="header-image" />
           <section className="header-content">
             <h1>Willkommen bei Blue Ocean Dive</h1>
-            <p>"Tauche ein in die Wc:\Users\BrennLe\Downloads\Startseite.jpgelt der Unterwasser-Abenteuer!"</p>
+            <p>"Tauche ein in die Welt der Unterwasser-Abenteuer!"</p>
+            <div className="cta-buttons">
+              <button className="jetzt-entdecken-button"onClick = {() => navigate('/Angebote')}>
+                Jetzt entdecken
+              </button>
+              <button className="mehr-erfahren-button"onClick = {() => navigate('/uberuns')}>
+                Mehr erfahren
+                </button>
+              </div>
           </section>
         </header>
 

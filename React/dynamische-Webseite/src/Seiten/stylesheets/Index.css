@@ -8,16 +8,23 @@
 
 .header {
    position: relative;
-   height: 90vh;
+   width: 100vw;      /* Volle Bildschirmbreite */
+   height: auto;      /* Höhe passt sich dem Inhalt an */
+   min-height: 300px; /* Optional: Mindesthöhe */
    overflow: hidden;
    margin-bottom: 60px;
+   left: 50%;
+   right: 50%;
+   margin-left: -50vw;
+   margin-right: -50vw;
 }
 
 .header-image {
-   width: 100%;
-   height: 100%;
+   width: 100vw;      /* Volle Bildschirmbreite */
+   height: auto;      /* Höhe automatisch */
+   display: block;    /* Kein zusätzlicher Abstand */
    object-fit: cover;
-   filter: brightness(0.96);
+   max-width: 100vw;  /* Verhindert Überlauf */
 }
 
 .header-content {
@@ -216,5 +223,6 @@
    .Thema {
       width: 250px;
    }
+
 
 }

@@ -12,12 +12,13 @@ import { Impressum } from './Seiten/Impressum';
 import { Datenschutz } from './Seiten/Datenschutz';
 import { Shop } from './Seiten/Shop';
 import { Hochzaehler } from './Seiten/Zähler';
+import { Spendenformularseite} from './Seiten/Spendenformular';
 import { ScrollToTop } from './Funktionen/ScrollToTop';
 import FAQ from './Seiten/FAQ';
 import { Warenkorb } from './Seiten/Warenkorb';
 import { Login } from './Seiten/Account';
 import { LoggedInPage } from './Seiten/Logout';
-import { Spendenformular } from './Seiten/Spendenformular';
+
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='/Datenschutz' element={<Datenschutz />} />
           <Route path='/Bildungsprojekt' element={<Bildungsprojekt />} />
           <Route path='/Spenden' element={<Hochzaehler />} />
+          <Route path='/Spendenseite' element={<Spendenformularseite />} />
           <Route path='/Naturschutz' element={<Naturschutz />} />
           <Route path='/Shop' element={<Shop />} />
           <Route path='/Buchung' element={<Buchung />} />
@@ -42,7 +44,6 @@ function App() {
           <Route path='/warenkorb' element={<Warenkorb />} />
           <Route path='/LogIn' element={<Login />} />
           <Route path='/loggedin' element={<LoggedInPage />} />
-          <Route path='/Spendenformular' element={<Spendenformular />} />
         </Routes>
       </main>
       <Footer />

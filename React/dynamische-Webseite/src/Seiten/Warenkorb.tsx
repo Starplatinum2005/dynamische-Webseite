@@ -44,7 +44,7 @@ export function Warenkorb() {
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Einloggen',
-        cancelButtonText: 'Nein danke, ich bin zurückgeblieben!'
+        cancelButtonText: 'Nein danke!'
       }).then((result) => {
         if (result.isConfirmed) {
           navigate('/login');

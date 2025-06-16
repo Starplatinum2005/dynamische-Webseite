@@ -2,13 +2,13 @@
   font-family: 'Segoe UI', sans-serif;
   color: var(--Textfarbe);
   line-height: 1.8;
-  max-width: 1400px;
   margin: 0 auto;
 }
 
 .header_überuns {
   position: relative;
   height: 90vh;
+  width: 100vw;
   overflow: hidden;
   margin-bottom: 60px;
   background-color: #002a55;

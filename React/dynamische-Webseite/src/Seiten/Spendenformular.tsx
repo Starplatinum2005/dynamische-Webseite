@@ -22,7 +22,7 @@ export const Spendenformularseite = () => {
 
     setTimeout(() => {
       navigate('/');
-    }, 1500);
+    }, 2500);
   };
 
   const handleSupportClick = () => {

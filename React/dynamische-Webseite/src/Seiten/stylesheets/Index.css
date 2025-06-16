@@ -73,25 +73,25 @@
  }
  
  .jetzt-entdecken-button {
-   background-color: #5d899b;
+   background-color: var(--Navigationsleiste);
    color: white;
-   border-color: #5d899b;
+   border-color: var(--Navigationsleiste);
  }
  
  .jetzt-entdecken-button:hover {
-   background-color: #8fb4c0;
-   border-color: #8fb4c0;
+   background-color: #79a8ba;
+   border-color: #79a8ba;
    transform: translateY(-2px);
  }
  
  .mehr-erfahren-button {
-   background-color: #e0e0e0;
-   color: #5d899b;
-   border-color: #5d899b;
+   background-color:#e0e0e0 ;
+   color: var(--Navigationsleiste);
+   border-color: var(--Navigationsleiste);
  }
  
  .mehr-erfahren-button:hover {
-   background-color: #e0f6ff;
+   background-color: #d0e4ea;
    transform: translateY(-2px);
  } 
 

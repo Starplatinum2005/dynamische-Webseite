@@ -2,7 +2,7 @@ import { useState } from 'react';
 //import {useNavigate} from 'react-router-dom'; //Routing; Hook von react-router-dom um per Knopfdruck die Seite zu wechseln
 import './stylesheets/Spendenformular.css';
 
-export const Spendenformular = () =>{
+export const Spendenformularseite = () =>{
     const [betrag, setBetrag] = useState <number| ''>(); //speichert, was der Spender eintippt; betrag darf entweder eine number oder ein leeres String sein 
     const [dankmeldung, setdankMeldung] = useState(''); //für Dank-Meldung nachher 
     const [fehlermeldung, setfehlerMeldung] = useState('');

@@ -69,7 +69,7 @@ export const Hochzaehler = () =>{
     <div className = "spendenbox">
        <h2>{anzeigeSpende}€ bereits gespendet</h2> 
        <p className = "spendenhinweis">Du willst auch helfen? </p>
-       <button className = "spendenbutton" onClick = {() => navigate('/Spendenformular')}>
+       <button className = "spendenbutton" onClick = {() => navigate('/Spendenseite')}>
         Jetzt spenden
         </button>
     </div>

@@ -25,6 +25,10 @@ export const Spendenformularseite = () => {
     }, 1500);
   };
 
+  const handleSupportClick = () => {
+    navigate('/kontakt');
+  };
+
   return (
     <div className="spendenformularseite">
       <div className="spendenformular">
@@ -47,8 +51,10 @@ export const Spendenformularseite = () => {
       </div>
 
       <div className="support-box">
-        <p>Wenn es Probleme mit dem Formular gibt, melden Sie sich bitte.</p>
-        <button className="support-button">Support kontaktieren</button>
+        <p>Wenn es Probleme gibt, kontaktieren Sie bitte unseren Support.</p>
+        <button className="support-button" onClick={handleSupportClick}>
+          Support kontaktieren
+        </button>
       </div>
     </div>
   );

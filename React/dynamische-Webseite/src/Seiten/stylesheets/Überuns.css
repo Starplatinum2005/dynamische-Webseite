@@ -162,10 +162,6 @@
   color: white;
 }
 
-.Interaktiv_überuns:hover {
-  transform: translateY(-5px);
-}
-
 .interaktiv-Inhalt_überuns {
   max-width: 800px;
   margin: 0 auto;

@@ -18,17 +18,16 @@ export function Login() {
           confirmButtonText: 'OK'
         });
         return;
-
       }
       localStorage.setItem('username', username);
-      localStorage.setItem('eingeloggt', 'true')
+      localStorage.setItem('eingeloggt', 'true');
       localStorage.setItem('password', password);
       Swal.fire({
         title: 'Erfolgreich eingeloggt!',
         text: 'Du wurdest erfolgreich eingeloggt.',
         icon: 'success',
         confirmButtonText: 'OK'
-      })
+      });
       navigate('/');
     } else {
       Swal.fire({
@@ -40,28 +39,37 @@ export function Login() {
     }
   };
 
-
+  const handleSupport = () => {
+    navigate('/kontakt');
+  };
 
   return (
-    <>
-    <main className="login-container">
-      <h1>Login</h1>
-      <input
-        type="text"
-        placeholder="Benutzername"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        required
-      />
-      <input
-        type="password"
-        placeholder="Passwort (min. 8 Zeichen)"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button onClick={handleLogin}>Einloggen</button>
+    <main className="login-page">
+      <div className="login-container">
+        <h1>Login</h1>
+        <input
+          type="text"
+          placeholder="Benutzername"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Passwort (min. 8 Zeichen)"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button onClick={handleLogin}>Einloggen</button>
+      </div>
+
+      <div className="support-box">
+        <p>Haben Sie Probleme beim Einloggen?</p>
+        <button className="support-button" onClick={handleSupport}>
+          Kontaktieren Sie uns
+        </button>
+      </div>
     </main>
-    </>
   );
 }

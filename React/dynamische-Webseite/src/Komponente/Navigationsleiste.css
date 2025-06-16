@@ -33,7 +33,8 @@
 .logo {
    height: 150%;
    /* skaliert relativ zur Navbar (13vh) */
-   padding-top: 1em;
+   padding-top: 1.75em;
+   padding-bottom:0.4em;
    width: auto;
    /* behält Proportionen */
    flex-shrink: 0;

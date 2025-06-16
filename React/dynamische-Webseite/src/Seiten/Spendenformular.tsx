@@ -1,12 +1,12 @@
 import { useState } from 'react';
-//import {useNavigate} from 'react-router-dom'; //Routing; Hook von react-router-dom um per Knopfdruck die Seite zu wechseln
+import {useNavigate} from 'react-router-dom'; //Routing; Hook von react-router-dom um per Knopfdruck die Seite zu wechseln
 import './stylesheets/Spendenformular.css';
 
 export const Spendenformularseite = () =>{
     const [betrag, setBetrag] = useState <number| ''>(); //speichert, was der Spender eintippt; betrag darf entweder eine number oder ein leeres String sein 
     const [dankmeldung, setdankMeldung] = useState(''); //für Dank-Meldung nachher 
     const [fehlermeldung, setfehlerMeldung] = useState('');
-    //const navigate = useNavigate(); //für die Navigation nach der Spende (auf Homepage)
+    const navigate = useNavigate(); //für die Navigation nach der Spende (auf Homepage)
 
     const check = () =>{
 
@@ -22,9 +22,9 @@ export const Spendenformularseite = () =>{
     setdankMeldung(`Vielen Dank für deine Spende von ${zahl}€!`);
    
     
-    /*setTimeout(() =>{
+    setTimeout(() =>{
         navigate('/');
-    },2500);//wartet 2,5 Sekunden und navigiert dann automatisch auf andere Seite*/
+    },1500);//wartet 1,5 Sekunden und navigiert dann automatisch auf andere Seite
 
     };
 

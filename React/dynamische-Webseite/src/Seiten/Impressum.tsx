@@ -52,7 +52,7 @@ export function Impressum() {
         </ul>
     </section>
     
-    <p className='p'>Alle genannten Daten auf der Website sind frei erfunden. Wir haften für nichts!</p>
+    <p className='p'>Bei dieser Website handelt es sich um ein studentisches Projekt. Alle genannten Daten sind frei erfunden, daher übernehmen wir keinerlei Haftung!</p>
     </main>
         </>
     )

@@ -13,8 +13,8 @@ export const Hochzaehler = () =>{
     const betrag = 110; //Simulation einer Spende (solange noch keine Spendenfunktion eingebunden ist)
     
     const Spende =(eingabe:number) =>{
-    setGesamtSpende(prev => prev+eingabe); //Funktion erhöht die gesamtSpende (falls gespendet wurde)
-};
+      setGesamtSpende(prev => prev+eingabe); //Funktion erhöht die gesamtSpende (falls gespendet wurde)
+    };
     
 /*useEffect(() => {
     let timer;
@@ -50,33 +50,30 @@ export const Hochzaehler = () =>{
   }, [gesamtSpende, anzeigeSpende]); */
 
 
-    useEffect (() =>{
-        const timer = setInterval(() =>{
-            setAnzeigeSpende((prev:number) =>{
-                if(prev <gesamtSpende)return prev +1; //solange die gesamtSpende Summe noch nicht erreicht wurde
-                clearInterval(timer);
-                return prev;
-            });
-        },1); //jede Millisekunden wird die angezeigte Spende um eins erhöht 
-       
+  useEffect (() =>{
+    const timer = setInterval(() =>{
+      setAnzeigeSpende((prev:number) =>{
+        if(prev <gesamtSpende)return prev +1; //solange die gesamtSpende Summe noch nicht erreicht wurde
+          clearInterval(timer);
+            return prev;
+      });
+    },1); //jede Millisekunden wird die angezeigte Spende um eins erhöht    
+    return () => clearInterval(timer);
+  }, [gesamtSpende, anzeigeSpende]); 
 
-return () => clearInterval(timer);
-    }, [gesamtSpende, anzeigeSpende]); 
+  useEffect (() =>{
+    Spende(betrag);//einmalig aufgerufen -> löst Hochzähler aus 
+  }, []); // [] -> nur einmal beim ersten Laden 
 
-
-    useEffect (() =>{
-        Spende(betrag);//einmalig aufgerufen -> löst Hochzähler aus 
-    }, []); // [] -> nur einmal beim ersten Laden 
-
-return (
+  return (
     <div className = "spendenbox">
        <h2>{anzeigeSpende}€ bereits gespendet</h2> 
        <p className = "spendenhinweis">Du willst auch helfen? </p>
-       <button className = "spendenbutton" onClick = {() => navigate("/spendenformular")}>
+       <button className = "spendenbutton" onClick = {() => navigate('/Spendenseite')}>
         Jetzt spenden
         </button>
     </div>
-);
+  );
 };
 
 

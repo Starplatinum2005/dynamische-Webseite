@@ -14,7 +14,7 @@
   margin-bottom: 20px;
 }
 
-.faq-question {
+.faq-frage {
   cursor: pointer;
   background-color: white;
   padding: 10px;
@@ -26,11 +26,11 @@
   align-items: center;
 }
 
-.faq-question:hover {
+.faq-frage:hover {
   background-color: #f0f0f0;
 }
 
-.faq-answer {
+.faq-antwort {
   padding: 0;  /* Start mit 0 Padding */
   height: 0;   /* Start mit 0 Höhe */
   margin: 0;   /* Kein Margin */
@@ -40,7 +40,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.faq-answer.active {
+.faq-antwort.active {
   padding: 10px;  /* Padding nur im aktiven Zustand */
   height: auto;   /* Höhe passt sich dem Inhalt an */
   opacity: 1;
@@ -51,18 +51,18 @@
   color: white;
 }
 
-.faq-question::after {
+.faq-frage::after {
   content: '+';
   font-size: 20px;
   font-weight: bold;
   transition: transform 0.3s ease;
 }
 
-.faq-question.active::after {
+.faq-frage.active::after {
   transform: rotate(45deg);
 }
 
-.faq-not-found {
+.faq-nicht-gefunden {
   text-align: center;
   margin-top: 30px;
 }

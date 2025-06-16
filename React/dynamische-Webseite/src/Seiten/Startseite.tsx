@@ -13,6 +13,14 @@ export function Index() {
           <section className="header-content">
             <h1>Willkommen bei Blue Ocean Dive</h1>
             <p>"Tauche ein in die Welt der Unterwasser-Abenteuer!"</p>
+              <div className="cta-buttons">
+                <button className="jetzt-entdecken-button"onClick = {() => navigate('/Angebote')}>
+                  Jetzt entdecken
+                </button>
+                <button className="mehr-erfahren-button"onClick = {() => navigate('/uberuns')}>
+                  Mehr erfahren
+                  </button>
+                </div>
 </section>
         </header>
 

@@ -2,7 +2,7 @@ import './stylesheets/Zähler.css';
 import {useState, useEffect} from 'react'; //useState (React Hook) um einen State innerhalb der Component abzubilden
 import { useNavigate} from 'react-router-dom'; //mit Routing zwischen einzelnen Bereichen navigieren
 
-const vorherigeSpende = 1000;
+const vorherigeSpende = 1300;
 
 
 export const Hochzaehler = () =>{

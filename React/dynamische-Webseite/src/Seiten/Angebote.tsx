@@ -3,9 +3,8 @@ import { Boxen, Info} from '../Objects/Angebote';
 import { Angebotsbox } from '../Komponente/Angebotsbox';
 import { InfoBoxen } from '../Komponente/InfoBoxen';
 
-type Props = { t: (key: string) => string };
 
-export function Angebote ({ t }: Props){
+export function Angebote (){
     return(
     <>
         <main>
@@ -13,7 +12,7 @@ export function Angebote ({ t }: Props){
             <img className="Anfangsbild" src="/blickfang_angebote.jpg" alt="Unsere Angebote"/>
             <header className="Anfangstext">
                 {/* <h2>{Info.Header}</h2> */}
-                <h2>{t("angebote_überschrift")}</h2>
+                <h2>Aktuelle Tauchkurse und Angebote</h2>
             </header>
         </section>
 

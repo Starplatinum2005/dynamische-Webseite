@@ -31,7 +31,7 @@ export const Boxen = {
     Header: "UNSERE TAUCH-ANGEBOTE",
     Schnuppertauchen: { 
         Kurs: "Schnuppertauchen",
-        src:"https://cdn.pixabay.com/photo/2012/02/23/08/57/woman-15840_1280.jpg" ,
+        src:"/schnuppertauchen.png" ,
         alt: "Schnuppertauchen",
     },
     Delfintauchen: { 

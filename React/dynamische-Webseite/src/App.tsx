@@ -1,6 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from "react";
-import { übersetzung } from './Übersetzung';
 import { Footer } from './Komponente/footer';
 import { Index } from './Seiten/Startseite';
 import { Angebote } from './Seiten/Angebote';
@@ -20,21 +18,18 @@ import FAQ from './Seiten/FAQ';
 import { Warenkorb } from './Seiten/Warenkorb';
 import { Login } from './Seiten/Account';
 import { LoggedInPage } from './Seiten/Logout';
-
-export type language = 'de' | 'en' | 'es';
+import { Spendenformular } from './Seiten/Spendenformular';
 
 function App() {
-  const [language, setLanguage] = useState<language>('de');
-  const t = (key: string) => übersetzung[language][key] || key;
 
   return (
     <>
       <ScrollToTop />
-      <Header language={language} setLanguage={setLanguage} t = {t} />
+      <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Index t={t} />} />
-          <Route path="/Angebote" element={<Angebote t={t} />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/Angebote" element={<Angebote />} />
           <Route path='/uberuns' element={<Überuns />} />
           <Route path='/Kontakt' element={<Kontakt />} />
           <Route path='/Impressum' element={<Impressum />} />
@@ -49,9 +44,10 @@ function App() {
           <Route path='/warenkorb' element={<Warenkorb />} />
           <Route path='/LogIn' element={<Login />} />
           <Route path='/loggedin' element={<LoggedInPage />} />
+          <Route path='/Spendenformular' element={<Spendenformular />} />
         </Routes>
       </main>
-      <Footer t={t}/>
+      <Footer />
     </>
   );
 }

@@ -2,35 +2,33 @@ import './stylesheets/Index.css'
 import { Startseite } from '../Objects/Startseite';
 import { ProjektBoxen } from '../Komponente/ProjektBoxen';
 
-type Props = { t: (key: string) => string };
-
-export function Index({ t }: Props) {
+export function Index() {
   return (
     <>
       <main className="startseite">
         <header className="header">
-          <img src="/blickfang_startseite.png" alt="Taucher unter Wasser" className="header-image" />
+          <img src="/Titelbild.png" alt="Taucher unter Wasser" className="header-image" />
           <section className="header-content">
-            <h1> {t("index_welcome")} </h1>
-            <p>{t("index_zitat")}</p>
+            <h1>Willkommen bei Blue Ocean Dive</h1>
+            <p>"Tauche ein in die Welt der Unterwasser-Abenteuer!"</p>
           </section>
         </header>
 
         <section className="Abschnitt1">
           <article className="Textcontainer1">
             <h1 className='Startseite_h1'>{Startseite.Einführungstext.Überschrift}</h1>
-            <p>{t("index_einführungstext")}</p>
+            <p>Tauche ein in eine Welt voller Abenteuer, Entspannung und einzigartiger Entdeckungen. Bei Blue Ocean Dive verbinden wir Leidenschaft für das Meer mit professioneller Ausbildung und individuellen Tauch-Erlebnissen. Ob du deine ersten Atemzüge unter Wasser erleben möchtest oder ein erfahrener Taucher bist, bei uns findest du genau das richtige Angebot. Unsere Tauchschule steht für höchste Sicherheitsstandards, erfahrene und herzliche Tauchlehrer sowie unvergessliche Momente in einer faszinierenden Unterwasserwelt. Zudem liegt uns der Schutz der Meere besonders am Herzen. Gemeinsam setzen wir uns für nachhaltiges Tauchen und den Erhalt unserer Ozeane ein. Willkommen an Bord – entdecke mit uns die Wunder der Tiefsee!</p>
           </article>
         </section>
 
-        <h1 className="Startseite_h1 Strich">{t("index_aktuelles")}</h1>
+        <h1 className="Startseite_h1 Strich">AKTUELLES</h1>
 
         <section className="Neuigkeiten">
           <ProjektBoxen Projekt={Startseite.Naturschutz} />
           <ProjektBoxen Projekt={Startseite.Bildungsprojekt} />
         </section>
 
-        <h1 className="Startseite_h1 Strich">{t("index_tauchen")}</h1>
+        <h1 className="Startseite_h1 Strich">TAUCHEN AUF MALLORCA</h1>
 
         <section className="Abschnitt2">
           <article className="Textcontainer2">
@@ -41,9 +39,9 @@ export function Index({ t }: Props) {
                 alt="Tauchen auf Mallorca"
               />
             </div>
-            <p>{t("index_p1")}</p>
-            <p>{t("index_p2")}</p>
-            <p>{t("index_p3")}</p>
+            <p>Erlebe die faszinierende Unterwasserwelt Mallorcas! Die Insel bietet dir nicht nur traumhafte Strände und kristallklares Wasser, sondern auch eine beeindruckende Vielfalt an Tauchrevieren. Von bunten Korallenriffen über geheimnisvolle Höhlen bis hin zu faszinierenden Wracks – Mallorcas Unterwasserwelt hat für Anfänger und erfahrene Taucher gleichermaßen einiges zu bieten.</p>
+            <p>Tauche in kleinen Gruppen an den schönsten Spots der Insel. Entdecke Meeresschildkröten, Zackenbarsche und eine beeindruckende Vielfalt an Fischen, während die Sonne die Wasseroberfläche in ein schimmerndes Lichtspiel verwandelt. Sicherheit, Spaß und nachhaltiges Tauchen stehen dabei immer im Mittelpunkt.</p>
+            <p>Mallorca wartet darauf, von dir entdeckt zu werden – und wir freuen uns, dich dabei zu begleiten! Tauche mit uns ein und erlebe unvergessliche Momente unter der Wasseroberfläche.</p>
           </article>
         </section>
       </main>

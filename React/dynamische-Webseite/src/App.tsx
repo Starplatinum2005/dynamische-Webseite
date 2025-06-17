@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Footer } from './Komponente/footer';
 import { Index } from './Seiten/Startseite';
 import { Angebote } from './Seiten/Angebote';
-import { Überuns } from './Seiten/Überuns';
+import { Ueberuns } from './Seiten/Überuns';
 import { Bildungsprojekt } from './Seiten/Bildungsprojekt';
 import { Buchung } from './Seiten/Buchung';
 import { Naturschutz } from './Seiten/Naturschutz';
@@ -30,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/Angebote" element={<Angebote />} />
-          <Route path='/uberuns' element={<Überuns />} />
+          <Route path='/uberuns' element={<Ueberuns />} />
           <Route path='/Kontakt' element={<Kontakt />} />
           <Route path='/Impressum' element={<Impressum />} />
           <Route path='/Datenschutz' element={<Datenschutz />} />

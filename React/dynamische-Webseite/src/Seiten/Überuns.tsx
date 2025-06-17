@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import './stylesheets/Überuns.css';
 
-export function Überuns() {
+export function Ueberuns() {
+  const navigate = useNavigate();
   return (
     <>
       <main className="überuns">
@@ -54,8 +56,16 @@ export function Überuns() {
               <p>"Blue Ocean Dive hat meine Liebe zum Tauchen entfacht!" ~ Anna M.</p>
             </blockquote>
             <nav className="Verlinkung_überuns">
-              <a href="/kontakt">Kontaktiere uns</a>
-              <a href="/Angebote">Kurse entdecken</a>
+              <button
+                 aria-label="Link zu Kontakt"
+                 onClick={() => navigate('/Kontakt')}>
+                  Kontaktiere uns
+              </button>
+              <button
+                 aria-label="Link zum Angebote"
+                 onClick={() => navigate('/Angebote')}>
+                  Kurse entdecken
+              </button>
             </nav>
           </article>
         </section>

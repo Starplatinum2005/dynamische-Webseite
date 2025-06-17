@@ -28,6 +28,12 @@ export function Warenkorb() {
     setCart(newCart);
   };
   const navigate = useNavigate();
+  let total;
+  if(localStorage.getItem('eingeloggt') === 'true'){
+    total = cart.reduce((sum, item) => sum + item.price, 0) * 0.9; // Rabatt wurde hinzugefügt
+  }else{
+    total = cart.reduce((sum, item) => sum + item.price, 0);
+  }
   const handleBezahlen = () => {
     if (localStorage.getItem('eingeloggt') === 'true') {
       Swal.fire({
@@ -79,7 +85,7 @@ export function Warenkorb() {
     );
   }
   
-  const total = cart.reduce((sum, item) => sum + item.price, 0)
+
    
   return (
     <>

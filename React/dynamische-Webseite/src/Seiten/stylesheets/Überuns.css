@@ -2,16 +2,16 @@
   font-family: 'Segoe UI', sans-serif;
   color: var(--Textfarbe);
   line-height: 1.8;
-  max-width: 1400px;
   margin: 0 auto;
 }
 
 .header_überuns {
   position: relative;
   height: 90vh;
+  width: 100vw;
   overflow: hidden;
   margin-bottom: 60px;
-  background-color: #001f3f;
+  background-color: #002a55;
 }
 
 .header_überuns-Inhalt {
@@ -67,8 +67,7 @@
 }
 
 .auszeichnung_links:hover,
-.auszeichnung_rechts:hover,
-.logo_überuns:hover {
+.auszeichnung_rechts:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
@@ -153,22 +152,17 @@
 }
 
 .Interaktiv_überuns {
-  background: linear-gradient(45deg, var(--Hintergrundfarbe), white);
+  background: #001f3f;
   padding: 60px 40px;
   text-align: center;
   border-radius: 15px;
   margin: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  color: #073869;
-}
-
-.Interaktiv_überuns:hover {
-  transform: translateY(-5px);
+  color: white;
 }
 
 .interaktiv-Inhalt_überuns {
-  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -178,26 +172,29 @@
   gap: 20px;
 }
 
-.interaktiv-Inhalt_überuns a {
+.interaktiv-Inhalt_überuns button {
   display: inline-block;
   padding: 12px 25px;
-  background-color: #001f3f;
-  color: white;
+  background-color: white;
+  color: #001f3f;
   text-decoration: none;
   border-radius: 25px;
   margin: 15px;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 
+
+
 .interaktiv-Inhalt_überuns a:hover {
-  background-color: #073869;
+  background-color: white;
   transform: translateY(-2px);
 }
 
 .interaktiv-Inhalt_überuns blockquote {
   font-size: 1.3rem;
   font-style: italic;
-  color: #001f3f;
+  color: white;
   margin: 30px 0;
 }
 

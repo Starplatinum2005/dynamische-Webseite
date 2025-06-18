@@ -2,22 +2,32 @@
    font-family: 'Helvetica', Arial, sans-serif;
    color: var(--Textfarbe);
    line-height: 1.8;
-   max-width: 1400px;
+
    margin: 0 auto;
 }
 
-.header {
+ .header {
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
    position: relative;
-   height: 90vh;
+   width: 100vw;      /* Volle Bildschirmbreite */
+   height: auto;      /* Höhe passt sich dem Inhalt an */
+   min-height: 300px; /* Optional: Mindesthöhe */
    overflow: hidden;
    margin-bottom: 60px;
+   left: 50%;
+   right: 50%;
+   margin-left: -50vw;
+   margin-right: -50vw;
 }
 
 .header-image {
-   width: 100%;
-   height: 100%;
+   width: 100vw;      /* Volle Bildschirmbreite */
+   height: auto;      /* Höhe automatisch */
+   display: block;    /* Kein zusätzlicher Abstand */
    object-fit: cover;
-   filter: brightness(0.96);
+   max-width: 100vw;  /* Verhindert Überlauf */
 }
 
 .header-content {
@@ -33,7 +43,6 @@
    /* Fügt einen leicht transparenten Hintergrund hinzu */
    border-radius: 10px;
    backdrop-filter: blur(5px);
-   /* Fügt einen Blur-Effekt hinzu */
 }
 
 .header-content h1 {
@@ -43,6 +52,47 @@
 .header-content p {
    font-size: 20px;
 }
+
+.cta-buttons {
+   display: flex;
+   justify-content: center;
+   gap: 16px;
+   margin-top: 20px;
+ }
+ 
+ .jetzt-entdecken-button, .mehr-erfahren-button {
+   padding: 12px 28px;
+   font-size: 16px;
+   font-weight: 600;
+   border-radius: 50px;
+   border: 2px solid transparent;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ }
+ 
+ .jetzt-entdecken-button {
+   background-color: var(--Navigationsleiste);
+   color: white;
+   border-color: var(--Navigationsleiste);
+ }
+ 
+ .jetzt-entdecken-button:hover {
+   background-color: #79a8ba;
+   border-color: #79a8ba;
+   transform: translateY(-2px);
+ }
+ 
+ .mehr-erfahren-button {
+   background-color:#e0e0e0 ;
+   color: var(--Navigationsleiste);
+   border-color: var(--Navigationsleiste);
+ }
+ 
+ .mehr-erfahren-button:hover {
+   background-color: #d0e4ea;
+   transform: translateY(-2px);
+ } 
 
 .Startseite_main {
    margin: 0;
@@ -217,4 +267,11 @@
       width: 250px;
    }
 
+
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }

@@ -22,7 +22,6 @@
 
 -[Pfadmarkierung](#pfadmarkierung)
 
-(-[Übersetzung](#übersetzung))
 
 ## Installationsanleitung
 
@@ -296,47 +295,3 @@ if (username.trim() && password.trim()) { //prüft ob beide Felder eingegeben wu
 - Es wird geprüft ob, der aktuelle Pfad übereistimmt mit dem Zielpfad übereinstimmt (hier: Shop)
   - Wenn es stimmt ,wird die Klasse auf das Pfeld angewendet
   - Wenn es nicht stimmt, passiert nichts
-
-## Übersetzung
-
-- Es werden die Sprachen deutsch, englisch und spanisch angeboten
-- dafür wird zuerste der typ für die verfügbaren Sprachen definiert
-`export type language = 'de' | 'en' | 'es'`(App.tsx)
-- für den Text mit den Übersetzungstexten, gibt es ein Objekt mit weiteren Objekten mit dem Text der jeweiligen Sprache
-  - der einzelne keys auf den Text der jeweiligen SPrache mappt
-``` Übersetzung.ts
-export const übersetzung: Record<language, Record<string, string>> = {
-  de: { // jeweilige Sprache als Key
-    index_welcome: "Willkommen bei Blue Ocean Dive",
-    index_zitat: "\"Tauche ein in die Welt der Unterwasser-Abenteuer!\"",
-    ...
-  },
-  en: {
-    index_welcome: "Welcome to Blue Ocean Dive",
-    index_zitat: "\"Dive into the world of underwater adventures!\"",
-    ...
-  },
-  es: {
-    index_welcome: "Bienvenido a Blue Ocean Dive",
-    index_zitat: "\"¡Sumérgete en el mundo de las aventuras submarinas!\"",
-    ...
-  }
-};
-```
-- Mit `Record<language, Record<string, string>>` wird mit `language` angegeben, dass das Objekt weitere Schlüssel hat (hier: de | en| es ) mit dem Wert `Record<string, string>`
-  - dies zeigt wiederum auf ein Objekt, unter den derzeitigen keys, mit weiteren keys(Unterkategorie, z.B.`index_welcome` unter jeweils `de`, `en`,`es`) als 
-  - hier sind die keys vom Typ string und der dazugehörige Wert auch ( keine Unterkategorien )
-  - so muss nicht ein ganzer Typ für das ganze Objekt erstellt werden
-- In der App.tsx wird die derzeitige Spracheinstellung als State gespeichert
-  - `const [language, setLanguage] = useState<language>('de');`
-  - Default-Sprache ist deutsch
-- Mit der Hilfsfunktion `t`, anhand der aktuellen Sprache, der passende Text ausgegeben
-  - `const t = (key: string) => übersetzung[language][key] || key;`
-  - t schaut in language nach der ausgewählten Sprache mit dem jeweiligen key nach dem passenden Text
-  - falls nichts gefunden werden sollte wird der key selbst anstatt undefined zurückgegeben, damit wenigstens etwas drinsteht
-- Mit der Sprachwechsel.tsx wird in der Navigationsleiste später DE/EN/ES dargestellt
-  - Man kann auf die jeweilige Sprache drücken damit der Text übersetzt wird, es wird also geprüft, ob die ausgewählte Sprache schon aktiv ist, um die CSS-Klasse zu verwenden 
-  `language === "en" ? " active" : ""`
-  - Beim `Draufklicken` wird die Funktion setLanguage aus der App.tsx aufgerufen, um so die Sprach, die im localstorage ist, zu überschreiben
-- `language` und `setLanguage` wird an die Navigationsleiste weitergegeben, indem sie eingebuunden wird als Prop, dort werden die Sprachen und setLanguage direkt angezeigt und wird auch direkt abrufbar sein
-- In den einzelnen Komponenten wird die Übersetzungsfunktion mit `t(key)` für den jeweiligen Text aufgerufen

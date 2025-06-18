@@ -1,10 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from "react";
-import { übersetzung } from './Übersetzung';
 import { Footer } from './Komponente/footer';
 import { Index } from './Seiten/Startseite';
 import { Angebote } from './Seiten/Angebote';
-import { Überuns } from './Seiten/Überuns';
+import { Ueberuns } from './Seiten/Überuns';
 import { Bildungsprojekt } from './Seiten/Bildungsprojekt';
 import { Buchung } from './Seiten/Buchung';
 import { Naturschutz } from './Seiten/Naturschutz';
@@ -14,32 +12,31 @@ import { Impressum } from './Seiten/Impressum';
 import { Datenschutz } from './Seiten/Datenschutz';
 import { Shop } from './Seiten/Shop';
 import { Hochzaehler } from './Seiten/Zähler';
+import { Spendenformularseite} from './Seiten/Spendenformular';
 import { ScrollToTop } from './Funktionen/ScrollToTop';
 import FAQ from './Seiten/FAQ';
 import { Warenkorb } from './Seiten/Warenkorb';
 import { Login } from './Seiten/Account';
 import { LoggedInPage } from './Seiten/Logout';
 
-export type language = 'de' | 'en' | 'es';
 
 function App() {
-  const [language, setLanguage] = useState<language>('de');
-  const t = (key: string) => übersetzung[language][key] || key;
 
   return (
     <>
       <ScrollToTop />
-      <Header language={language} setLanguage={setLanguage} t = {t} />
+      <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Index t={t} />} />
-          <Route path="/Angebote" element={<Angebote t={t} />} />
-          <Route path='/uberuns' element={<Überuns />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/Angebote" element={<Angebote />} />
+          <Route path='/uberuns' element={<Ueberuns />} />
           <Route path='/Kontakt' element={<Kontakt />} />
           <Route path='/Impressum' element={<Impressum />} />
           <Route path='/Datenschutz' element={<Datenschutz />} />
           <Route path='/Bildungsprojekt' element={<Bildungsprojekt />} />
           <Route path='/Spenden' element={<Hochzaehler />} />
+          <Route path='/Spendenseite' element={<Spendenformularseite />} />
           <Route path='/Naturschutz' element={<Naturschutz />} />
           <Route path='/Shop' element={<Shop />} />
           <Route path='/Buchung' element={<Buchung />} />
@@ -49,7 +46,7 @@ function App() {
           <Route path='/loggedin' element={<LoggedInPage />} />
         </Routes>
       </main>
-      <Footer t={t}/>
+      <Footer />
     </>
   );
 }

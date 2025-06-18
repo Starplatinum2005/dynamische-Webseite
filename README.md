@@ -62,6 +62,8 @@
 - die Boxen mit Informationen der Angebotsseite
 - die Boxen der Kurse auf der Angebotsseite
 - die versch. Boxen für die Kurse auf der Buchungsseite
+- Artikelkachel im Shop
+- Box für die Projekte auf der Startseite
 
 ## Routing
 
@@ -127,7 +129,7 @@ export function ScrollToTop() {
 
 ## Shop
 
-- Mehrere Artikel auf der Seite, die man in den Warenkorb legen kann
+- Mehrere Artikel auf der Seite zu sehen, die man in den Warenkorb legen kann (Erklärung des Codes in den Kommentaren)
 ```
 const [cart, setCart] = useState<Produkt[]>([]); // neuer Zustand wird als Warenkorb-Array definiert
 
@@ -169,7 +171,7 @@ const addToCart = (product: Produkt) => {
       });
       clearCart();// Nach Bezahlung wird cart geleert
       navigate('/');
-    } else { // ohne ANmeldung kommt noch ein ANgebot als Köder
+    } else { // ohne Anmeldung kommt noch ein ANgebot als Köder
       Swal.fire({
         title: 'Rabattcode verfügabr!',
         text: 'Melde dich an um 10% Rabatt auf diesen Einkauf zu erhalten',
@@ -193,7 +195,12 @@ const addToCart = (product: Produkt) => {
     };
   };
 
-  const total = cart.reduce((sum, item) => sum + item.price, 0);// Gesamtpreis wird berechnet
+  let total;
+  if(localStorage.getItem('eingeloggt') === 'true'){
+    total = cart.reduce((sum, item) => sum + item.price, 0) * 0.9; // Rabatt wurde hinzugefügt
+  }else{
+    total = cart.reduce((sum, item) => sum + item.price, 0);
+  }
 
  let content; // Der Inhalt der angezeigt werden soll wird hier definiert
   if (cart.length === 0) { 
@@ -220,7 +227,7 @@ const addToCart = (product: Produkt) => {
 
       {cart.length > 0 && (
         <div className="cart-total">
-          <strong>Gesamt:</strong> €{total.toFixed(2)} // Gesamtbetrag wird angezeigt
+          <strong>Gesamt:</strong> €{total.toFixed(2)} // Gesamtbetrag wird angezeigt, aber es wird nicht gekennzeichnet ob Rabatt hinzugefügt wurde oder nicht
         </div>
       )}
 
@@ -248,8 +255,8 @@ const addToCart = (product: Produkt) => {
 )}
 ```
 - Abfrage ob ein User eingelogt ist
-  - Wenn nicht, dann steht in der Navigationsleiste, dann steht da ein Icon, auf dass man klicken kann, um zur Login Seite zu kommen
-  - Wenn man eingeloggt ist, steht da "Wilkommen" mit dem Benutzernamen, den man in das Benutzernamenfeld beim LogIn eingegeben hat
+  - Wenn nicht, dann steht in der Navigationsleiste ein Icon, auf dass man klicken kann, um zur Login Seite zu kommen
+  - Wenn man eingeloggt ist, steht da "Wilkommen" + Benutzernamen, den man in das Benutzernamenfeld beim LogIn eingegeben hat
 
 - Um sich anmelden zu können, werden loakale Zustände definiert, um Benutzername und Passwort speichern zu können
 - Bei der Eingabe wird zum einen das Vorhandensein von Benutzername und Passwort geprüft und ob das Passwort mehr als 8 Zeichen hat
@@ -260,38 +267,39 @@ const addToCart = (product: Produkt) => {
   - Da kann man mit einem Klicken auf einen Button, den Benutzernamen und das Paswort aus dem localstorage löschen
 
 ## Formularvalidierung
-- Bei der Anmeldung wird geprüft ob die Felder ausgefüllt sind und ob das Passwort mindestens 8 Zeichen lang ist
+- Bei der Anmeldung wird geprüft ,ob die Felder ausgefüllt sind und ,ob das Passwort mindestens 8 Zeichen lang ist
 ``` Account.tsx
 if (username.trim() && password.trim()) { //prüft ob beide Felder eingegeben wurden
-      if (password.length < 8) { // prüft ob Passwort min. 8 Zeichen lang ist
-        Swal.fire({
-          title: 'Fehler!',
-          text: 'Das Passwort muss mindestens 8 Zeichen lang sein.',
-          icon: 'error',
-          confirmButtonText: 'OK'
-        });
-        return;
-      }
-      //...
-    } else {
+    if (password.length < 8) { // prüft ob Passwort min. 8 Zeichen lang ist
       Swal.fire({
+        title: 'Fehler!',
+        text: 'Das Passwort muss mindestens 8 Zeichen lang sein.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+      return;
+    }
+    //...
+} else {
+    Swal.fire({
         title: 'Fehler!',
         text: 'Bitte Benutzername und Passwort eingeben.',
         icon: 'error',
         confirmButtonText: 'OK'
-      });
-    }
+    });
+}
 ```
-- Das Passwort wird dabei auch zensiert und man kann es mit dem AUge neben der Leiste sichtbar machen
-- Bei der Buchung und beim Kontaktformular wird nur mit HTML geprüft ob etwas drinstehen und es im richtigen Format ist
+- Das Passwort wird dabei auch zensiert und man kann es mit dem Auge neben der Leiste sichtbar machen
+- Bei der Buchung und beim Kontaktformular wird nur mit HTML geprüft ,ob etwas drinstehen und es im richtigen Format ist
 
 ## Pfadmarkierung
 
-- In der Navigationsleiste wird gezeigt auf welcher Seite man ist
+- In der Navigationsleiste wird gezeigt ,auf welcher Seite man ist
   - Problem dabei ist, dass nichts angezeigt wird ,wenn man auf einer Unterseite ist
+
 ``` Navigationsleiste.tsx
   className={location.pathname === '/Shop' ? 'active' : ''}
 ```
-- Es wird geprüft ob, der aktuelle Pfad übereistimmt mit dem Zielpfad übereinstimmt (hier: Shop)
-  - Wenn es stimmt ,wird die Klasse auf das Pfeld angewendet
+- Es wird geprüft ob, der aktuelle Pfad mit dem Zielpfad übereinstimmt (hier: Shop)
+  - Wenn es stimmt ,wird die Klasse auf den Pfald angewendet
   - Wenn es nicht stimmt, passiert nichts

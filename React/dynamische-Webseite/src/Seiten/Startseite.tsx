@@ -21,7 +21,7 @@ export function Index() {
                   Mehr erfahren
                   </button>
                 </div>
-</section>
+          </section>
         </header>
 
         <section className="Abschnitt1">

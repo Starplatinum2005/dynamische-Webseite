@@ -8,14 +8,14 @@ type Test = {
 
 export function Artikel({ product, addToCart }: Test) {
   return (
-    <div className="card">
+    <div className="kachel">
       {product.Bestseller && ( 
         <span className="badge">Bestseller</span>
       )}
       <img src={product.image} alt={product.name} />
       <h3 className="shop_h3">{product.name}</h3>
-      <div className="price">€{product.price}</div>
-      <button className="btn" onClick={() => addToCart(product)}>In den Warenkorb</button>
+      <div className="Preis">€{product.price}</div>
+      <button className="button" onClick={() => addToCart(product)}>In den Warenkorb</button>
     </div>
   );
 }

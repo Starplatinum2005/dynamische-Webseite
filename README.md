@@ -40,10 +40,10 @@
 - Webseite mit React + Vite dynamisiert
 - Shop- und Warenkorb-Seite eingefügt
 - Log-In implementiert
-    - Keine Daten Überprüfung
+    - Keine Datenüberprüfung
     - Benutzername wird nur oben rechts erstetzt bei Anmeldung
 - FAQ Seite eingebaut
-- dyn. Formularvalidierung bei einigen Formularen( Anmeldung )
+- dyn. Formularvalidierung bei einigen Formularen ( Anmeldung )
 - In der Navigationsleiste wird durch Unterstreichung angezeigt wo man ist
 
 ## dynamische Inhalte
@@ -100,8 +100,8 @@ function App() {
 ```
 - die Ziele der Pfade, die in den Seiten verlinkt werden, werden hier definiert mit `element = {<(zugehöriger Funktionsname) />}`
 - So sieht die Verlinkung z.B. aus: `<li><Link to="/Buchung">Höhlentauchen</Link></li>`
-- Da der Router in der main.tsx ist gilt der Router für die ganze Seite
-- Da mein bei Navigation durch Buttons nicht automatisch an den Anfang der Seite kommt, wurde dieser Code erstellt
+- Da der Router in der main.tsx ist ,gilt der Router für die ganze Seite
+- Da man bei Navigation durch Buttons nicht automatisch an den Anfang der Seite kommt, wurde dieser Code erstellt
 
 ```
 import { useEffect } from "react";
@@ -143,7 +143,7 @@ const addToCart = (product: Produkt) => {
   existingCart.push(product);
   localStorage.setItem('cart', JSON.stringify(existingCart));
   setCart(existingCart);
-}; // es wird der aktualle Warenkorb aus dem storage geholt und dass neue Item wird mit push in das Array reingetan und das Array wird im Anschluss wieder gespeichert
+}; // es wird der aktualle Warenkorb aus dem storage geholt und ,dass neue Item wird mit push in das Array reingetan und das Array wird im Anschluss wieder gespeichert
 ```
 - Die Anzahl der Artikel wird dann beim Button unten rechts angezeigt mit `cart.length`
 
@@ -163,7 +163,7 @@ const addToCart = (product: Produkt) => {
   };// Produkt wird je nach Index gelöscht und der Warenkorb wird aktualisiert
 
   const handleBezahlen = () => {
-    if (localStorage.getItem('eingeloggt') === 'true') { //Unterscheidung ob man eingeloogt ist oder nicht (Eintrag `eingeloggt` entsteht beim Anmelden)
+    if (localStorage.getItem('eingeloggt') === 'true') { //Unterscheidung ob man eingelogt ist oder nicht (Eintrag `eingeloggt` entsteht beim Anmelden)
       Swal.fire({// Wenn ja, dann kann direkt bezahlt werden
       title: 'Vielen Dank für Ihren Einkauf!',
       icon: 'success',
@@ -171,7 +171,7 @@ const addToCart = (product: Produkt) => {
       });
       clearCart();// Nach Bezahlung wird cart geleert
       navigate('/');
-    } else { // ohne Anmeldung kommt noch ein ANgebot als Köder
+    } else { // ohne Anmeldung kommt noch ein Angebot als Köder
       Swal.fire({
         title: 'Rabattcode verfügabr!',
         text: 'Melde dich an um 10% Rabatt auf diesen Einkauf zu erhalten',
@@ -189,7 +189,7 @@ const addToCart = (product: Produkt) => {
           icon: 'success',
           confirmButtonText: 'OK'
         });
-          clearCart(); //Wagen wird gelehrt
+          clearCart(); //Wagen wird geleert
         }
       });
     };
@@ -202,9 +202,9 @@ const addToCart = (product: Produkt) => {
     total = cart.reduce((sum, item) => sum + item.price, 0);
   }
 
- let content; // Der Inhalt der angezeigt werden soll wird hier definiert
+ let content; // Der Inhalt der angezeigt werden soll ,wird hier definiert
   if (cart.length === 0) { 
-    content = <p className="cart-empty">Warenkorb ist leer.</p>;// Wird angezeigt wenn Warenkorb leer ist
+    content = <p className="cart-empty">Warenkorb ist leer.</p>;// Wird angezeigt ,wenn Warenkorb leer ist
   } else {
     content = (
       <ul className="cart-list"> // Liste mit allen Items aus dem Warenkorb wird angezeigt
@@ -227,13 +227,13 @@ const addToCart = (product: Produkt) => {
 
       {cart.length > 0 && (
         <div className="cart-total">
-          <strong>Gesamt:</strong> €{total.toFixed(2)} // Gesamtbetrag wird angezeigt, aber es wird nicht gekennzeichnet ob Rabatt hinzugefügt wurde oder nicht
+          <strong>Gesamt:</strong> €{total.toFixed(2)} // Gesamtbetrag wird angezeigt, aber es wird nicht gekennzeichnet ,ob Rabatt hinzugefügt wurde oder nicht
         </div>
       )}
 
       {cart.length > 0 && (
         <button className="clear-cart-button" onClick={clearCart}>
-          🗑️ Warenkorb leeren // Warenkorb wird geleehrt
+          🗑️ Warenkorb leeren // Warenkorb wird geleert
         </button>
       )}
       <div className='bezahlen-container'>
@@ -256,10 +256,10 @@ const addToCart = (product: Produkt) => {
 ```
 - Abfrage ob ein User eingelogt ist
   - Wenn nicht, dann steht in der Navigationsleiste ein Icon, auf dass man klicken kann, um zur Login Seite zu kommen
-  - Wenn man eingeloggt ist, steht da "Wilkommen" + Benutzernamen, den man in das Benutzernamenfeld beim LogIn eingegeben hat
+  - Wenn man eingeloggt ist, steht da "Willkommen" + Benutzernamen, den man in das Benutzernamenfeld beim LogIn eingegeben hat
 
 - Um sich anmelden zu können, werden loakale Zustände definiert, um Benutzername und Passwort speichern zu können
-- Bei der Eingabe wird zum einen das Vorhandensein von Benutzername und Passwort geprüft und ob das Passwort mehr als 8 Zeichen hat
+- Bei der Eingabe wird zum einen ,das Vorhandensein von Benutzername und Passwort geprüft und ,ob das Passwort mehr als 8 Zeichen hat
   - Wenn eines davon nicht zurtrifft, dann kommt mit sweetalert2 ein Popup, dass sagt, dass die Anmeldung aus einem der beiden Gründe fehlschlägt
   - Wenn beides passt, kommt ein Popup mit einem grünen Haken, der die Anmeldung bestätigt
 - Man wird automatich auf die Homepage weitergeleitet und statt dem Loginzeichen steht nun das Wilkommen mit dem Username
@@ -267,7 +267,7 @@ const addToCart = (product: Produkt) => {
   - Da kann man mit einem Klicken auf einen Button, den Benutzernamen und das Paswort aus dem localstorage löschen
 
 ## Formularvalidierung
-- Bei der Anmeldung wird geprüft ,ob die Felder ausgefüllt sind und ,ob das Passwort mindestens 8 Zeichen lang ist
+- Bei der Anmeldung wird geprüft ob die Felder ausgefüllt sind und ob das Passwort mindestens 8 Zeichen lang ist
 ``` Account.tsx
 if (username.trim() && password.trim()) { //prüft ob beide Felder eingegeben wurden
     if (password.length < 8) { // prüft ob Passwort min. 8 Zeichen lang ist
@@ -290,11 +290,11 @@ if (username.trim() && password.trim()) { //prüft ob beide Felder eingegeben wu
 }
 ```
 - Das Passwort wird dabei auch zensiert und man kann es mit dem Auge neben der Leiste sichtbar machen
-- Bei der Buchung und beim Kontaktformular wird nur mit HTML geprüft ,ob etwas drinstehen und es im richtigen Format ist
+- Bei der Buchung und beim Kontaktformular wird nur mit HTML geprüft ob etwas drinstehen und es im richtigen Format ist
 
 ## Pfadmarkierung
 
-- In der Navigationsleiste wird gezeigt ,auf welcher Seite man ist
+- In der Navigationsleiste wird gezeigt auf welcher Seite man ist
   - Problem dabei ist, dass nichts angezeigt wird ,wenn man auf einer Unterseite ist
 
 ``` Navigationsleiste.tsx

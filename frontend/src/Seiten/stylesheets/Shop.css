@@ -93,7 +93,7 @@
     display: block;
   }
 
-  .card p {
+  .kachel p {
     word-wrap: break-word;
     white-space: normal;
     overflow-wrap: anywhere;

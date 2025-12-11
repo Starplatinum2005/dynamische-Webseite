@@ -17,8 +17,6 @@ export function Bildungsprojekt (){
             </p>
         </article>
         </section>
-
-
     
         <section className="Projekte">
         <img className="Projekte-image" src="https://cdn.pixabay.com/photo/2024/02/25/15/36/wash-8595992_1280.jpg" alt = "Kin sammelt Müll" />

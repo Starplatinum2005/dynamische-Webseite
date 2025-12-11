@@ -14,7 +14,7 @@ import { Shop } from './Seiten/Shop';
 import { Hochzaehler } from './Seiten/Zähler';
 import { Spendenformularseite} from './Seiten/Spendenformular';
 import { ScrollToTop } from './Funktionen/ScrollToTop';
-import FAQ from './Seiten/FAQ';
+import {FAQ} from './Seiten/FAQ';
 import { Warenkorb } from './Seiten/Warenkorb';
 import { Login } from './Seiten/Account';
 import { LoggedInPage } from './Seiten/Logout';

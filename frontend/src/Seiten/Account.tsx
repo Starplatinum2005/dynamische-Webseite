@@ -44,7 +44,7 @@ export function Login() {
   };
 
   return (
-    <main className="login-page">
+    <main className="login">
       <div className="login-container">
         <h1>Login</h1>
         <input

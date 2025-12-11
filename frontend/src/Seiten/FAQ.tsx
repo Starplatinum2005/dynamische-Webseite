@@ -1,7 +1,7 @@
 import './stylesheets/FAQ.css';
 import {useState} from 'react'; //useState (React Hook) um einen State innerhalb der Component abzubilden
 
-const FAQ = () => {
+export const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -89,5 +89,3 @@ const FAQ = () => {
   </>
 );
 };
-
-export default FAQ;

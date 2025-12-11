@@ -11,11 +11,9 @@ export function Angebote (){
         <section className="Anfangscontainer"> 
             <img className="Anfangsbild" src="/blickfang_angebote.jpg" alt="Unsere Angebote"/>
             <header className="Anfangstext">
-                {/* <h2>{Info.Header}</h2> */}
                 <h2>Aktuelle Tauchkurse und Angebote</h2>
             </header>
         </section>
-
 
         <section className="Angebote-Allgemeines">
             <InfoBoxen info={Info.Allgemeines} />

@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: shop_datenbank
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: BlueOD_WwI02040A_
+      MYSQL_DATABASE: Datenbank
+      MYSQL_USER: BOD_Nutzer
+      MYSQL_PASSWORD: BlueOD_WwI02040A_
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: shop_phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mariadb
+    depends_on:
+      - mariadb

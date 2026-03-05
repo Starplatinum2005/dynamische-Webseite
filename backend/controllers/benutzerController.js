@@ -40,7 +40,7 @@ exports.updateBenutzer = async (req, res) => {
     res.status(500).json({ error: 'Fehler beim Aktualisieren' });
   }
 };
-n
+
 exports.deleteBenutzer = async (req, res) => {
   try {
     const userId = req.params.id;

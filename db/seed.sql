@@ -1,12 +1,12 @@
--- Rollen anlegen
+-- 1. ZUERST Rollen anlegen (Wichtig, damit die IDs 1 und 2 existieren!)
 INSERT INTO `Rolle` (`Berechtigung`, `Bezeichnung`) VALUES 
 ('Admin', 'Administrator'),
 ('User', 'Kunde');
 
--- Benutzer anlegen (Passwörter sind hier nur Beispiel-Klartext)
-INSERT INTO `Benutzer` (`Vorname`, `Nachname`, `Strasse`, `PLZ`, `Ort`, `Email`, `Passwort`) VALUES 
-('Max', 'Mustermann', 'Marienstraße 20', '89522', 'Heidenheim', 'max@mustermann.de', 'geheim123'),
-('Erika', 'Beispiel', 'Schloßhau 1', '89518', 'Heidenheim', 'erika@web.de', 'passwort456');
+-- 2. Benutzer anlegen (Hier geben wir jetzt direkt die Rollennummer mit!)
+INSERT INTO `Benutzer` (`Vorname`, `Nachname`, `Strasse`, `PLZ`, `Ort`, `Email`, `Passwort`, `Rollennummer`) VALUES 
+('Max', 'Mustermann', 'Marienstraße 20', '89522', 'Heidenheim', 'max@mustermann.de', 'geheim123', 1), -- Max kriegt Rolle 1 (Admin)
+('Erika', 'Beispiel', 'Schloßhau 1', '89518', 'Heidenheim', 'erika@web.de', 'passwort456', 2);  -- Erika kriegt Rolle 2 (Kunde)
 
 -- Locations anlegen
 INSERT INTO `Location` (`Strasse`, `PLZ`, `Ort`, `Raumname`) VALUES 
@@ -17,11 +17,6 @@ INSERT INTO `Location` (`Strasse`, `PLZ`, `Ort`, `Raumname`) VALUES
 INSERT INTO `Produkt` (`Bezeichnung`, `Beschreibung`, `Bestand`, `Preis`) VALUES 
 ('Skizzenblock A4', 'Hochwertiges Papier für Zeichnungen', 50, 4.99),
 ('Kugelschreiber Blau', 'Dokumentenecht, Mine auswechselbar', 200, 1.50);
-
--- Benutzern Rollen zuweisen
-INSERT INTO `Benutzer_hat_Rolle` (`User_ID`, `Rollennummer`) VALUES 
-(1, 1), -- Max ist Admin
-(2, 2); -- Erika ist Kunde
 
 -- Kurse anlegen (verknüpft mit Location_ID)
 INSERT INTO `Kurs` (`Titel`, `Teilnehmerobergrenze`, `Zeit_der_Veranstaltung`, `Preis`, `Location_ID`) VALUES 

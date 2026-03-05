@@ -12,6 +12,10 @@ services:
       MYSQL_PASSWORD: BlueOD_WwI02040A_
     ports:
       - "3306:3306"
+    volumes:
+      # HIER IST DIE MAGIE: 
+      # Verbindet deinen lokalen "db"-Ordner mit dem Autopilot-Ordner von MariaDB
+      - ./db:/docker-entrypoint-initdb.d
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

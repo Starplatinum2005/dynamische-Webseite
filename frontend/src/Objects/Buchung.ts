@@ -1,3 +1,4 @@
+
 export type Buchungstyp = {
     h2: string,
     p: string,

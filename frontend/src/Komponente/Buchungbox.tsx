@@ -1,4 +1,21 @@
 import './Buchungbox.css'
+
+export function Buchungsbox({ dbKurs }: { dbKurs: any }){
+    return(
+        <>
+        <div className="kurs-container" id={dbKurs.Kurs_ID}> 
+            <img className="kurs-bild" src="/blickfang_angebote.jpg" alt={dbKurs.Titel}/>
+            <div className="kurs-info">
+                <h2>{dbKurs.Titel}</h2>
+                <p>Datum: {new Date(dbKurs.Zeit_der_Veranstaltung).toLocaleDateString()}</p>
+                <p className="kurs-preis">Preis: {dbKurs.Preis} €</p>
+            </div>
+        </div>
+        </>
+    )
+}
+
+/*import './Buchungbox.css'
 import { Buchungstyp} from '../Objects/Buchung'
 
 export function Buchungsbox({ Kurse }: { Kurse: Buchungstyp }){
@@ -14,4 +31,4 @@ export function Buchungsbox({ Kurse }: { Kurse: Buchungstyp }){
         </div>
         </>
     )
-}
+}*/

@@ -1,4 +1,4 @@
-import './stylesheets/shop.css';
+import './stylesheets/Shop.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Artikel } from '../Komponente/Artikel';

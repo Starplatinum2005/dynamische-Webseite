@@ -44,17 +44,23 @@ export function Angebote (){
 }
 */
 
-import { useEffect, useState } from 'react'; // WICHTIG: React Hooks importieren!
+import { useEffect, useState } from 'react'; 
 import './stylesheets/Angebote.css'
-import { Info } from '../Objects/Angebote'; // Boxen brauchen wir hier nicht mehr
+import { Info } from '../Objects/Angebote'; 
 import { Angebotsbox } from '../Komponente/Angebotsbox';
 import { InfoBoxen } from '../Komponente/InfoBoxen';
 
+
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000/api'
+    : '/api';
+    
 export function Angebote () {
     const [dbKurse, setDbKurse] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/kurse')
+
+        fetch(`${API_BASE_URL}/kurse`)
             .then(res => res.json())
             .then(data => {
                 console.log("Daten aus MariaDB:", data);

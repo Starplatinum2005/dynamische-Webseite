@@ -7,8 +7,13 @@ export function Header() {
   const [username, setUsername] = useState<string | null>(null)
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('username');
-    setUsername(storedUser);
+    const storedUserStr = localStorage.getItem('user');
+    if (storedUserStr) {
+      const storedUser = JSON.parse(storedUserStr);
+      setUsername(storedUser.vorname);
+    } else {
+      setUsername(null);
+    }
   }, [location]);
 
   return (

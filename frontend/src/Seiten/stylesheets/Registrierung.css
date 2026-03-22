@@ -1,0 +1,120 @@
+.registrierung {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.registrierung-container {
+  max-width: 500px;
+  width: 100%;
+  border: 2px solid var(--Textfarbe);
+  border-radius: 12px;
+  background-color: var(--Hintergrundfarbe);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+.registrierung-container h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: var(--Unterüberschriften);
+}
+
+.registrierung-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.registrierung-container input:focus {
+  outline: none;
+  border-color: var(--Hauptfarbe, #0077b6);
+  box-shadow: 0 0 4px rgba(0, 119, 182, 0.3);
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.registrierung-container .register-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--Hauptfarbe, #0077b6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.registrierung-container .register-btn:hover {
+  background-color: var(--HauptfarbeDunkel, #005f87);
+}
+
+.registrierung-container .register-btn:active {
+  transform: scale(0.98);
+}
+
+.support-box {
+  margin-top: 30px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.support-box p {
+  margin-bottom: 12px;
+  color: var(--Textfarbe);
+  font-size: 15px;
+}
+
+.support-button {
+  padding: 10px 20px;
+  background-color: var(--Hauptfarbe, #0077b6);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.support-button:hover {
+  background-color: var(--HauptfarbeDunkel, #005f87);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .registrierung-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-row input {
+    margin-bottom: 16px;
+  }
+
+  .registrierung-container h1 {
+    font-size: 24px;
+  }
+}

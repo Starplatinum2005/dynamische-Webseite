@@ -3,72 +3,76 @@ import { useNavigate } from 'react-router-dom';
 import './stylesheets/account.css';
 import Swal from 'sweetalert2';
 
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000/api'
+    : '/api';
+
 export function Login() {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    if (username.trim() && password.trim()) {
-      if (password.length < 8) {
-        Swal.fire({
-          title: 'Fehler!',
-          text: 'Das Passwort muss mindestens 8 Zeichen lang sein.',
-          icon: 'error',
-          confirmButtonText: 'OK'
+  const handleLogin = async () => {
+    if (email.trim() && password.trim()) {
+      try {
+        const response = await fetch(`${API_BASE_URL}/benutzer/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, passwort: password })
         });
-        return;
+
+        const data = await response.json();
+
+        if (response.ok) {
+          localStorage.setItem('user', JSON.stringify(data.user));
+          
+          Swal.fire({
+            title: `Willkommen zurück, ${data.user.vorname}!`,
+            icon: 'success',
+            confirmButtonText: 'OK'
+          });
+          navigate('/');
+        } else {
+          Swal.fire({
+            title: 'Fehler!',
+            text: data.error || 'Login fehlgeschlagen',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          });
+        }
+      } catch (error) {
+        console.error("Login-Fehler:", error);
       }
-      localStorage.setItem('username', username);
-      localStorage.setItem('eingeloggt', 'true');
-      localStorage.setItem('password', password);
-      Swal.fire({
-        title: 'Erfolgreich eingeloggt!',
-        text: 'Du wurdest erfolgreich eingeloggt.',
-        icon: 'success',
-        confirmButtonText: 'OK'
-      });
-      navigate('/');
     } else {
-      Swal.fire({
-        title: 'Fehler!',
-        text: 'Bitte Benutzername und Passwort eingeben.',
-        icon: 'error',
-        confirmButtonText: 'OK'
-      });
+      Swal.fire({ title: 'Fehler!', text: 'Bitte E-Mail und Passwort eingeben.', icon: 'error' });
     }
   };
 
-  const handleSupport = () => {
-    navigate('/kontakt');
-  };
+  const handleSupport = () => navigate('/kontakt');
 
   return (
     <main className="login">
       <div className="login-container">
         <h1>Login</h1>
         <input
-          type="text"
-          placeholder="Benutzername"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          type="email"
+          placeholder="E-Mail Adresse"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="password"
-          placeholder="Passwort (min. 8 Zeichen)"
+          placeholder="Passwort"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
         <button onClick={handleLogin}>Einloggen</button>
       </div>
-
       <div className="support-box">
-        <p>Haben Sie Probleme beim Einloggen?</p>
-        <button className="support-button" onClick={handleSupport}>
-          Kontaktieren Sie uns
-        </button>
+        <p>Noch keinen Account?</p>
+        <button className="support-button" onClick={() => navigate('/registrieren')}>Jetzt registrieren</button>
       </div>
     </main>
   );

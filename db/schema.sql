@@ -42,7 +42,9 @@ CREATE OR REPLACE TABLE `Produkt` (
     `Bezeichnung` VARCHAR(255),
     `Beschreibung` TEXT,
     `Bestand` INTEGER,
-    `Preis` DECIMAL,
+    `Preis` DECIMAL(10,2),
+    `Bildpfad` VARCHAR(255) NOT NULL DEFAULT '/placeholder.png', 
+    `Bestseller` TINYINT(1) NOT NULL DEFAULT 0,
     PRIMARY KEY(`Artikelnummer`)
 );
 

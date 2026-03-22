@@ -12,10 +12,10 @@ exports.getAllProdukte = async (req, res) => {
 
 exports.createProdukt = async (req, res) => {
   try {
-    const { Bezeichnung, Beschreibung, Bestand, Preis } = req.body; 
+    const { Bezeichnung, Beschreibung, Bestand, Preis, Bildpfad, Bestseller } = req.body; 
     
-    const sql = 'INSERT INTO Produkt (Bezeichnung, Beschreibung, Bestand, Preis) VALUES (?, ?, ?, ?)';
-    const [result] = await db.query(sql, [Bezeichnung, Beschreibung, Bestand, Preis]);
+    const sql = 'INSERT INTO Produkt (Bezeichnung, Beschreibung, Bestand, Preis, Bildpfad, Bestseller) VALUES (?, ?, ?, ?, ?, ?)';
+    const [result] = await db.query(sql, [Bezeichnung, Beschreibung, Bestand, Preis, Bildpfad || '/placeholder.png', Bestseller || 0]);
     
     res.status(201).json({ message: 'Produkt erfolgreich angelegt!', Artikelnummer: result.insertId });
   } catch (error) {
@@ -27,10 +27,10 @@ exports.createProdukt = async (req, res) => {
 exports.updateProdukt = async (req, res) => {
   try {
     const artikelnummer = req.params.id;
-    const { Bezeichnung, Beschreibung, Bestand, Preis } = req.body; 
+    const { Bezeichnung, Beschreibung, Bestand, Preis, Bildpfad, Bestseller } = req.body; 
     
-    const sql = 'UPDATE Produkt SET Bezeichnung = ?, Beschreibung = ?, Bestand = ?, Preis = ? WHERE Artikelnummer = ?';
-    const [result] = await db.query(sql, [Bezeichnung, Beschreibung, Bestand, Preis, artikelnummer]);
+    const sql = 'UPDATE Produkt SET Bezeichnung = ?, Beschreibung = ?, Bestand = ?, Preis = ?, Bildpfad = ?, Bestseller = ? WHERE Artikelnummer = ?';
+    const [result] = await db.query(sql, [Bezeichnung, Beschreibung, Bestand, Preis, Bildpfad, Bestseller, artikelnummer]);
     
     if (result.affectedRows === 0) {
       return res.status(404).json({ message: 'Produkt nicht gefunden' });

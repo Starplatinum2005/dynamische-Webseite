@@ -14,9 +14,19 @@ INSERT INTO `Location` (`Strasse`, `PLZ`, `Ort`, `Raumname`) VALUES
 ('Seestraße 10', '89567', 'Sontheim', 'Baggersee Einstieg Nord');
 
 -- Produkte anlegen (Tauch-Equipment statt Schreibwaren)
-INSERT INTO `Produkt` (`Bezeichnung`, `Beschreibung`, `Bestand`, `Preis`) VALUES 
-('Taucherbrille Pro', 'Anti-Beschlag-Glas mit weichem Silikonrand', 50, 49.99),
-('Neoprenanzug 5mm', 'Warmer Nassanzug für europäische Gewässer', 20, 199.00);
+INSERT INTO `Produkt` (`Artikelnummer`, `Bezeichnung`, `Beschreibung`, `Bestand`, `Preis`, `Bildpfad`, `Bestseller`) VALUES 
+(1, 'ProDive Maske', 'Professionelle Tauchmaske für optimalen Durchblick', 25, 49.99, '/tauchmaske.png', 1),
+(2, 'Speed Fins', 'Ergonomische Flossen für schnellen Vortrieb', 15, 79.95, '/flossen.png', 0),
+(3, 'Neoprenanzug', '5mm Neoprenanzug für kalte Gewässer', 10, 129.00, '/neopren.png', 0),
+(4, 'KidFlex Anzug', 'Bequemer und warmer Kinder-Neoprenanzug', 8, 99.00, '/kinderanzug.png', 0),
+(5, 'GPS-System', 'Unterwasser-GPS zur genauen Positionsbestimmung', 5, 149.00, '/gps-tracker.png', 0),
+(6, 'SeaLight 3000', 'Leistungsstarke Tauchlampe mit 3000 Lumen', 12, 59.00, '/tauchlampe.png', 0),
+(7, 'ActionCam DiveX', 'Wasserdichte 4K Action-Kamera für tolle Aufnahmen', 4, 299.00, '/actioncam.png', 0),
+(8, 'Aqua-Kompass', 'Zuverlässiger Unterwasser-Kompass', 20, 49.99, '/kompass.png', 0),
+(9, 'Steelsharp Messer', 'Rostfreies Tauchermesser mit praktischem Holster', 18, 34.95, '/messer.png', 0),
+(10, 'Safety Gloves', 'Robuste Handschuhe für optimalen Schutz unter Wasser', 30, 24.90, '/handschuhe.png', 0),
+(11, 'Sauerstoff-Flasche', 'Leichte 12-Liter Tauchflasche (200 bar)', 10, 79.00, '/sauerstoff.png', 0),
+(12, 'Backpack 40l', 'Wasserdichter Rucksack für dein Equipment', 15, 44.90, '/rucksack.png', 0);
 
 -- Kurse anlegen (verknüpft mit Location_ID)
 INSERT INTO `Kurs` (`Titel`, `Teilnehmerobergrenze`, `Zeit_der_Veranstaltung`, `Preis`, `Location_ID`) VALUES 

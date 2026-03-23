@@ -2,9 +2,14 @@ import './Navigationsleiste.css'
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
+const API_BASE_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000/api'
+    : '/api';
+
 export function Header() {
   const location = useLocation();
   const [username, setUsername] = useState<string | null>(null)
+  const [kurse, setKurse] = useState<any[]>([]);
 
   useEffect(() => {
     const storedUserStr = localStorage.getItem('user');
@@ -15,6 +20,21 @@ export function Header() {
       setUsername(null);
     }
   }, [location]);
+
+  useEffect(() => {
+    const loadKurse = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/kurse`);
+        if (response.ok) {
+          const data = await response.json();
+          setKurse(data);
+        }
+      } catch (error) {
+        console.error('Fehler beim Laden der Kurse:', error);
+      }
+    };
+    loadKurse();
+  }, []);
 
   return (
     <nav className="navbar">
@@ -41,11 +61,15 @@ export function Header() {
             Angebote
           </Link>
           <ul className="dropdown-content">
-            <li><Link to="/Buchung#Schnuppertauchen">Schnuppertauchen</Link></li>
-            <li><Link to="/Buchung#Delfintauchen">Delfintauchen</Link></li>
-            <li><Link to="/Buchung#Korallentauchen">Korallentauchen</Link></li>
-            <li><Link to="/Buchung#Tauchschein">Tauchschein</Link></li>
-            <li><Link to="/Buchung#Höhlentauchen">Höhlentauchen</Link></li>
+            {kurse.length > 0 ? (
+              kurse.map((kurs) => (
+                <li key={kurs.Kurs_ID}>
+                  <Link to={`/Buchung#${kurs.Titel}`}>{kurs.Titel}</Link>
+                </li>
+              ))
+            ) : (
+              <li><span>Keine Kurse verfügbar</span></li>
+            )}
           </ul>
         </li>
         <li>

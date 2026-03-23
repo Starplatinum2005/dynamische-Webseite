@@ -236,10 +236,10 @@ export function Buchung () {
         }
     }
 
-    const getLocationName = (locationId: number) => {
+    /*const getLocationName = (locationId: number) => {
         const location = locations.find(l => l.Location_ID === locationId);
         return location ? location.Raumname : `Location ${locationId}`;
-    };
+    };*/
 
     return (
         <main className="buchung_main">

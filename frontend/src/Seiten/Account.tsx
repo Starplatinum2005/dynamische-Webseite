@@ -48,7 +48,7 @@ export function Login() {
     }
   };
 
-  const handleSupport = () => navigate('/kontakt');
+  //const handleSupport = () => navigate('/kontakt');
 
   return (
     <main className="login">

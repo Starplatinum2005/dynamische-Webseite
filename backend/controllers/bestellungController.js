@@ -51,6 +51,48 @@ exports.createBestellung = async (req, res) => {
   }
 };
 
+exports.getBestellungenByUserId = async (req, res) => {
+  try {
+    const userId = req.params.userId;
+    
+    // Get all orders for the user
+    const [bestellungen] = await db.query(
+      'SELECT * FROM Bestellung WHERE User_ID = ? ORDER BY Bestellungsdatum DESC',
+      [userId]
+    );
+
+    // For each order, get the products and courses
+    const bestellungenMitDetails = await Promise.all(bestellungen.map(async (bestellung) => {
+      // Get products from this order
+      const [produkte] = await db.query(
+        `SELECT p.*, bpp.Menge FROM Produkt p 
+         JOIN Bestellposition_Produkt bpp ON p.Artikelnummer = bpp.Artikelnummer 
+         WHERE bpp.Bestellungs_ID = ?`,
+        [bestellung.Bestellungs_ID]
+      );
+
+      // Get courses from this order
+      const [kurse] = await db.query(
+        `SELECT k.*, bpk.Anzahl_Teilnehmer FROM Kurs k 
+         JOIN Bestellposition_Kurs bpk ON k.Kurs_ID = bpk.Kurs_ID 
+         WHERE bpk.Bestellungs_ID = ?`,
+        [bestellung.Bestellungs_ID]
+      );
+
+      return {
+        ...bestellung,
+        produkte: produkte || [],
+        kurse: kurse || []
+      };
+    }));
+
+    res.json(bestellungenMitDetails);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Fehler beim Laden der Bestellungen' });
+  }
+};
+
 exports.deleteBestellung = async (req, res) => {
   try {
     const id = req.params.id;

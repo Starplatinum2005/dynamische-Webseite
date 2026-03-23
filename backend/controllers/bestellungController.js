@@ -22,19 +22,19 @@ exports.createBestellung = async (req, res) => {
     );
     const bestellungId = bestellungResult.insertId;
 
-    if (produkte && produkte.length > 0) {
+  if (produkte && produkte.length > 0) {
       for (const p of produkte) {
         await connection.query(
-          'INSERT INTO Bestellposition_Produkt (Bestellungs_ID_Bestellung, Artikelnummer_Produkt, Menge) VALUES (?, ?, ?)',
+          'INSERT INTO Bestellposition_Produkt (Bestellungs_ID, Artikelnummer, Menge) VALUES (?, ?, ?)',
           [bestellungId, p.Artikelnummer, p.Menge]
         );
       }
     }
 
-    if (kurse && kurse.length > 0) {
+  if (kurse && kurse.length > 0) {
       for (const k of kurse) {
         await connection.query(
-          'INSERT INTO Bestellposition_Kurs (Bestellungs_ID_Bestellung, Kurs_ID_Kurs, Anzahl_Teilnehmer) VALUES (?, ?, ?)',
+          'INSERT INTO Bestellposition_Kurs (Bestellungs_ID, Kurs_ID, Anzahl_Teilnehmer) VALUES (?, ?, ?)',
           [bestellungId, k.Kurs_ID, k.Anzahl_Teilnehmer]
         );
       }

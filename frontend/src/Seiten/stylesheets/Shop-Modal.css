@@ -1,0 +1,145 @@
+/* PRODUCT MODAL STYLING */
+
+.product-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.product-modal-container {
+  background-color: var(--Hintergrundfarbe);
+  border: 2px solid var(--Textfarbe);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+}
+
+.product-modal-container h2 {
+  text-align: center;
+  color: var(--Unterüberschriften);
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+}
+
+.product-form-group {
+  margin-bottom: 16px;
+}
+
+.product-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--Textfarbe);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.product-form-group input[type="text"],
+.product-form-group input[type="number"],
+.product-form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.product-form-group input[type="text"]:focus,
+.product-form-group input[type="number"]:focus,
+.product-form-group textarea:focus {
+  outline: none;
+  border-color: var(--Hauptfarbe, #0077b6);
+  box-shadow: 0 0 4px rgba(0, 119, 182, 0.3);
+}
+
+.product-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.product-checkbox label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.product-checkbox input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  cursor: pointer;
+  accent-color: var(--Hauptfarbe, #0077b6);
+}
+
+.product-btn-save,
+.product-btn-cancel {
+  padding: 12px 24px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.product-btn-save {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.product-btn-save:hover {
+  background-color: #27ae60;
+}
+
+.product-btn-save:active {
+  transform: scale(0.98);
+}
+
+.product-btn-cancel {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.product-btn-cancel:hover {
+  background-color: #c0392b;
+}
+
+.product-btn-cancel:active {
+  transform: scale(0.98);
+}
+
+/* Responsive für kleinere Bildschirme */
+@media (max-width: 600px) {
+  .product-modal-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .product-modal-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
+  .product-form-group input[type="text"],
+  .product-form-group input[type="number"],
+  .product-form-group textarea {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

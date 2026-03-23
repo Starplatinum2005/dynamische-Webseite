@@ -12,10 +12,17 @@ exports.getAllKurse = async (req, res) => {
 
 exports.createKurs = async (req, res) => {
   try {
-    const { Titel, Preis, Location_ID } = req.body; 
+    const { Titel, Preis, Location_ID, Teilnehmerobergrenze, Zeit_der_Veranstaltung } = req.body; 
     
-    const sql = 'INSERT INTO Kurs (Titel, Preis, Location_ID) VALUES (?, ?, ?)';
-    const [result] = await db.query(sql, [Titel, Preis, Location_ID]);
+    // Konvertiere Zeit zu MySQL DATETIME Format
+    let datumZeit = Zeit_der_Veranstaltung;
+    if (datumZeit && datumZeit.includes('T')) {
+      // Format: YYYY-MM-DDTHH:mm -> YYYY-MM-DD HH:mm:00
+      datumZeit = datumZeit.replace('T', ' ') + ':00';
+    }
+    
+    const sql = 'INSERT INTO Kurs (Titel, Preis, Location_ID, Teilnehmerobergrenze, Zeit_der_Veranstaltung) VALUES (?, ?, ?, ?, ?)';
+    const [result] = await db.query(sql, [Titel, Preis, Location_ID, Teilnehmerobergrenze || 10, datumZeit || new Date()]);
     
     res.status(201).json({ 
       message: 'Kurs erfolgreich angelegt!', 
@@ -30,10 +37,17 @@ exports.createKurs = async (req, res) => {
 exports.updateKurs = async (req, res) => {
   try {
     const kursId = req.params.id; 
-    const { Titel, Preis, Location_ID } = req.body; 
+    const { Titel, Preis, Location_ID, Teilnehmerobergrenze, Zeit_der_Veranstaltung } = req.body; 
     
-    const sql = 'UPDATE Kurs SET Titel = ?, Preis = ?, Location_ID = ? WHERE Kurs_ID = ?';
-    const [result] = await db.query(sql, [Titel, Preis, Location_ID, kursId]);
+    // Konvertiere Zeit zu MySQL DATETIME Format
+    let datumZeit = Zeit_der_Veranstaltung;
+    if (datumZeit && datumZeit.includes('T')) {
+      // Format: YYYY-MM-DDTHH:mm -> YYYY-MM-DD HH:mm:00
+      datumZeit = datumZeit.replace('T', ' ') + ':00';
+    }
+    
+    const sql = 'UPDATE Kurs SET Titel = ?, Preis = ?, Location_ID = ?, Teilnehmerobergrenze = ?, Zeit_der_Veranstaltung = ? WHERE Kurs_ID = ?';
+    const [result] = await db.query(sql, [Titel, Preis, Location_ID, Teilnehmerobergrenze || 10, datumZeit, kursId]);
     
     if (result.affectedRows === 0) {
       return res.status(404).json({ message: 'Kurs nicht gefunden' });

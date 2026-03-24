@@ -30,8 +30,8 @@ INSERT INTO `Produkt` (`Artikelnummer`, `Bezeichnung`, `Beschreibung`, `Bestand`
 
 -- Kurse anlegen (verknüpft mit Location_ID)
 INSERT INTO `Kurs` (`Titel`, `Teilnehmerobergrenze`, `Zeit_der_Veranstaltung`, `Preis`, `Location_ID`) VALUES 
-('Open Water Diver (OWD) Anfängerkurs', 8, '2026-05-10 09:00:00', 399.00, 1), -- Findet im Pool statt (Location 1)
-('Advanced Open Water (AOWD) Tieftauchen', 6, '2026-06-15 10:00:00', 299.00, 2); -- Findet im See statt (Location 2)
+('Open Water Diver (OWD) Anfängerkurs', 8, '2026-05-10 09:00:00', 399.00, 1),
+('Advanced Open Water (AOWD) Tieftauchen', 6, '2026-06-15 10:00:00', 299.00, 2); 
 
 -- Eine erste Bestellung anlegen
 INSERT INTO `Bestellung` (`Bestellungsdatum`, `Bestellstatus`, `User_ID`) VALUES 

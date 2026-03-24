@@ -19,6 +19,7 @@ import { Warenkorb } from './Seiten/Warenkorb';
 import { Login } from './Seiten/Account';
 import { LoggedInPage } from './Seiten/Logout';
 import { Registrierung } from './Seiten/Registrierung';
+import { AdminDashboard } from './Seiten/AdminDashboard';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path='/LogIn' element={<Login />} />
           <Route path='/loggedin' element={<LoggedInPage />} />
           <Route path='/registrieren' element={<Registrierung />} />
+          <Route path='/admin' element={<AdminDashboard />} />
         </Routes>
       </main>
       <Footer />

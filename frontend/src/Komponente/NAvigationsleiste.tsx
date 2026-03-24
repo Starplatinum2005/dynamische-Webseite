@@ -9,6 +9,7 @@ const API_BASE_URL = window.location.hostname === 'localhost'
 export function Header() {
   const location = useLocation();
   const [username, setUsername] = useState<string | null>(null)
+  const [userRole, setUserRole] = useState<number | null>(null)
   const [kurse, setKurse] = useState<any[]>([]);
 
   useEffect(() => {
@@ -16,8 +17,10 @@ export function Header() {
     if (storedUserStr) {
       const storedUser = JSON.parse(storedUserStr);
       setUsername(storedUser.vorname);
+      setUserRole(storedUser.rolle);
     } else {
       setUsername(null);
+      setUserRole(null);
     }
   }, [location]);
 
@@ -99,6 +102,18 @@ export function Header() {
             Kontakt
           </Link>
         </li>
+        {userRole === 1 && (
+          <li>
+            <Link
+              to="/admin"
+              className={`admin-link ${location.pathname === '/admin' ? 'active' : ''}`}
+              aria-label="Admin Dashboard"
+              title="Admin Dashboard"
+            >
+              ⚙️ Admin
+            </Link>
+          </li>
+        )}
         <li>
           {username ? (
             <Link to="/loggedin" className='span'>Willkommen, {username}!</Link>

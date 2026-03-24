@@ -50,7 +50,7 @@ CREATE OR REPLACE TABLE `Produkt` (
 
 CREATE OR REPLACE TABLE `Bestellung` (
     `Bestellungs_ID` INTEGER AUTO_INCREMENT,
-    `Bestellungsdatum` DATETIME NOT NULL,
+    `Bestellungsdatum` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `Bestellstatus` VARCHAR(50) NOT NULL CHECK (`Bestellstatus` IN ('In Bearbeitung', 'Versendet', 'Abgeschlossen', 'Storniert')),
     `User_ID` INTEGER NOT NULL,
     PRIMARY KEY(`Bestellungs_ID`)
@@ -97,3 +97,66 @@ ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE `Bestellposition_Kurs`
 ADD FOREIGN KEY(`Kurs_ID`) REFERENCES `Kurs`(`Kurs_ID`)
 ON UPDATE CASCADE ON DELETE RESTRICT;
+
+DELIMITER $$
+CREATE TRIGGER check_kurs_kapazitaet
+BEFORE INSERT ON `Bestellposition_Kurs`
+FOR EACH ROW
+BEGIN    
+    DECLARE aktuelle_teilnehmer INTEGER;    
+    DECLARE max_teilnehmer INTEGER;    
+    
+    SELECT COALESCE(SUM(bk.Anzahl_Teilnehmer), 0)    
+    INTO aktuelle_teilnehmer    
+    FROM Bestellposition_Kurs bk    
+    WHERE bk.Kurs_ID = NEW.Kurs_ID;    
+    
+    SELECT Teilnehmerobergrenze    
+    INTO max_teilnehmer    
+    FROM Kurs    
+    WHERE Kurs_ID = NEW.Kurs_ID;    
+    
+    IF max_teilnehmer IS NOT NULL AND (aktuelle_teilnehmer + NEW.Anzahl_Teilnehmer) > max_teilnehmer THEN        
+        SIGNAL SQLSTATE '45000'        
+        SET MESSAGE_TEXT = 'Kursbelegung überschreitet die Teilnehmerobergrenze';    
+    END IF;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE TRIGGER check_kurs_kapazitaet_update
+BEFORE UPDATE ON `Bestellposition_Kurs`
+FOR EACH ROW
+BEGIN    
+    DECLARE aktuelle_teilnehmer INTEGER;    
+    DECLARE max_teilnehmer INTEGER;    
+    
+    SELECT COALESCE(SUM(bk.Anzahl_Teilnehmer), 0)    
+    INTO aktuelle_teilnehmer    
+    FROM Bestellposition_Kurs bk    
+    WHERE bk.Kurs_ID = NEW.Kurs_ID      
+      AND bk.Bestellungs_ID != NEW.Bestellungs_ID;    
+    
+    SELECT Teilnehmerobergrenze    
+    INTO max_teilnehmer    
+    FROM Kurs    
+    WHERE Kurs_ID = NEW.Kurs_ID;    
+    
+    IF max_teilnehmer IS NOT NULL AND (aktuelle_teilnehmer + NEW.Anzahl_Teilnehmer) > max_teilnehmer THEN        
+        SIGNAL SQLSTATE '45000'        
+        SET MESSAGE_TEXT = 'Kursbelegung überschreitet die Teilnehmerobergrenze';    
+    END IF;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE TRIGGER check_kurs_datum
+BEFORE INSERT ON `Kurs`
+FOR EACH ROW
+BEGIN    
+    IF NEW.Zeit_der_Veranstaltung <= NOW() THEN        
+        SIGNAL SQLSTATE '45000'        
+        SET MESSAGE_TEXT = 'Veranstaltungsdatum muss in der Zukunft liegen';    
+    END IF;
+END$$
+DELIMITER ;
